@@ -4118,7 +4118,7 @@ div.column ul.niloa-portal {
   max-width: 728px;
   height: 0;
   padding: 0;
-  padding-bottom: 88.49001795%;
+  padding-bottom: 96.25468165%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -4126,7 +4126,6 @@ div.column ul.niloa-portal > li {
   position: absolute;
   width: 33.33333333%;
   height: 40%;
-  background-size: cover;
   list-style-type: none;
 }
 div.column ul.niloa-portal > li:nth-child(1) {
@@ -4158,4 +4157,12 @@ div.column ul.niloa-portal > li:nth-child(6) {
   top: 60%;
   left: 50%;
   background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_current-assessment-activities.png) no-repeat scroll center center;
+}
+div.column ul.niloa-portal > li:nth-child(1),
+div.column ul.niloa-portal > li:nth-child(2),
+div.column ul.niloa-portal > li:nth-child(3),
+div.column ul.niloa-portal > li:nth-child(4),
+div.column ul.niloa-portal > li:nth-child(5),
+div.column ul.niloa-portal > li:nth-child(6) {
+  background-size: 100% auto;
 }
