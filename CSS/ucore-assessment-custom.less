@@ -158,35 +158,78 @@ div.column ul.niloa-portal {
 		width: 33.33333333%;
 		height: 40%;
         list-style-type: none;
+		& > div.initial,
+		& > div.revealed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+		}
+		& > div.initial {
+			z-index: 11;
+			.transition(~"opacity 0.25s linear");
+		}
 		&:nth-child(1) {
 			top: 0;
 			left: 16.66666667%;
-			background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_student-learning-outcome-statements.png) no-repeat scroll center center;
+			& > div.initial {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_student-learning-outcome-statements.png) no-repeat scroll center center;
+			}
+			& > div.revealed {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_student-learning-outcome-statements_highlighted.png) no-repeat scroll center center;
+			}
 		}
 		&:nth-child(2) {
 			top: 0;
 			left: 50%;
-			background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans.png) no-repeat scroll center center;
+			& > div.initial {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans.png) no-repeat scroll center center;
+			}
+			& > div.revealed {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans_highlighted.png) no-repeat scroll center center;
+			}
 		}
 		&:nth-child(3) {
 			top: 30%;
 			left: 0;
-			background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_use-of-student-learning-evidence.png) no-repeat scroll center center;
+			& > div.initial {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_use-of-student-learning-evidence.png) no-repeat scroll center center;
+			}
+			& > div.revealed {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_use-of-student-learning-evidence_highlighted.png) no-repeat scroll center center;
+			}
 		}
 		&:nth-child(4) {
 			top: 30%;
 			left: 66.66666667%;
-			background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-resources.png) no-repeat scroll center center;
+			& > div.initial {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-resources.png) no-repeat scroll center center;
+			}
+			& > div.revealed {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-resources_highlighted.png) no-repeat scroll center center;
+			}
 		}
 		&:nth-child(5) {
 			top: 60%;
 			left: 16.66666667%;
-			background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_evidence-of-student-learning.png) no-repeat scroll center center;
+			& > div.initial {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_evidence-of-student-learning.png) no-repeat scroll center center;
+			}
+			& > div.revealed {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_evidence-of-student-learning_highlighted.png) no-repeat scroll center center;
+			}
 		}
 		&:nth-child(6) {
 			top: 60%;
 			left: 50%;
-			background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_current-assessment-activities.png) no-repeat scroll center center;
+			& > div.initial {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_current-assessment-activities.png) no-repeat scroll center center;
+			}
+			& > div.revealed {
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_current-assessment-activities_highlighted.png) no-repeat scroll center center;
+			}
 		}
 		&:nth-child(1),
 		&:nth-child(2),
@@ -194,8 +237,17 @@ div.column ul.niloa-portal {
 		&:nth-child(4),
 		&:nth-child(5),
 		&:nth-child(6) {
-			background-size: 100% auto;
+			& > div.initial,
+			& > div.revealed {
+				background-size: 100% auto;
+			}
 		}
-		
+		&:hover {
+			& > div.initial {
+				opacity: 0;
+				//z-index: 9;
+				.transition(~"opacity 0.25s linear, z-index 0.25s step-end");
+			}
+		}
 	}
 }
