@@ -4136,11 +4136,42 @@ div.column ul.niloa-portal > li > div.revealed {
   height: 100%;
   z-index: 10;
 }
+div.column ul.niloa-portal > li > div.initial > div.content,
+div.column ul.niloa-portal > li > div.revealed > div.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 div.column ul.niloa-portal > li > div.initial {
   z-index: 11;
   -webkit-transition: opacity 0.25s linear;
   -moz-transition: opacity 0.25s linear;
   transition: opacity 0.25s linear;
+}
+div.column ul.niloa-portal > li > div.initial > div.content {
+  font-weight: bold;
+  font-size: 1.7em;
+  line-height: 1em;
+  color: #fff;
+}
+div.column ul.niloa-portal > li > div.revealed > div.content > h3,
+div.column ul.niloa-portal > li > div.revealed > div.content > p {
+  color: #000;
+}
+div.column ul.niloa-portal > li > div.revealed > div.content > h3 {
+  font-weight: bold;
+  font-size: 1.25em;
+  line-height: 1em;
+  text-align: left;
+}
+div.column ul.niloa-portal > li > div.revealed > div.content > p {
+  font-size: 0.925em;
+  text-align: left;
 }
 div.column ul.niloa-portal > li:nth-child(1) {
   top: 0;
