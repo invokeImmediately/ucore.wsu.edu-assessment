@@ -4138,9 +4138,9 @@ div.column ul.niloa-portal > li > div.revealed {
 }
 div.column ul.niloa-portal > li > div.initial {
   z-index: 11;
-  -webkit-transition: opacity 0.25s linear, z-index 0.25s step-end;
-  -moz-transition: opacity 0.25s linear, z-index 0.25s step-end;
-  transition: opacity 0.25s linear, z-index 0.25s step-end;
+  -webkit-transition: opacity 0.25s linear;
+  -moz-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
 }
 div.column ul.niloa-portal > li:nth-child(1) {
   top: 0;
