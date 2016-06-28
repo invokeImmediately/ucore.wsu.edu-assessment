@@ -132,7 +132,7 @@ div.column {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) {
+div.column ul:not(.niloa-portal) {
 	li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
 	&.gray-bullets {
 		li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
@@ -145,20 +145,18 @@ div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) {
 //
 
 // TODO: Code CSS for transparency framework portal
-ul.niloa-portal {
+div.column ul.niloa-portal {
 	position: relative;
 	width: 100%;
-	max-width: 728px;
 	height: 0;
 	padding: 0;
-	padding-bottom: 88.49001795%;
+	padding-bottom: 96.25468165%;
 	margin-left: auto;
 	margin-right: auto;
 	& > li {
 		position: absolute;
 		width: 33.33333333%;
 		height: 40%;
-		background-size: cover;
         list-style-type: none;
 		&:nth-child(1) {
 			top: 0;
@@ -190,5 +188,14 @@ ul.niloa-portal {
 			left: 50%;
 			background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_current-assessment-activities.png) no-repeat scroll center center;
 		}
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(6) {
+			background-size: 100% auto;
+		}
+		
 	}
 }
