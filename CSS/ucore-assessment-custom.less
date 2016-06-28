@@ -1,0 +1,390 @@
+@import "..\WSU-UE---CSS\wp-master-style-sheet.less";
+
+body {
+    @media all and (max-width: @v-wdscrn-bckgrnd) {
+        background: @hex-light-gray;
+    }
+    @media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
+        background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wuxga.jpg) repeat-y fixed right top;
+    }
+    @media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
+        background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed right top;
+    }
+    @media all and (min-width: (@v-wqxga-width+1)) {
+        background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed 1080px top;
+    }
+}
+
+main {
+	background: @hex-white url(/wp-content/uploads/sites/907/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
+}
+
+#binder {
+    @media all and (min-width: (@v-wdscrn-bckgrnd+1)) {
+        border-right: 1px solid rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.5);
+        box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), green(@hex-darkest-gray), blue(@hex-darkest-gray), 0.5);
+    }
+}
+
+#jacket {
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-attachment: fixed;
+}
+
+header.main-header {
+    &:extend(.has-dflt-font);
+	background: #981e32 url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) repeat scroll left top;
+	color: #fff !important;
+}
+
+.main-header sub:not(.unset), .main-header sup:not(.unset) {
+	color: #fff !important;
+}
+
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column {
+	aside {
+		font-size: .8rem;
+        &+aside {
+            margin-top: @v-dflt-spcng;
+        }
+		p, ul {
+			font-size: inherit;
+            &:not(:last-child) {
+                margin-bottom: 0.8rem;
+            }
+            &:last-child:not(.no-bottom-pad) {
+                padding-bottom: 0;
+            }
+		}
+        &.article-sidebar {
+            background: #f8f1eb url(/wp-content/uploads/sites/907/2015/09/tileable-concrete-texture_128x128.png) left top repeat;
+            &.green-marble {
+                background: #e3dfcd url(/wp-content/uploads/sites/907/2015/09/seamless-marble-texture_528x528.png) left top repeat;
+                border: 1px solid #afa370;
+                box-shadow: 3px 3px 3px rgba(57,50,21,0.3333);
+            }
+            &.bluish-gray {
+                background: #edf3f4 url(/wp-content/uploads/sites/907/2015/09/vertically-tileable-gray-acrylic_opacity-0.15.png) left top repeat-y;
+                background-size: 100% auto;
+                border: 1px solid #464e54;
+                box-shadow: 3px 3px 3px rgba(42,48,51,0.3333);
+            }
+        }
+	}
+}
+
+div.column {
+	div.bluish-gray-acrylic-sidebar, div.green-marble-sidebar, div.gray-acrylic-sidebar {
+		p {
+			font-size: .75rem;
+		}
+		h2 + hr {
+			margin-top: .25rem;
+			background-color: rgba(70,78,84,0.75);
+		}
+		h3 {
+			font-size: 1.275rem;
+		}
+		h4 {
+			font-size: 1.05rem;
+		}
+	}
+}
+
+div.column {
+	&:extend(.has-dflt-font);
+	section {
+		&.header-newsEvents {
+			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+                url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+                url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
+		}
+	}
+}
+
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### DIV STYLES ############################################################################ ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.interactively-flipped-panels {
+    background: @hex-dark-gray url(/wp-content/uploads/sites/907/2016/05/texture_brushed-metal.jpg) repeat scroll left top ;
+    div.container {
+		padding-bottom: ~"calc(((50% * 0.6) - 1.5em) * 2 + 3em)";
+		@media all {
+			@media (max-width: 1030px) and @ifp-desktop-min {
+				padding-bottom: ~"calc(((50% * 0.7) - 1.5em) * 2 + 3em)";
+			}
+			@media (max-width: 791px) and (min-width: 592px) {
+				padding-bottom: ~"calc(((50% * 0.8) - 1.5em) * 2 + 3em)";
+			}
+			@media (max-width: 591px) and (min-width: 481px) {
+				padding-bottom: ~"calc((50% - 1.5em) * 2 + 3em)";
+			}
+			@media (max-width: 480px) {
+				padding-bottom: ~"calc(100% * 4 + 3em)";
+			}
+		}        
+        div.panel-wrapper {
+			padding-bottom: ~"calc(50% - 1.5em)";
+			@media all and (max-width: 480px) {
+				padding-bottom: 100%;
+			}
+            &.top-left {
+                @media all and (max-width: 480px) {
+                    margin-bottom: 1em;
+                }
+                div.panel {
+                    div.front {
+                        background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-opportunities.jpg) no-repeat center center;
+                        background-size: auto 100%;
+                    }	
+                    div.rear {
+                        background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-opportunities_hovered.jpg) no-repeat center center;
+                        background-size: auto 100%;
+                        color: @hex-white;
+                    }
+                }
+            }
+            &.top-right{
+                @media all and (max-width: 480px) {
+                    margin-bottom: 1em;
+                }
+                div.panel {
+                    div.front {
+                        background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02.jpg) no-repeat center center;
+                        background-size: auto 100%;
+                    }	
+                    div.rear {
+                        background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02_hovered.jpg) no-repeat center center;
+                        background-size: auto 100%;
+                        color: @hex-white;
+                    }
+                }
+            }
+            &.bottom-left{
+                @media all and (max-width: 480px) {
+                    margin-bottom: 1em;
+                }
+                div.panel {
+                    div.front {
+                        background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium.jpg) no-repeat center center;
+                        background-size: auto 100%;
+                    }	
+                    div.rear {
+                        background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium_hovered.jpg) no-repeat center center;
+                        background-size: auto 100%;
+                        color: @hex-white;
+                    }
+                }
+            }
+            &.bottom-right{
+                div.panel {
+                    div.front {
+                        background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-events.jpg) no-repeat center center;
+                        background-size: auto 100%;
+                    }	
+                    div.rear {
+                        background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-events_hovered.jpg) no-repeat center center;
+                        background-size: auto 100%;
+                        color: @hex-white;
+                    }
+                }
+            }
+			&.top-left:hover, &.top-right:hover, &.bottom-left:hover, &.bottom-right:hover {
+				padding-bottom: ~"calc((50% - 2em) * 2 + 2em)";
+				@media all and (max-width: 480px) {
+                    position: relative;
+                    padding-bottom: 100%;
+                    width: 100%;
+				}
+			}
+        }
+        &:hover {
+            @media all and (max-width: 480px) {
+                padding-bottom: ~"calc(100% * 4 + 3em)";
+            }        
+        }
+    }
+}
+
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### CUSTOM STYLES ######################################################################### ║
+ *  ╠==============================================================================================╣
+ *  ║ Custom styles intended only for the Summer Research website.                                 ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column p.rounded-box {
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+    padding: 7px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    & > img {
+        border-radius: 7px;
+        margin: 4px;
+    }
+}
+
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### LIST STYLES ########################################################################### ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) {
+    li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
+    &.gray-bullets {
+        li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
+    }
+}
+//
+//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+//     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+//
+div.column ul.event-boxes {
+    &:extend(ul.content-boxes all);
+}
+
+div.column ul.event-boxes {
+    & > li {
+        float: left;
+        width: 49%;
+        @media all and (max-width: @v-rghtclmn-thrshld) {
+            width: 98%;
+        }
+        min-height: 198px;
+        margin-bottom: 2%;
+        @media all and (max-width: @v-bckgrnd-thrshld) {
+            overflow-x: visible;
+        }
+        &.full-width {
+            width: 98%;
+        }
+        & + li {
+            margin-top: 0;
+        }
+        & > h3:first-child {
+            padding: (@v-dflt-spcng / 4);
+            margin: 0;
+            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.5);
+            border-top: 1px solid rgba(@rval, @gval, @bval, 0.0);
+            border-top-right-radius: 4px;
+             border-top-left-radius: 4px;
+            font-weight: bold;
+              font-size: 1.45em;
+            text-transform: none;
+            color: @hex-dark-blue;
+        }
+        & > h4:nth-child(2) {
+            &:extend(.has-alt-font);
+            padding: (@v-dflt-spcng * 3 / 20) (@v-dflt-spcng / 4);
+            margin-bottom: 0;
+               margin-top: 0;
+            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.75);
+            font-weight: 700;
+              font-size: 1.15em;
+            color: @hex-bright-blue;
+            & + * {
+                margin-top: (@v-dflt-spcng / 4);
+            }
+        }
+        & > div.iframe-wrapper {
+            position: relative;
+            height: 0;
+             width: 97%;
+            margin-bottom: (@v-dflt-spcng / 4);
+             margin-right: auto;
+              margin-left: auto;
+            padding-bottom: 66.666667%;
+            overflow: hidden;
+            border: 1px solid @hex-darker-gray;
+            & > iframe {
+                position: absolute;
+                    left: 0;
+                     top: 0;
+                height: 100%;
+                 width: 100%;
+                padding: 0;
+            }
+        }
+        & > p {
+			&:not(.centered):not(.centers-text) {
+				text-align: left;
+			}
+            padding-right: (@v-dflt-spcng / 4);
+             padding-left: (@v-dflt-spcng / 4);
+            font-size: 0.95em;
+			&:not(:last-child):not(.no-btm-spacing) {
+                margin-bottom: @v-btm-mrgns;
+			}
+        }
+        & > *:last-child {
+            padding-bottom: (@v-dflt-spcng / 4);
+        }
+        &:nth-child(4n + 1) {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-accent-yellow), green(@hex-accent-yellow), blue(@hex-accent-yellow), 0.5);
+                color: @hex-dark-yellow;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-accent-yellow), green(@hex-accent-yellow), blue(@hex-accent-yellow), 0.75);
+                color: @hex-bright-yellow;
+            }
+        }
+        &:nth-child(4n + 2) {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0.5);
+                color: @hex-dark-green;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0.75);
+                color: @hex-bright-green;
+            }
+        }
+        &:nth-child(4n + 3) {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-accent-orange), green(@hex-accent-orange), blue(@hex-accent-orange), 0.5);
+                color: @hex-dark-orange;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-accent-orange), green(@hex-accent-orange), blue(@hex-accent-orange), 0.75);
+                color: @hex-bright-orange;
+            }
+        }
+    }
+}
+
+ul.program-info {
+    padding-right: 0;
+     padding-left: 0;
+    & > li {
+        float: left;
+        width: 49%;
+        margin-bottom: 2%;
+        overflow-x: auto;
+        border: 1px solid #d9d9d9;
+        border-radius: 7px;
+        list-style-type: none;
+        box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
+        & > p {
+            padding: 7px;
+            text-align: left;
+            & > img {
+                border-radius: 7px;
+                margin: 4px 4px 4px 7px;
+            }
+        }
+    }
+}
