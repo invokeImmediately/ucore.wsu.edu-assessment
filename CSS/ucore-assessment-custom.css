@@ -4218,7 +4218,6 @@ div.column ul.niloa-portal > li:nth-child(6) > div.revealed {
 }
 div.column ul.niloa-portal > li:hover > div.initial {
   opacity: 0;
-  z-index: 9;
   -webkit-transition: opacity 0.25s linear, z-index 0.25s step-end;
   -moz-transition: opacity 0.25s linear, z-index 0.25s step-end;
   transition: opacity 0.25s linear, z-index 0.25s step-end;
