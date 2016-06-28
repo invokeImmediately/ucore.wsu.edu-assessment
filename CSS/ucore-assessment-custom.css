@@ -4106,13 +4106,13 @@ div.column section.header-newsEvents {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) li {
+div.column ul:not(.niloa-portal) li {
   list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
 }
-div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info).gray-bullets li {
+div.column ul:not(.niloa-portal).gray-bullets li {
   list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png);
 }
-ul.niloa-portal {
+div.column ul.niloa-portal {
   position: relative;
   width: 100%;
   max-width: 728px;
@@ -4122,39 +4122,39 @@ ul.niloa-portal {
   margin-left: auto;
   margin-right: auto;
 }
-ul.niloa-portal > li {
+div.column ul.niloa-portal > li {
   position: absolute;
   width: 33.33333333%;
   height: 40%;
   background-size: cover;
   list-style-type: none;
 }
-ul.niloa-portal > li:nth-child(1) {
+div.column ul.niloa-portal > li:nth-child(1) {
   top: 0;
   left: 16.66666667%;
   background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_student-learning-outcome-statements.png) no-repeat scroll center center;
 }
-ul.niloa-portal > li:nth-child(2) {
+div.column ul.niloa-portal > li:nth-child(2) {
   top: 0;
   left: 50%;
   background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans.png) no-repeat scroll center center;
 }
-ul.niloa-portal > li:nth-child(3) {
+div.column ul.niloa-portal > li:nth-child(3) {
   top: 30%;
   left: 0;
   background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_use-of-student-learning-evidence.png) no-repeat scroll center center;
 }
-ul.niloa-portal > li:nth-child(4) {
+div.column ul.niloa-portal > li:nth-child(4) {
   top: 30%;
   left: 66.66666667%;
   background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-resources.png) no-repeat scroll center center;
 }
-ul.niloa-portal > li:nth-child(5) {
+div.column ul.niloa-portal > li:nth-child(5) {
   top: 60%;
   left: 16.66666667%;
   background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_evidence-of-student-learning.png) no-repeat scroll center center;
 }
-ul.niloa-portal > li:nth-child(6) {
+div.column ul.niloa-portal > li:nth-child(6) {
   top: 60%;
   left: 50%;
   background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_current-assessment-activities.png) no-repeat scroll center center;
