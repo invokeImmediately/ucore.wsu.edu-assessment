@@ -171,35 +171,33 @@ div.column ul.niloa-portal {
 				top: 50%;
 				left: 50%;
 				width: 90%;
+				color: @hex-white;
+				font-weight: bold;
+				font-size: 1.7em;
+				line-height: 1em;
 				text-align: center;
 				.transform(~"translate(-50%, -50%)");
 			}
 		}
-		& > div.initial {
+		& > div.initial  {
 			z-index: 11;
 			.transition(~"opacity 0.25s linear");
-			& > div.content {
-				font-weight: bold;
-				font-size: 1.7em;
-				line-height: 1em;
-				color: @hex-white;
-			}
 		}
-		& > div.revealed > div.content {
-			& > h3,
-			& > p {
-				color: @hex-black;
-			}
-			& > h3 {
+//		& > div.revealed > div.content {
+//			& > h3,
+//			& > p {
+//				color: @hex-black;
+//			}
+//			& > h3 {
 //				font-weight: bold;
 //				font-size: 1.25em;
 //				line-height: 1em;
-				text-align: center;
-			}
-			& > p {
-				font-size: 0.925em;
-				text-align: left;
-			}
+//				text-align: center;
+//			}
+//			& > p {
+//				font-size: 0.925em;
+//				text-align: left;
+//			}
 		}
 		&:nth-child(1) {
 			top: 0;
