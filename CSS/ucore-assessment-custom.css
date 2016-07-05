@@ -4157,6 +4157,9 @@ div.column ul.niloa-portal > li > div.initial {
   -moz-transition: opacity 0.25s linear;
   transition: opacity 0.25s linear;
 }
+div.column ul.niloa-portal > li > div.revealed > div.content {
+  color: #000;
+}
 div.column ul.niloa-portal > li:nth-child(1) {
   top: 0;
   left: 16.66666667%;
