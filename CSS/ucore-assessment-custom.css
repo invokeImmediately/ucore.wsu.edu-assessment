@@ -4234,7 +4234,7 @@ div.column ul.niloa-portal > li:nth-child(5) > div.revealed,
 div.column ul.niloa-portal > li:nth-child(6) > div.revealed {
   background-size: 100% auto;
 }
-div.column ul.niloa-portal > li:hover > div.initial {
+div.column ul.niloa-portal > li.hovered > div.initial {
   opacity: 0;
   z-index: 9;
   -webkit-transition: opacity 0.25s linear, z-index 0.25s step-end;
