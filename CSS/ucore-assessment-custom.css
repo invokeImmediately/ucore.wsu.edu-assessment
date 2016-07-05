@@ -4164,10 +4164,7 @@ div.column ul.niloa-portal > li > div.revealed > div.content > p {
   color: #000;
 }
 div.column ul.niloa-portal > li > div.revealed > div.content > h3 {
-  font-weight: bold;
-  font-size: 1.25em;
-  line-height: 1em;
-  text-align: left;
+  text-align: center;
 }
 div.column ul.niloa-portal > li > div.revealed > div.content > p {
   font-size: 0.925em;
