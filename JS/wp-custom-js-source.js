@@ -319,6 +319,7 @@ function isJQuery($obj) {
 		if($portal.length == 1) {
 			var $bttns = $portal.find("li.panel");
 			$bttns.each(function () {
+				alert("Here we go again!");
 				var $thisBttn = $(this);
 				$thisBttn.mousemove(function(moveEvent) {
 					var hxgnlBttn = new HexagonalButton($(this));
