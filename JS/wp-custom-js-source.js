@@ -296,7 +296,7 @@ function isJQuery($obj) {
 	}
 	
 	function handleNiloaMouseMove($whichBttn, bttnCoords, moveEvent) {
-		if(isJQuery($whichBttn) && bttnCoords && Object.getPrototypeOf(bttnCoords) === HexagonalButton) {
+		if(isJQuery($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
 			if(bttnCoords.isWithinArea(moveEvent.pageX, moveEvent.pageY)) {
 				$whichBttn.addClass("hovered");
 			}
@@ -307,8 +307,7 @@ function isJQuery($obj) {
 	}
 	
 	function handleNiloaClick($whichBttn, bttnCoords, clickEvent) {
-		alert(Object.getPrototypeOf(bttnCoords));
-		if(isJQuery($whichBttn) && bttnCoords && Object.getPrototypeOf(bttnCoords) === HexagonalButton) {
+		if(isJQuery($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
 			if(bttnCoords.isWithinArea(moveEvent.pageX, moveEvent.pageY)) {
 				alert("Clicked!");
 			}
