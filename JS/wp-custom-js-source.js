@@ -317,7 +317,7 @@ function isJQuery($obj) {
 	function initNiloaPortal(slctrPortal) {
 		var $portal = $(slctrPortal);
 		if($portal.length == 1) {
-			var $bttns = $portal.find("li.button");
+			var $bttns = $portal.find("li.panel");
 			$bttns.each(function () {
 				var $thisBttn = $(this);
 				$thisBttn.mousemove(function(moveEvent) {
