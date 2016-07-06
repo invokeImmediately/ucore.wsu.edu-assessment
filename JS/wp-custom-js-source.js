@@ -307,8 +307,8 @@ function isJQuery($obj) {
 	}
 	
 	function handleNiloaClick($whichBttn, bttnCoords, clickEvent) {
+		alert("Here we go again!");
 		if(isJQuery($whichBttn) && bttnCoords && Object.getPrototypeOf(bttnCoords) === HexagonalButton) {
-			alert("Here we go again!");
 			if(bttnCoords.isWithinArea(moveEvent.pageX, moveEvent.pageY)) {
 				alert("Clicked!");
 			}
