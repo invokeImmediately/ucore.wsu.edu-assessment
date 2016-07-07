@@ -1,33 +1,33 @@
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
 body {
-	background: @hex-crimson;
-	
-	// TODO: Implement a more complex tiled background on right-hand side of site.
+	background: @hex-crimson;	
     @media all and (max-width: @v-wdscrn-bckgrnd) {
 		background: @hex-crimson;
 	}
 	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
-		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga.jpg) right top auto 100% repeat-y fixed;
+		@media (max-height: 1080px) {
+			background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top repeat-y fixed;
+		}
+		@media (min-height: 1081px) {
+			background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top/auto 100% repeat-y fixed;
+		}
 	}
 	@media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
-		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga.jpg) right top auto 100% repeat-y fixed;
+		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top/auto 100% repeat-y fixed;
 	}
 	@media all and (min-width: (@v-wqxga-width+1)) {
-		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga.jpg) 1080px top auto 100% repeat-y fixed;
+		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) 1080px top/auto 100% repeat-y fixed;
 	}
 }
 
 main {
-	// TODO: figure out what to use as a page background texture, if anything
-	//background: @hex-white url(/wp-content/uploads/sites/907/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
 	background: @hex-white;
 }
 
-// TODO: decide whether to keep the binder shadow
 #binder {
 	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) {
-		border-right: 1px solid rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.5);
+//		border-right: 1px solid rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.5);
 		box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), green(@hex-darkest-gray), blue(@hex-darkest-gray), 0.5);
 	}
 }
@@ -215,10 +215,10 @@ div.column ul.niloa-portal {
 			top: 0;
 			left: 50%;
 			& > div.initial {
-				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans.png) no-repeat scroll center center;
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans-v2.png) no-repeat scroll center center;
 			}
 			& > div.revealed {
-				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans_highlighted.png) no-repeat scroll center center;
+				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans_highlighted-v2.png) no-repeat scroll center center;
 			}
 		}
 		&:nth-child(3) {
