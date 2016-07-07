@@ -4056,17 +4056,17 @@ body {
 }
 @media all and (min-width: 1441px) and (max-width: 1920px) {
   body {
-    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga.jpg) right top auto 100% repeat-y fixed;
+    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v3.jpg) right top / auto 100% repeat-y fixed;
   }
 }
 @media all and (min-width: 1921px) and (max-width: 2560px) {
   body {
-    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga.jpg) right top auto 100% repeat-y fixed;
+    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v3.jpg) right top / auto 100% repeat-y fixed;
   }
 }
 @media all and (min-width: 2561px) {
   body {
-    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga.jpg) 1080px top auto 100% repeat-y fixed;
+    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v3.jpg) 1080px top / auto 100% repeat-y fixed;
   }
 }
 main {
