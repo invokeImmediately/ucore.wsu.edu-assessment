@@ -10,6 +10,7 @@ div.column h2,
 div.column h3,
 div.column h4,
 div.column,
+header.main-header,
 div.column,
 .gform_heading h3.gform_title {
   font-family: 'Open Sans', sans-serif;
@@ -4087,11 +4088,10 @@ main {
   background-position: right bottom;
   background-attachment: fixed;
 }
-/*header.main-header {
-	&:extend(.has-dflt-font);
-	background: #981e32 url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) repeat scroll left top;
-	color: #fff !important;
-}*/
+header.main-header {
+  background: #717171 url(/wp-content/uploads/sites/1304/2016/07/site-header_platinum-background.jpg) repeat scroll left top;
+  color: #fff !important;
+}
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
   color: #fff !important;
