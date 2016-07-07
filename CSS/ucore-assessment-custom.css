@@ -4054,7 +4054,12 @@ body {
     background: #981e32;
   }
 }
-@media all and (min-width: 1441px) and (max-width: 1920px) {
+@media all and (min-width: 1441px) and (max-width: 1920px) and (max-height: 1080px) {
+  body {
+    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top repeat-y fixed;
+  }
+}
+@media all and (min-width: 1441px) and (max-width: 1920px) and (min-height: 1081px) {
   body {
     background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top / auto 100% repeat-y fixed;
   }
