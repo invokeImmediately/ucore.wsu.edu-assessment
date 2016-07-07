@@ -4301,6 +4301,9 @@ div.column ul.niloa-portal > li:nth-child(5) > div.revealed,
 div.column ul.niloa-portal > li:nth-child(6) > div.revealed {
   background-size: 100% auto;
 }
+div.column ul.niloa-portal > li.hovered {
+  cursor: pointer;
+}
 div.column ul.niloa-portal > li.hovered > div.initial {
   opacity: 0;
   z-index: 9;
