@@ -4,18 +4,18 @@ body {
 	background: @hex-crimson;
 	
 	// TODO: Implement a more complex tiled background on right-hand side of site.
-    /*@media all and (max-width: @v-wdscrn-bckgrnd) {
+    @media all and (max-width: @v-wdscrn-bckgrnd) {
 		background: @hex-crimson;
 	}
 	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
-		background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wuxga.jpg) repeat-y fixed right top;
+		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga.jpg) right top auto 100% repeat-y fixed;
 	}
 	@media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
-		background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed right top;
+		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga.jpg) right top auto 100% repeat-y fixed;
 	}
 	@media all and (min-width: (@v-wqxga-width+1)) {
-		background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed 1080px top;
-	}*/
+		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga.jpg) 1080px top auto 100% repeat-y fixed;
+	}
 }
 
 main {
@@ -25,12 +25,12 @@ main {
 }
 
 // TODO: decide whether to keep the binder shadow
-/*#binder {
+#binder {
 	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) {
 		border-right: 1px solid rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.5);
 		box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), green(@hex-darkest-gray), blue(@hex-darkest-gray), 0.5);
 	}
-}*/
+}
 
 #jacket {
 	background-repeat: no-repeat;
@@ -144,7 +144,6 @@ div.column ul:not(.niloa-portal) {
 //     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 //
 
-// TODO: Code CSS for transparency framework portal
 div.column ul.niloa-portal {
 	position: relative;
 	width: 100%;
