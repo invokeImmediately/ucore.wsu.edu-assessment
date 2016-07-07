@@ -4074,7 +4074,6 @@ main {
 }
 @media all and (min-width: 1441px) {
   #binder {
-    border-right: 1px solid rgba(0, 0, 0, 0.5);
     box-shadow: 5px 0 5px rgba(42, 48, 51, 0.5);
   }
 }
