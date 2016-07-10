@@ -543,15 +543,26 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
         var scalingAmount = scalingFactor || 1,
             settings = $.extend({
                 "minFontSize" : Number.NEGATIVE_INFINITY,
-                "maxFontSize" : Number.POSITIVE_INFINITY
+                "maxFontSize" : Number.POSITIVE_INFINITY,
+				"againstSelf" : true
             }, options);
         return this.each(function () {
             var $this = $(this);
+			var $parent = undefined;
+			if(settings.measuredBy = "parent") {
+				$parent = $this.parents("div.column").first();
+			}
           
             // Resizer() keeps font-size proportional to object width as constrainted by the user
             var resizer = function () {
-                $this.css("font-size", Math.max(Math.min($this.width() / (scalingAmount*10),
-                    parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+				if(!settings.againstSelf) {
+					$this.css("font-size", Math.max(Math.min($parent.innerWidth() / (scalingAmount*10),
+						parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+				}
+				else {
+					$this.css("font-size", Math.max(Math.min($this.width() / (scalingAmount*10),
+						parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+				}
             };
           
             // Call once to set the object's font size based on current window size, then call as
@@ -577,9 +588,17 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
 		var $fittedElems = $(".auto-fits-text");
 		$fittedElems.each(function() {
 			var $this = $(this);
+			var $parent = $this.parents("div.column").first();
 			var fontSz = $this.css("font-size");
-			var scalingAmt = clmnWidth / (fontSz * 10);
-			$this.textResize(scalingAmt, {"minFontSize" : "10.7"})
+			var maxWidth = $parent.css("max-width");
+			var scalingAmt;
+			if (maxWidth == "none") {
+				scalingAmt = clmnWidth / (parseFloat(fontSz) * 10);
+			}
+			else {
+				scalingAmt = parseFloat(maxWidth) / (parseFloat(fontSz) * 10);
+			}
+			$this.textResize(scalingAmt, {"minFontSize" : "10.7px", "againstSelf" : 0})
 		});
     });
 })(jQuery);
