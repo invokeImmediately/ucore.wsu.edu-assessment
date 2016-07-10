@@ -547,6 +547,7 @@ section.halves div.column p:not([class*="center"]) {
 @media (min-width: 792px) and (max-width: 989px) {
   section.single.large-format-friendly div.column.one,
   section.row.single.large-format-friendly div.column.one {
+    float: none;
     margin-right: auto;
     margin-left: auto;
     max-width: 800px;
@@ -4310,4 +4311,43 @@ div.column ul.niloa-portal > li.hovered > div.initial {
   -webkit-transition: opacity 0.25s linear, z-index 0.25s step-end;
   -moz-transition: opacity 0.25s linear, z-index 0.25s step-end;
   transition: opacity 0.25s linear, z-index 0.25s step-end;
+}
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### TABLE STYLES ########################################################################## ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+table.assessment-planning > thead > tr > th {
+  background-color: #8a8f90;
+  color: #ffffff;
+}
+table.assessment-planning > tbody > tr > td {
+  background-color: #cfd2d2;
+}
+table.assessment-planning > tbody > tr > td:first-child {
+  background-color: #b1b5b5;
+}
+table.assessment-planning > tbody > tr:nth-child(even) {
+  background-color: #c6c2c6;
+}
+table.assessment-planning > tbody > tr:nth-child(even):first-child {
+  background-color: #a9a4a9;
+}
+table.assessment-evidence > thead > tr > th {
+  background-color: #8a8f90;
+  color: #8a8f90;
+}
+table.assessment-evidence > tbody > tr > td {
+  background-color: #8a8f90;
+}
+table.assessment-evidence > tbody > tr > td:first-child {
+  background-color: #8a8f90;
+}
+table.assessment-evidence > tbody > tr:nth-child(even) {
+  background-color: #8a8f90;
+}
+table.assessment-evidence > tbody > tr:nth-child(even):first-child {
+  background-color: #8a8f90;
 }
