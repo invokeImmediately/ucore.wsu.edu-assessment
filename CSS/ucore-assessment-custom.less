@@ -39,14 +39,14 @@ main {
 }
 
 // TODO: come up with a main header for the site
-/*header.main-header {
+header.main-header {
 	&:extend(.has-dflt-font);
-	background: #981e32 url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) repeat scroll left top;
-	color: #fff !important;
-}*/
+	background: #717171 url(/wp-content/uploads/sites/1304/2016/07/site-header_platinum-background.jpg) repeat scroll left top;
+	color: @hex-white !important;
+}
 
 .main-header sub:not(.unset), .main-header sup:not(.unset) {
-	color: #fff !important;
+	color: @hex-white !important;
 }
 
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
@@ -143,7 +143,6 @@ div.column ul:not(.niloa-portal) {
 //     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 //     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 //
-
 div.column ul.niloa-portal {
 	position: relative;
 	width: 100%;
@@ -215,10 +214,10 @@ div.column ul.niloa-portal {
 			top: 0;
 			left: 50%;
 			& > div.initial {
-				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans-v2.png) no-repeat scroll center center;
+				background: transparent url(/wp-content/uploads/sites/1304/2016/07/panel_assessment-plans-v2.png) no-repeat scroll center center;
 			}
 			& > div.revealed {
-				background: transparent url(/wp-content/uploads/sites/1304/2016/06/panel_assessment-plans_highlighted-v2.png) no-repeat scroll center center;
+				background: transparent url(/wp-content/uploads/sites/1304/2016/07/panel_assessment-plans_highlighted-v2.png) no-repeat scroll center center;
 			}
 		}
 		&:nth-child(3) {
@@ -273,6 +272,7 @@ div.column ul.niloa-portal {
 			}
 		}
 		&.hovered {
+			cursor: pointer;
 			& > div.initial {
 				opacity: 0;
 				z-index: 9;
@@ -281,3 +281,61 @@ div.column ul.niloa-portal {
 		}
 	}
 }
+
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### TABLE STYLES ########################################################################## ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+@tbl-elem-slctrs: ~"table.assessment-planning", ~"table.assessment-evidence";
+@tbl-header-clrs: #8a8f90 #8a8f90;
+@tbl-header-txt-clrs: #ffffff #8a8f90;
+@tbl-col1-clrs: #b1b5b5 #8a8f90;
+@tbl-col1-alt-clrs: #a9a4a9 #8a8f90;
+@tbl-row-clrs: #cfd2d2 #8a8f90;
+@tbl-row-alt-clrs: #c6c2c6 #8a8f90;
+// Sub table alternate row color: #e3e5e5
+
+@niloa-table-rules: {
+	thead > tr > th {
+		background-color: inherit;
+	}
+	tbody > tr > td {
+		background-color: inherit;
+	}
+};
+.apply-ruleset-to-selector-list(@tbl-elem-slctrs, @niloa-table-rules);
+
+.create-table-clr-classes(@i: 1) when(@i <= length(@tbl-elem-slctrs)) {
+	@slctr: extract(@tbl-elem-slctrs, @i);
+	@{slctr} {
+		& > thead {
+			& > tr {
+				& > th {
+					background-color: extract(@tbl-header-clrs, @i);
+					color: extract(@tbl-header-txt-clrs, @i);
+				}
+			}
+		}
+		& > tbody {
+			& > tr {
+				& > td {
+					background-color: extract(@tbl-row-clrs, @i);
+					&:first-child {
+						background-color: extract(@tbl-col1-clrs, @i);
+					}
+				}
+				&:nth-child(even) {
+					background-color: extract(@tbl-row-alt-clrs, @i);
+					&:first-child {
+						background-color: extract(@tbl-col1-alt-clrs, @i);
+					}
+				}
+			}
+		}
+	}
+	.create-table-clr-classes((@i + 1));
+}
+.create-table-clr-classes();
