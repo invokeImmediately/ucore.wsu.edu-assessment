@@ -4368,23 +4368,78 @@ div.column ul.niloa-portal > li.hovered > div.initial {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-table.assessment-planning thead > tr > th,
-table.assessment-evidence thead > tr > th {
-  background-color: inherit;
+@media all {
+  table.assessment-planning thead > tr > th,
+  table.assessment-evidence thead > tr > th {
+    line-height: 1.375em;
+  }
 }
-table.assessment-planning tbody > tr > td,
-table.assessment-evidence tbody > tr > td {
-  background-color: inherit;
+@media all and (min-width: 1050px) {
+  table.assessment-planning thead > tr > th,
+  table.assessment-evidence thead > tr > th {
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 1049px) {
+  table.assessment-planning thead > tr > th,
+  table.assessment-evidence thead > tr > th {
+    font-size: 0.92195445em;
+  }
+}
+@media all and (max-width: 480px) {
+  table.assessment-planning thead > tr > th,
+  table.assessment-evidence thead > tr > th {
+    font-size: 0.85000001em;
+    text-align: left;
+  }
+}
+@media all {
+  table.assessment-planning tbody > tr > td,
+  table.assessment-evidence tbody > tr > td {
+    line-height: 1.375em;
+  }
+}
+@media all and (min-width: 1050px) {
+  table.assessment-planning tbody > tr > td,
+  table.assessment-evidence tbody > tr > td {
+    font-size: 0.88em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 1049px) {
+  table.assessment-planning tbody > tr > td,
+  table.assessment-evidence tbody > tr > td {
+    font-size: 0.81131992em;
+  }
+}
+@media all and (max-width: 480px) {
+  table.assessment-planning tbody > tr > td,
+  table.assessment-evidence tbody > tr > td {
+    font-size: 0.74800001em;
+    text-align: left;
+  }
 }
 table.assessment-planning > thead > tr > th {
   background-color: #8a8f90;
   color: #ffffff;
 }
+table.assessment-planning > thead > tr > th:not(:last-child) {
+  border-right: #3f4242;
+}
+table.assessment-planning > thead > tr > th:not(:first-child) {
+  border-left: #d9dada;
+}
 table.assessment-planning > tbody > tr > td {
   background-color: #cfd2d2;
 }
+table.assessment-planning > tbody > tr > td:not(:last-child) {
+  border-right: #808888;
+}
+table.assessment-planning > tbody > tr > td:not(:first-child) {
+  border-left: #ffffff;
+}
 table.assessment-planning > tbody > tr > td:first-child {
   background-color: #b1b5b5;
+  border-right: #646969;
 }
 table.assessment-planning > tbody > tr:nth-child(even) > td {
   background-color: #c6c2c6;
@@ -4396,11 +4451,24 @@ table.assessment-evidence > thead > tr > th {
   background-color: #8a8f90;
   color: #8a8f90;
 }
+table.assessment-evidence > thead > tr > th:not(:last-child) {
+  border-right: #3f4242;
+}
+table.assessment-evidence > thead > tr > th:not(:first-child) {
+  border-left: #d9dada;
+}
 table.assessment-evidence > tbody > tr > td {
   background-color: #8a8f90;
 }
+table.assessment-evidence > tbody > tr > td:not(:last-child) {
+  border-right: #3f4242;
+}
+table.assessment-evidence > tbody > tr > td:not(:first-child) {
+  border-left: #d9dada;
+}
 table.assessment-evidence > tbody > tr > td:first-child {
   background-color: #8a8f90;
+  border-right: #3f4242;
 }
 table.assessment-evidence > tbody > tr:nth-child(even) > td {
   background-color: #8a8f90;
