@@ -657,24 +657,24 @@ main section.row > div.column > article > div.article-body > section > ol:not(.n
 main section.row > div.column > section > section > ol:not(.no-btm-margin) {
   margin-bottom: 1em;
 }
-main section.row:last-child > div.column > p:not(.no-btm-margin),
-main section.row:last-child > div.column > article > div.article-body > p:not(.no-btm-margin),
-main section.row:last-child > div.column > section > p:not(.no-btm-margin),
-main section.row:last-child > div.column > section > p:not(.no-btm-margin),
-main section.row:last-child > div.column > article > div.article-body > section > p:not(.no-btm-margin),
-main section.row:last-child > div.column > section > section > p:not(.no-btm-margin),
-main section.row:last-child > div.column > ul:not(.no-btm-margin),
-main section.row:last-child > div.column > article > div.article-body > ul:not(.no-btm-margin),
-main section.row:last-child > div.column > section > ul:not(.no-btm-margin),
-main section.row:last-child > div.column > section > ul:not(.no-btm-margin),
-main section.row:last-child > div.column > article > div.article-body > section > ul:not(.no-btm-margin),
-main section.row:last-child > div.column > section > section > ul:not(.no-btm-margin),
-main section.row:last-child > div.column > ol:not(.no-btm-margin),
-main section.row:last-child > div.column > article > div.article-body > ol:not(.no-btm-margin),
-main section.row:last-child > div.column > section > ol:not(.no-btm-margin),
-main section.row:last-child > div.column > section > ol:not(.no-btm-margin),
-main section.row:last-child > div.column > article > div.article-body > section > ol:not(.no-btm-margin),
-main section.row:last-child > div.column > section > section > ol:not(.no-btm-margin) {
+main section.row:last-child > div.column > p:last-child,
+main section.row:last-child > div.column > article > div.article-body > p:last-child,
+main section.row:last-child > div.column > section > p:last-child,
+main section.row:last-child > div.column > section > p:last-child,
+main section.row:last-child > div.column > article > div.article-body > section > p:last-child,
+main section.row:last-child > div.column > section > section > p:last-child,
+main section.row:last-child > div.column > ul:last-child,
+main section.row:last-child > div.column > article > div.article-body > ul:last-child,
+main section.row:last-child > div.column > section > ul:last-child,
+main section.row:last-child > div.column > section > ul:last-child,
+main section.row:last-child > div.column > article > div.article-body > section > ul:last-child,
+main section.row:last-child > div.column > section > section > ul:last-child,
+main section.row:last-child > div.column > ol:last-child,
+main section.row:last-child > div.column > article > div.article-body > ol:last-child,
+main section.row:last-child > div.column > section > ol:last-child,
+main section.row:last-child > div.column > section > ol:last-child,
+main section.row:last-child > div.column > article > div.article-body > section > ol:last-child,
+main section.row:last-child > div.column > section > section > ol:last-child {
   margin-bottom: 0;
 }
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
