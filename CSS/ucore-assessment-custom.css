@@ -1561,7 +1561,7 @@ div.column .has-smaller-text {
     max-width: 792px;
   }
 }
-main > section.row:last-child > div.column > *:last-child:not(.no-bottom-pad) {
+main > div.page > section.row:last-child > div.column > *:last-child:not(.no-bottom-pad) {
   padding-bottom: 2rem;
 }
 /*         └-----------------------------------------------------------------------------------------┘        
@@ -4337,10 +4337,10 @@ table.assessment-planning > tbody > tr > td {
 table.assessment-planning > tbody > tr > td:first-child {
   background-color: #b1b5b5;
 }
-table.assessment-planning > tbody > tr:nth-child(even) {
+table.assessment-planning > tbody > tr:nth-child(even) > td {
   background-color: #c6c2c6;
 }
-table.assessment-planning > tbody > tr:nth-child(even):first-child {
+table.assessment-planning > tbody > tr:nth-child(even) > td:first-child {
   background-color: #a9a4a9;
 }
 table.assessment-evidence > thead > tr > th {
@@ -4353,9 +4353,9 @@ table.assessment-evidence > tbody > tr > td {
 table.assessment-evidence > tbody > tr > td:first-child {
   background-color: #8a8f90;
 }
-table.assessment-evidence > tbody > tr:nth-child(even) {
+table.assessment-evidence > tbody > tr:nth-child(even) > td {
   background-color: #8a8f90;
 }
-table.assessment-evidence > tbody > tr:nth-child(even):first-child {
+table.assessment-evidence > tbody > tr:nth-child(even) > td:first-child {
   background-color: #8a8f90;
 }
