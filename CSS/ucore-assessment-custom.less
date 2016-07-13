@@ -292,18 +292,53 @@ div.column ul.niloa-portal {
 @tbl-elem-slctrs: ~"table.assessment-planning", ~"table.assessment-evidence";
 @tbl-header-clrs: #8a8f90 #8a8f90;
 @tbl-header-txt-clrs: #ffffff #8a8f90;
-@tbl-col1-clrs: #b1b5b5 #8a8f90;
-@tbl-col1-alt-clrs: #a9a4a9 #8a8f90;
-@tbl-row-clrs: #cfd2d2 #8a8f90;
-@tbl-row-alt-clrs: #c6c2c6 #8a8f90;
+@tbl-col1-clrs: lighten(#b1b5b5, 5%) #8a8f90;
+@tbl-col1-alt-clrs: lighten(#a9a4a9, 5%) #8a8f90;
+@tbl-row-clrs: lighten(#cfd2d2, 5%) #8a8f90;
+@tbl-row-alt-clrs: lighten(#c6c2c6, 5%) #8a8f90;
 // Sub table alternate row color: #e3e5e5
 
 @niloa-table-rules: {
+	border-collapse: separate;
+	border-spacing: 0;
 	thead > tr > th {
-		background-color: inherit;
+        @media all {
+			padding-right: 0.5em;
+			padding-left: 0.5em;
+            line-height: @v-p-lnhght;
+            @media (min-width: @v-lrgfrmt-thrshld) {
+                font-size: (@v-p-sz);
+            }
+            @media (min-width: (@v-mbl-thrshld + 1)) and (max-width: (@v-lrgfrmt-thrshld - 1)) {
+                font-size: (@v-p-sz * @v-scl-dwn);
+            }
+            @media (max-width: @v-mbl-thrshld) {
+                font-size: (@v-p-sz * @v-scl-dwn * @v-scl-dwn);
+                text-align: left;
+            }
+        }
 	}
 	tbody > tr > td {
-		background-color: inherit;
+        @media all {
+			&:not(.no-padding) {
+				padding-right: 0.5em;
+				padding-left: 0.5em;
+			}
+            line-height: @v-p-lnhght;
+            @media (min-width: @v-lrgfrmt-thrshld) {
+                font-size: (@v-p-sz * 0.88);
+            }
+            @media (min-width: (@v-mbl-thrshld + 1)) and (max-width: (@v-lrgfrmt-thrshld - 1)) {
+                font-size: (@v-p-sz * @v-scl-dwn * 0.88);
+            }
+            @media (max-width: @v-mbl-thrshld) {
+                font-size: (@v-p-sz * @v-scl-dwn * @v-scl-dwn * 0.88);
+                text-align: left;
+            }
+			&.no-padding {
+				padding: 0;
+			}
+        }
 	}
 };
 .apply-ruleset-to-selector-list(@tbl-elem-slctrs, @niloa-table-rules);
@@ -316,6 +351,14 @@ div.column ul.niloa-portal {
 				& > th {
 					background-color: extract(@tbl-header-clrs, @i);
 					color: extract(@tbl-header-txt-clrs, @i);
+					border-bottom: 1px solid saturate(darken(extract(@tbl-header-clrs, @i), 30%), 5%);
+					&:not(:last-child) {
+						border-right: 1px solid darken(extract(@tbl-header-clrs, @i), 30%);
+					}
+					&:not(:first-child) {
+						border-top: 1px solid saturate(lighten(extract(@tbl-header-clrs, @i), 5%), 5%);
+						border-left: 1px solid lighten(extract(@tbl-header-clrs, @i), 5%);
+					}
 				}
 			}
 		}
@@ -323,14 +366,45 @@ div.column ul.niloa-portal {
 			& > tr {
 				& > td {
 					background-color: extract(@tbl-row-clrs, @i);
+					&:not(:last-child) {
+						border-right: 1px solid darken(extract(@tbl-row-clrs, @i), 30%);
+					}
+					&:not(:first-child) {
+						border-left: 1px solid lighten(extract(@tbl-row-clrs, @i), 5%);
+					}
 					&:first-child {
 						background-color: extract(@tbl-col1-clrs, @i);
+						border-right: 1px solid darken(extract(@tbl-col1-clrs, @i), 30%);
+						font-weight: bold;
 					}
 				}
-				&:nth-child(even) {
+				&:nth-child(even) > td {
 					background-color: extract(@tbl-row-alt-clrs, @i);
+					&:not(:last-child) {
+						border-right: 1px solid darken(extract(@tbl-row-alt-clrs, @i), 30%);
+					}
+					&:not(:first-child) {
+						border-left: 1px solid lighten(extract(@tbl-row-alt-clrs, @i), 5%);
+					}
 					&:first-child {
 						background-color: extract(@tbl-col1-alt-clrs, @i);
+						border-right: 1px solid darken(extract(@tbl-col1-alt-clrs, @i), 30%);
+					}
+				}
+				&:not(:first-child) {
+					& > td {
+						border-top: 1px solid saturate(lighten(extract(@tbl-row-clrs, @i), 5%), 5%);
+					}
+					&:nth-child(even) > td {
+						border-top: 1px solid saturate(lighten(extract(@tbl-row-alt-clrs, @i), 5%), 5%);
+					}
+				}
+				&:not(:last-child) {
+					& > td {
+						border-bottom: 1px solid saturate(darken(extract(@tbl-row-clrs, @i), 30%), 5%);
+					}
+					&:nth-child(even) > td {
+						border-bottom: 1px solid saturate(darken(extract(@tbl-row-alt-clrs, @i), 30%), 5%);
 					}
 				}
 			}
@@ -339,3 +413,31 @@ div.column ul.niloa-portal {
 	.create-table-clr-classes((@i + 1));
 }
 .create-table-clr-classes();
+
+table.assessment-planning > tbody > tr {
+	& > td > table.sub-planning > tbody > tr {
+		& > td {
+			background-color: extract(@tbl-row-clrs, 1);
+			font-size: 1em;
+		}
+		&:nth-child(even) > td {
+			background-color: lighten(#e3e5e5, 5%);
+		}
+		&:not(:first-child) {
+			& > td {
+				border-top: 1px solid saturate(lighten(lighten(#e3e5e5, 5%), 5%), 5%);
+			}
+			&:nth-child(even) > td {
+				border-top: 1px solid saturate(lighten(lighten(#e3e5e5, 5%), 5%), 5%);
+			}
+		}
+		&:not(:last-child) {
+			& > td {
+				border-bottom: 1px solid saturate(darken(lighten(#e3e5e5, 5%), 30%), 5%);
+			}
+			&:nth-child(even) > td {
+				border-bottom: 1px solid saturate(darken(lighten(#e3e5e5, 5%), 30%), 5%);
+			}
+		}
+	}
+}
