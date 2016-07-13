@@ -4446,6 +4446,18 @@ table.assessment-planning > thead > tr > th:not(:first-child) {
   border-top: 1px solid #929fa1;
   border-left: 1px solid #979c9c;
 }
+table.assessment-planning > thead > tr:first-child > th:nth-child(4n + 1) {
+  width: 20.92391304%;
+}
+table.assessment-planning > thead > tr:first-child > th:nth-child(4n + 2) {
+  width: 23.77717391%;
+}
+table.assessment-planning > thead > tr:first-child > th:nth-child(4n + 3) {
+  width: 21.60326087%;
+}
+table.assessment-planning > thead > tr:first-child > th:nth-child(4n) {
+  width: 33.69565218%;
+}
 table.assessment-planning > tbody > tr > td {
   background-color: #dcdede;
 }
@@ -4496,6 +4508,18 @@ table.assessment-evidence > thead > tr > th:not(:last-child) {
 table.assessment-evidence > thead > tr > th:not(:first-child) {
   border-top: 1px solid #929fa1;
   border-left: 1px solid #979c9c;
+}
+table.assessment-evidence > thead > tr:first-child > th:nth-child(4n + 1) {
+  width: 20.92391304%;
+}
+table.assessment-evidence > thead > tr:first-child > th:nth-child(4n + 2) {
+  width: 23.77717391%;
+}
+table.assessment-evidence > thead > tr:first-child > th:nth-child(4n + 3) {
+  width: 21.60326087%;
+}
+table.assessment-evidence > thead > tr:first-child > th:nth-child(4n) {
+  width: 33.69565218%;
 }
 table.assessment-evidence > tbody > tr > td {
   background-color: #8a8f90;
