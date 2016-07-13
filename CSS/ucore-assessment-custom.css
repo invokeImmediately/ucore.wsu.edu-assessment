@@ -4368,9 +4368,16 @@ div.column ul.niloa-portal > li.hovered > div.initial {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
+table.assessment-planning,
+table.assessment-evidence {
+  border-collapse: separate;
+  border-spacing: 0;
+}
 @media all {
   table.assessment-planning thead > tr > th,
   table.assessment-evidence thead > tr > th {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
     line-height: 1.375em;
   }
 }
@@ -4398,6 +4405,15 @@ div.column ul.niloa-portal > li.hovered > div.initial {
   table.assessment-evidence tbody > tr > td {
     line-height: 1.375em;
   }
+  table.assessment-planning tbody > tr > td:not(.no-padding),
+  table.assessment-evidence tbody > tr > td:not(.no-padding) {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+  table.assessment-planning tbody > tr > td.no-padding,
+  table.assessment-evidence tbody > tr > td.no-padding {
+    padding: 0;
+  }
 }
 @media all and (min-width: 1050px) {
   table.assessment-planning tbody > tr > td,
@@ -4421,58 +4437,121 @@ div.column ul.niloa-portal > li.hovered > div.initial {
 table.assessment-planning > thead > tr > th {
   background-color: #8a8f90;
   color: #ffffff;
+  border-bottom: 1px solid #3c4445;
 }
 table.assessment-planning > thead > tr > th:not(:last-child) {
-  border-right: #3f4242;
+  border-right: 1px solid #3f4242;
 }
 table.assessment-planning > thead > tr > th:not(:first-child) {
-  border-left: #d9dada;
+  border-top: 1px solid #929fa1;
+  border-left: 1px solid #979c9c;
 }
 table.assessment-planning > tbody > tr > td {
-  background-color: #cfd2d2;
+  background-color: #dcdede;
 }
 table.assessment-planning > tbody > tr > td:not(:last-child) {
-  border-right: #808888;
+  border-right: 1px solid #8d9494;
 }
 table.assessment-planning > tbody > tr > td:not(:first-child) {
-  border-left: #ffffff;
+  border-left: 1px solid #e9ebeb;
 }
 table.assessment-planning > tbody > tr > td:first-child {
-  background-color: #b1b5b5;
-  border-right: #646969;
+  background-color: #bec1c1;
+  border-right: 1px solid #707676;
+  font-weight: bold;
 }
 table.assessment-planning > tbody > tr:nth-child(even) > td {
-  background-color: #c6c2c6;
+  background-color: #d2cfd2;
+}
+table.assessment-planning > tbody > tr:nth-child(even) > td:not(:last-child) {
+  border-right: 1px solid #888088;
+}
+table.assessment-planning > tbody > tr:nth-child(even) > td:not(:first-child) {
+  border-left: 1px solid #dfdcdf;
 }
 table.assessment-planning > tbody > tr:nth-child(even) > td:first-child {
-  background-color: #a9a4a9;
+  background-color: #b5b1b5;
+  border-right: 1px solid #6a646a;
+}
+table.assessment-planning > tbody > tr:not(:first-child) > td {
+  border-top: 1px solid #e8ecec;
+}
+table.assessment-planning > tbody > tr:not(:first-child):nth-child(even) > td {
+  border-top: 1px solid #e0dbe0;
+}
+table.assessment-planning > tbody > tr:not(:last-child) > td {
+  border-bottom: 1px solid #889a9a;
+}
+table.assessment-planning > tbody > tr:not(:last-child):nth-child(even) > td {
+  border-bottom: 1px solid #8f7a8f;
 }
 table.assessment-evidence > thead > tr > th {
   background-color: #8a8f90;
   color: #8a8f90;
+  border-bottom: 1px solid #3c4445;
 }
 table.assessment-evidence > thead > tr > th:not(:last-child) {
-  border-right: #3f4242;
+  border-right: 1px solid #3f4242;
 }
 table.assessment-evidence > thead > tr > th:not(:first-child) {
-  border-left: #d9dada;
+  border-top: 1px solid #929fa1;
+  border-left: 1px solid #979c9c;
 }
 table.assessment-evidence > tbody > tr > td {
   background-color: #8a8f90;
 }
 table.assessment-evidence > tbody > tr > td:not(:last-child) {
-  border-right: #3f4242;
+  border-right: 1px solid #3f4242;
 }
 table.assessment-evidence > tbody > tr > td:not(:first-child) {
-  border-left: #d9dada;
+  border-left: 1px solid #979c9c;
 }
 table.assessment-evidence > tbody > tr > td:first-child {
   background-color: #8a8f90;
-  border-right: #3f4242;
+  border-right: 1px solid #3f4242;
+  font-weight: bold;
 }
 table.assessment-evidence > tbody > tr:nth-child(even) > td {
   background-color: #8a8f90;
 }
+table.assessment-evidence > tbody > tr:nth-child(even) > td:not(:last-child) {
+  border-right: 1px solid #3f4242;
+}
+table.assessment-evidence > tbody > tr:nth-child(even) > td:not(:first-child) {
+  border-left: 1px solid #979c9c;
+}
 table.assessment-evidence > tbody > tr:nth-child(even) > td:first-child {
   background-color: #8a8f90;
+  border-right: 1px solid #3f4242;
+}
+table.assessment-evidence > tbody > tr:not(:first-child) > td {
+  border-top: 1px solid #929fa1;
+}
+table.assessment-evidence > tbody > tr:not(:first-child):nth-child(even) > td {
+  border-top: 1px solid #929fa1;
+}
+table.assessment-evidence > tbody > tr:not(:last-child) > td {
+  border-bottom: 1px solid #3c4445;
+}
+table.assessment-evidence > tbody > tr:not(:last-child):nth-child(even) > td {
+  border-bottom: 1px solid #3c4445;
+}
+table.assessment-planning > tbody > tr > td > table.sub-planning > tbody > tr > td {
+  background-color: #dcdede;
+  font-size: 1em;
+}
+table.assessment-planning > tbody > tr > td > table.sub-planning > tbody > tr:nth-child(even) > td {
+  background-color: #f0f1f1;
+}
+table.assessment-planning > tbody > tr > td > table.sub-planning > tbody > tr:not(:first-child) > td {
+  border-top: 1px solid #fdfefe;
+}
+table.assessment-planning > tbody > tr > td > table.sub-planning > tbody > tr:not(:first-child):nth-child(even) > td {
+  border-top: 1px solid #fdfefe;
+}
+table.assessment-planning > tbody > tr > td > table.sub-planning > tbody > tr:not(:last-child) > td {
+  border-bottom: 1px solid #9cacac;
+}
+table.assessment-planning > tbody > tr > td > table.sub-planning > tbody > tr:not(:last-child):nth-child(even) > td {
+  border-bottom: 1px solid #9cacac;
 }
