@@ -290,6 +290,7 @@ div.column ul.niloa-portal {
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 @tbl-elem-slctrs: ~"table.assessment-planning", ~"table.assessment-evidence";
+@tbl-col-wdths: 20.92391304% 23.77717391% 21.60326087% 33.69565218%, 20.92391304% 23.77717391% 21.60326087% 33.69565218%;
 @tbl-header-clrs: #8a8f90 #8a8f90;
 @tbl-header-txt-clrs: #ffffff #8a8f90;
 @tbl-col1-clrs: lighten(#b1b5b5, 5%) #8a8f90;
@@ -358,6 +359,20 @@ div.column ul.niloa-portal {
 					&:not(:first-child) {
 						border-top: 1px solid saturate(lighten(extract(@tbl-header-clrs, @i), 5%), 5%);
 						border-left: 1px solid lighten(extract(@tbl-header-clrs, @i), 5%);
+					}
+				}
+				&:first-child > th {
+					&:nth-child(4n + 1) {
+						width: extract(extract(@tbl-col-wdths, @i), 1);
+					}
+					&:nth-child(4n + 2) {
+						width: extract(extract(@tbl-col-wdths, @i), 2);
+					}
+					&:nth-child(4n + 3) {
+						width: extract(extract(@tbl-col-wdths, @i), 3);
+					}
+					&:nth-child(4n) {
+						width: extract(extract(@tbl-col-wdths, @i), 4);
 					}
 				}
 			}
