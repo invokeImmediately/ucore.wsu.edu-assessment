@@ -4171,7 +4171,7 @@ div.article-header > div.content {
   transform: translateY(-50%);
 }
 div.article-header > div.content > h1 {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.35em;
   color: #fff;
   text-shadow: 0 0 18px #000;
 }
