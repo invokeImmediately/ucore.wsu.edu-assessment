@@ -4404,6 +4404,7 @@ div.column ul.niloa-portal > li.hovered > div.initial {
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.column > table,
+div.column > table.tablepress,
 table.assessment.planning,
 table.assessment.evidence,
 table.assessment.resources {
@@ -4413,6 +4414,7 @@ table.assessment.resources {
 }
 @media all {
   div.column > table thead > tr > th,
+  div.column > table.tablepress thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
@@ -4423,6 +4425,7 @@ table.assessment.resources {
 }
 @media all and (min-width: 1050px) {
   div.column > table thead > tr > th,
+  div.column > table.tablepress thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
@@ -4431,6 +4434,7 @@ table.assessment.resources {
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
   div.column > table thead > tr > th,
+  div.column > table.tablepress thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
@@ -4439,6 +4443,7 @@ table.assessment.resources {
 }
 @media all and (max-width: 480px) {
   div.column > table thead > tr > th,
+  div.column > table.tablepress thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
@@ -4448,12 +4453,14 @@ table.assessment.resources {
 }
 @media all {
   div.column > table tbody > tr > td,
+  div.column > table.tablepress tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
     line-height: 1.375em;
   }
   div.column > table tbody > tr > td:not(.no-padding),
+  div.column > table.tablepress tbody > tr > td:not(.no-padding),
   table.assessment.planning tbody > tr > td:not(.no-padding),
   table.assessment.evidence tbody > tr > td:not(.no-padding),
   table.assessment.resources tbody > tr > td:not(.no-padding) {
@@ -4461,6 +4468,7 @@ table.assessment.resources {
     padding-left: 0.5em;
   }
   div.column > table tbody > tr > td.no-padding,
+  div.column > table.tablepress tbody > tr > td.no-padding,
   table.assessment.planning tbody > tr > td.no-padding,
   table.assessment.evidence tbody > tr > td.no-padding,
   table.assessment.resources tbody > tr > td.no-padding {
@@ -4469,6 +4477,7 @@ table.assessment.resources {
 }
 @media all and (min-width: 1050px) {
   div.column > table tbody > tr > td,
+  div.column > table.tablepress tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
@@ -4477,6 +4486,7 @@ table.assessment.resources {
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
   div.column > table tbody > tr > td,
+  div.column > table.tablepress tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
@@ -4485,6 +4495,7 @@ table.assessment.resources {
 }
 @media all and (max-width: 480px) {
   div.column > table tbody > tr > td,
+  div.column > table.tablepress tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
@@ -4541,6 +4552,57 @@ div.column > table > tbody > tr:not(:last-child) > td {
   border-bottom: 1px solid #89b7bf;
 }
 div.column > table > tbody > tr:not(:last-child):nth-child(even) > td {
+  border-bottom: 1px solid #70a5ad;
+}
+div.column > table.tablepress > thead > tr > th {
+  background-color: #2f5055;
+  color: #fff;
+  border-bottom: 1px solid #000000;
+}
+div.column > table.tablepress > thead > tr > th:not(:last-child) {
+  border-right: 1px solid #000000;
+}
+div.column > table.tablepress > thead > tr > th:not(:first-child) {
+  border-top: 1px solid #346269;
+  border-left: 1px solid #385f65;
+}
+div.column > table.tablepress > tbody > tr > td {
+  background-color: #edf3f4;
+}
+div.column > table.tablepress > tbody > tr > td:not(:last-child) {
+  border-right: 1px solid #8eb4ba;
+}
+div.column > table.tablepress > tbody > tr > td:not(:first-child) {
+  border-left: 1px solid #fdfefe;
+}
+div.column > table.tablepress > tbody > tr > td:first-child {
+  background-color: #d5ebef;
+  border-right: 1px solid #68b7c3;
+  font-weight: bold;
+}
+div.column > table.tablepress > tbody > tr:nth-child(even) > td {
+  background-color: #d3e1e3;
+}
+div.column > table.tablepress > tbody > tr:nth-child(even) > td:not(:last-child) {
+  border-right: 1px solid #76a1a7;
+}
+div.column > table.tablepress > tbody > tr:nth-child(even) > td:not(:first-child) {
+  border-left: 1px solid #e3eced;
+}
+div.column > table.tablepress > tbody > tr:nth-child(even) > td:first-child {
+  background-color: #bedbdf;
+  border-right: 1px solid #57a2ad;
+}
+div.column > table.tablepress > tbody > tr:not(:first-child) > td {
+  border-top: 1px solid #fdfefe;
+}
+div.column > table.tablepress > tbody > tr:not(:first-child):nth-child(even) > td {
+  border-top: 1px solid #e1ecee;
+}
+div.column > table.tablepress > tbody > tr:not(:last-child) > td {
+  border-bottom: 1px solid #89b7bf;
+}
+div.column > table.tablepress > tbody > tr:not(:last-child):nth-child(even) > td {
   border-bottom: 1px solid #70a5ad;
 }
 div.column table.gray > thead > tr > th {
