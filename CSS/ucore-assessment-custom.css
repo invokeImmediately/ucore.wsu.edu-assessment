@@ -4167,8 +4167,8 @@ section.row.single.article-header div.column > h1 {
   position: absolute;
   top: 50%;
   left: 2rem;
-  right: 2rem;
-  max-width: 540px;
+  right: 10%;
+  right: calc(10% + 2rem);
   margin-bottom: 0.35em;
   color: #fff;
   text-shadow: 0 0 18px #000;
@@ -4197,6 +4197,9 @@ section.row.single.article-header.assessment-planning div.column:before {
 section.row.single.article-header.assessment-resources div.column {
   background: #6c563f url(/wp-content/uploads/sites/1304/2016/07/header-background_assessment-resources.jpg) center center / 990px 230px no-repeat;
 }
+section.row.single.article-header.assessment-resources div.column > h1 {
+  right: calc(12.19178082% + 2rem);
+}
 section.row.single.article-header.assessment-resources div.column:before {
   width: 12.19178082%;
   padding-bottom: 9.62873599%;
@@ -4205,10 +4208,24 @@ section.row.single.article-header.assessment-resources div.column:before {
 section.row.single.article-header.assessment-evidence div.column {
   background: #8a8f90 url(/wp-content/uploads/sites/1304/2016/07/header-background_evidence-of-student-learning.jpg) center center / 990px 230px no-repeat;
 }
+section.row.single.article-header.assessment-evidence div.column > h1 {
+  right: calc(9.86301370% + 2rem);
+}
 section.row.single.article-header.assessment-evidence div.column:before {
   width: 9.86301370%;
   padding-bottom: 11.50684932%;
   background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_evidence-of-student-learning_with-shadow.png) center center / 100% auto no-repeat;
+}
+section.row.single.article-header.learning-goals div.column {
+  background: #9c7c58 url(/wp-content/uploads/sites/1304/2016/07/header-background_learning-outcomes.jpg) center center / 990px 230px no-repeat;
+}
+section.row.single.article-header.learning-goals div.column > h1 {
+  right: calc(9.86301370% + 2rem);
+}
+section.row.single.article-header.learning-goals div.column:before {
+  width: 9.86301370%;
+  padding-bottom: 11.57534247%;
+  background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_student-learning-outcome-statements_with-shadow.png) center center / 100% auto no-repeat;
 }
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
