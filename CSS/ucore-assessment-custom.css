@@ -4178,6 +4178,19 @@ section.row.single.article-header div.column > :not(h1) {
 section.row.single.article-header.assessment-planning div.column {
   background: #8a8f90 url(/wp-content/uploads/sites/1304/2016/07/header-background_assessment-planning-v2.jpg) center center / 990px 230px no-repeat;
 }
+section.row.single.article-header.assessment-planning div.column:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  width: 10%;
+  height: 0;
+  padding-bottom: 11.71232877%;
+  background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-plans.png) center center / 100% auto no-repeat;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 section.row.single.article-header.assessment-resources div.column {
   background: #6c563f url(/wp-content/uploads/sites/1304/2016/07/header-background_assessment-resources.jpg) center center / 990px 230px no-repeat;
 }
