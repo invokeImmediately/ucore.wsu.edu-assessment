@@ -4166,8 +4166,9 @@ section.row.single.article-header div.column {
 section.row.single.article-header div.column > h1 {
   position: absolute;
   top: 50%;
-  right: 2rem;
   left: 2rem;
+  right: 2rem;
+  max-width: 540px;
   margin-bottom: 0.35em;
   color: #fff;
   text-shadow: 0 0 18px #000;
