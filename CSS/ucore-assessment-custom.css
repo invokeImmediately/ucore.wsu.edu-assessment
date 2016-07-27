@@ -4954,14 +4954,14 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
   border-bottom: 1px solid #89b7bf;
 }
 .tablepress .row-hover tr:hover td {
-  background-color: #c9e8ed;
+  background-color: #d9eef1;
 }
 .tablepress .row-hover tr:hover td:first-child {
-  background-color: #b6e2e8;
+  background-color: #c5e7ec;
 }
 .tablepress .row-hover tr.odd:hover td {
-  background-color: #b4dae0;
+  background-color: #c2dfe3;
 }
 .tablepress .row-hover tr.odd:hover td:first-child {
-  background-color: #a3d5dd;
+  background-color: #b0d9df;
 }
