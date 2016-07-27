@@ -4201,6 +4201,14 @@ section.row.single.article-header.assessment-resources div.column:before {
   padding-bottom: 9.62873599%;
   background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-resources_with-shadow.png) center center / 100% auto no-repeat;
 }
+section.row.single.article-header.assessment-evidence div.column {
+  background: #8a8f90 url(/wp-content/uploads/sites/1304/2016/07/header-background_evidence-of-student-learning.jpg) center center / 990px 230px no-repeat;
+}
+section.row.single.article-header.assessment-evidence div.column:before {
+  width: 9.86301370%;
+  padding-bottom: 11.50684932%;
+  background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_evidence-of-student-learning_with-shadow.png) center center / 100% auto no-repeat;
+}
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
  *  ╠==============================================================================================╣
