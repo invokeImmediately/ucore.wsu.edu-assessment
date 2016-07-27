@@ -4965,3 +4965,8 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
 .tablepress .row-hover tr.odd:hover td:first-child {
   background-color: #b0d9df;
 }
+.tablepress .sorting {
+  -webkit-transition: all 0.3s easing;
+  -moz-transition: all 0.3s easing;
+  transition: all 0.3s easing;
+}
