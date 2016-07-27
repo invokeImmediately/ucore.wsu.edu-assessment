@@ -4153,12 +4153,15 @@ header.main-header {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
+section.row.single.article-header {
+  height: 230px;
+}
 section.row.single.article-header div.column {
   position: relative;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-  height: 230px;
+  height: 100%;
 }
 section.row.single.article-header div.column > h1 {
   position: absolute;
