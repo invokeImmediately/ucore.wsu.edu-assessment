@@ -2,7 +2,7 @@
 
 body {
 	background: @hex-crimson;	
-    @media all and (max-width: @v-wdscrn-bckgrnd) {
+	@media all and (max-width: @v-wdscrn-bckgrnd) {
 		background: @hex-crimson;
 	}
 	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
@@ -322,9 +322,9 @@ div.column ul.niloa-portal {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-@tbl-elem-slctrs: ~"table.assessment.planning", ~"table.assessment.evidence", ~"table.assessment.resources";
+@tbl-elem-slctrs: ~"div.column > table", ~"table.assessment.planning", ~"table.assessment.evidence", ~"table.assessment.resources";
 @tbl-col-wdths: auto auto 141px 231px, auto 50px 50px 50px 50px 50px 50px 50px, auto auto auto;
-@tbl-clr-classes: ~"table.assessment.blue", ~"table.assessment.gray", ~"table.assessment.burgundy",
+@tbl-clr-classes: ~"div.column > table", ~"div.column table.gray", ~"table.assessment.burgundy",
  ~"table.assessment.desaturated-orange";
 @tbl-header-clrs: @hex-darker-blue #8a8f90 #610013 #6c563f;
 @tbl-header-txt-clrs: @hex-white @hex-white @hex-white @hex-white;
@@ -381,23 +381,85 @@ div.column ul.niloa-portal {
 };
 .apply-ruleset-to-selector-list(@tbl-elem-slctrs, @niloa-table-rules);
 
+/*.tablepress thead th {
+	background-color: #2f5055;
+	color: #fff;
+	border-bottom: 1px solid #000000;
+}
+
+.tablepress thead th:not(:last-child) {
+	border-right: 1px solid #000000;
+}
+
+.tablepress thead th:not(:first-child) {
+	border-top: 1px solid #346269;
+	border-left: 1px solid #385f65;
+}
+
+.tablepress tbody .even td {
+	background-color: #edf3f4;
+}
+
+.tablepress tbody .odd td {
+	background-color: #d3e1e3;
+}
+
+.tablepress tbody td:not(:last-child) {
+	border-right: 1px solid #8eb4ba;
+}
+
+.tablepress tbody td:not(:first-child) {
+	border-left: 1px solid #fdfefe;
+}
+
+.tablepress tbody .even td:first-child {
+	background-color: #d5ebef;
+	border-right: 1px solid #68b7c3;
+	font-weight: bold;
+}
+
+.tablepress tbody .odd td:not(:last-child) {
+	border-right: 1px solid #76a1a7;
+}
+
+.tablepress tbody .odd td:not(:first-child) {
+	border-left: 1px solid #e3eced;
+}
+
+.tablepress tbody .odd td:first-child {
+	background-color: #bedbdf;
+	border-right: 1px solid #57a2ad;
+}
+
+.tablepress tbody .even:not(:first-child) td {
+	border-top: 1px solid #fdfefe;
+}
+
+.tablepress tbody .odd td {
+	border-top: 1px solid #e1ecee;
+}
+
+.tablepress tbody .even td {
+	border-bottom: 1px solid #89b7bf;
+}
+
+.tablepress tbody .odd:not(:last-child) td {
+	border-bottom: 1px solid #70a5ad;
+}*/
+
 .create-table-clr-classes(@i: 1) when(@i <= length(@tbl-clr-classes)) {
 	@slctr: extract(@tbl-clr-classes, @i);
 	@{slctr} {
-		& > thead {
-			& > tr {
-				& > th {
-					background-color: extract(@tbl-header-clrs, @i);
-					color: extract(@tbl-header-txt-clrs, @i);
-					border-bottom: 1px solid saturate(darken(extract(@tbl-header-clrs, @i), 30%), 5%);
-					&:not(:last-child) {
-						border-right: 1px solid darken(extract(@tbl-header-clrs, @i), 30%);
-					}
-					&:not(:first-child) {
-						border-top: 1px solid saturate(lighten(extract(@tbl-header-clrs, @i), 5%), 5%);
-						border-left: 1px solid lighten(extract(@tbl-header-clrs, @i), 5%);
-					}
-				}
+		thead th {
+			background-color: extract(@tbl-header-clrs, @i);
+			color: extract(@tbl-header-txt-clrs, @i);
+			border-bottom: 1px solid saturate(darken(extract(@tbl-header-clrs, @i), 30%), 5%);
+			&:not(:last-child) {
+				border-right: 1px solid darken(extract(@tbl-header-clrs, @i), 30%);
+			}
+			&:not(:first-child) {
+				border-top: 1px solid saturate(lighten(extract(@tbl-header-clrs, @i), 5%), 5%);
+				border-left: 1px solid lighten(extract(@tbl-header-clrs, @i), 5%);
 			}
 		}
 		& > tbody {
@@ -452,7 +514,7 @@ div.column ul.niloa-portal {
 }
 .create-table-clr-classes();
 
-table.assessment.planning > thead > tr {
+section.assessment-planning > div.column > table > thead > tr {
 	&:first-child > th {
 		&:nth-child(4n + 1) {
 			width: extract(extract(@tbl-col-wdths, 1), 1);
@@ -475,7 +537,7 @@ table.assessment.planning > thead > tr {
 	}
 }
 
-table.assessment.planning > tbody > tr {
+section.assessment-planning > div.column > table > tbody > tr {
 	& > td > table.sub-planning > tbody > tr {
 		& > td {
 			background-color: extract(@tbl-row-clrs, 1);
@@ -525,7 +587,7 @@ table.assessment.planning > tbody > tr {
 	}
 }
 
-table.assessment.evidence {
+section.assessment-evidence > div.column > table {
 	& > thead > tr:first-child > th {
 		&:nth-child(8n + 1) {
 			width: auto;
@@ -555,5 +617,133 @@ table.assessment.evidence {
 			text-align: center;
 			font-weight: bold;
 		}
+	}
+}
+
+@dflt-tbl-hdr-clr: @hex-darker-blue;
+@dflt-tbl-hdr-txt-clr: @hex-white;
+@dflt-tbl-col1-clr: mix(@hex-bright-blue, @hex-accent-blue, 90%);
+@dflt-tbl-col1-alt-clr: mix(@hex-lightest-blue, @hex-accent-blue, 90%);
+@dflt-tbl-row-clr: @hex-bright-blue;
+@dflt-tbl-row-alt-clr: @hex-lightest-blue;
+@dflt-tbl-sub-row-clr: mix(@hex-bright-blue, @hex-accent-blue, 97%);
+//@dflt-hvr-mix-clr: #ffff00;
+@dflt-hvr-mix-clr: @hex-accent-blue;
+.tablepress {
+	border-collapse: separate;
+	border-spacing: 0;
+	box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
+	thead th {
+		padding-right: .5em;
+		padding-left: .5em;
+		background-color: @dflt-tbl-hdr-clr;
+		color: @dflt-tbl-hdr-txt-clr;
+		border-bottom: 1px solid saturate(darken(@dflt-tbl-hdr-clr, 30%), 5%);
+		&:not(:last-child) {
+			border-right: 1px solid darken(@dflt-tbl-hdr-clr, 30%);
+		}
+		&:not(:first-child) {
+			border-top: 1px solid saturate(lighten(@dflt-tbl-hdr-clr, 5%), 5%);
+			border-left: 1px solid lighten(@dflt-tbl-hdr-clr, 5%);
+		}
+		line-height: 1.375em;
+		@media all {
+            @media (min-width: @v-lrgfrmt-thrshld) {
+                font-size: (@v-p-sz);
+            }
+            @media (min-width: (@v-mbl-thrshld + 1)) and (max-width: (@v-lrgfrmt-thrshld - 1)) {
+                font-size: (@v-p-sz * @v-scl-dwn);
+            }
+            @media (max-width: @v-mbl-thrshld) {
+                font-size: (@v-p-sz * @v-scl-dwn * @v-scl-dwn);
+                text-align: left;
+            }
+		}
+	}
+	tbody {
+		td {
+			&:not(.no-padding) {
+				padding-right: 0.5em;
+				padding-left: 0.5em;
+			}
+			&.no-padding {
+				padding: 0;
+			}
+			&:not(:last-child) {
+				border-right: 1px solid darken(@dflt-tbl-row-clr, 30%);
+			}
+			&:not(:first-child) {
+				border-left: 1px solid lighten(@dflt-tbl-row-clr, 5%);
+			}
+			&:first-child {
+				border-right: 1px solid darken(@dflt-tbl-col1-clr, 30%);
+			}
+			line-height: @v-p-lnhght;
+			@media all {
+				@media (min-width: @v-lrgfrmt-thrshld) {
+					font-size: (@v-p-sz * 0.88);
+				}
+				@media (min-width: (@v-mbl-thrshld + 1)) and (max-width: (@v-lrgfrmt-thrshld - 1)) {
+					font-size: (@v-p-sz * @v-scl-dwn * 0.88);
+				}
+				@media (max-width: @v-mbl-thrshld) {
+					font-size: (@v-p-sz * @v-scl-dwn * @v-scl-dwn * 0.88);
+					text-align: left;
+				}
+			}
+			.transition(~"all 0.3s ease");
+		}
+		.odd {
+			td {
+				background-color: @dflt-tbl-row-alt-clr;
+				&:not(:last-child) {
+					border-right: 1px solid darken(@dflt-tbl-row-alt-clr, 30%);
+				}
+				&:not(:first-child) {
+					border-left: 1px solid lighten(@dflt-tbl-row-alt-clr, 5%);
+				}
+				&:first-child {
+					background-color: @dflt-tbl-col1-alt-clr;
+					border-right: 1px solid darken(@dflt-tbl-col1-alt-clr, 30%);
+				}
+			}
+			&:not(:first-child) td {
+				border-top: 1px solid saturate(lighten(@dflt-tbl-row-alt-clr, 5%), 5%);
+			}
+			&:not(:last-child) td {
+				border-bottom: 1px solid saturate(darken(@dflt-tbl-row-alt-clr, 30%), 5%);
+			}
+		}
+		.even {
+			td {
+				background-color: @dflt-tbl-row-clr;
+				&:first-child {
+					background-color: @dflt-tbl-col1-clr;
+				}
+			}
+			&:not(:first-child) td {
+				border-top: 1px solid saturate(lighten(@dflt-tbl-row-clr, 5%), 5%);
+			}
+			&:not(:last-child) td {
+				border-bottom: 1px solid saturate(darken(@dflt-tbl-row-clr, 30%), 5%);
+			}
+		}
+	}
+	.row-hover tr {
+		&:hover td {
+			background-color: lighten(mix(@dflt-tbl-row-clr, @dflt-hvr-mix-clr, 87%), 3%);
+			&:first-child {
+				background-color: lighten(mix(@dflt-tbl-col1-clr, @dflt-hvr-mix-clr, 87%), 3%);
+			}
+		}
+		&.odd:hover td {
+			background-color: lighten(mix(@dflt-tbl-row-alt-clr, @dflt-hvr-mix-clr, 87%), 3%);
+			&:first-child {
+				background-color: lighten(mix(@dflt-tbl-col1-alt-clr, @dflt-hvr-mix-clr, 87%), 3%);
+			}			
+		}
+	}
+	.sorting {
+		.transition(~"all 0.3s ease");
 	}
 }
