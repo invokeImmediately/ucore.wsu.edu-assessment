@@ -4966,7 +4966,7 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
   background-color: #b0d9df;
 }
 .tablepress .sorting {
-  -webkit-transition: all 0.3s easing;
-  -moz-transition: all 0.3s easing;
-  transition: all 0.3s easing;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
