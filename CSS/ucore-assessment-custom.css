@@ -647,35 +647,45 @@ div.column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
 main section.row > div.column > p:not(.no-btm-margin),
 main section.row > div.column > article > div.article-body > p:not(.no-btm-margin),
 main section.row > div.column > section > p:not(.no-btm-margin),
+main section.row > div.column > table > tbody > td > p:not(.no-btm-margin),
 main section.row > div.column > section > p:not(.no-btm-margin),
 main section.row > div.column > article > div.article-body > section > p:not(.no-btm-margin),
 main section.row > div.column > section > section > p:not(.no-btm-margin),
+main section.row > div.column > table > tbody > td > section > p:not(.no-btm-margin),
 main section.row > div.column > ul:not(.no-btm-margin),
 main section.row > div.column > article > div.article-body > ul:not(.no-btm-margin),
 main section.row > div.column > section > ul:not(.no-btm-margin),
+main section.row > div.column > table > tbody > td > ul:not(.no-btm-margin),
 main section.row > div.column > section > ul:not(.no-btm-margin),
 main section.row > div.column > article > div.article-body > section > ul:not(.no-btm-margin),
 main section.row > div.column > section > section > ul:not(.no-btm-margin),
+main section.row > div.column > table > tbody > td > section > ul:not(.no-btm-margin),
 main section.row > div.column > ol:not(.no-btm-margin),
 main section.row > div.column > article > div.article-body > ol:not(.no-btm-margin),
 main section.row > div.column > section > ol:not(.no-btm-margin),
+main section.row > div.column > table > tbody > td > ol:not(.no-btm-margin),
 main section.row > div.column > section > ol:not(.no-btm-margin),
 main section.row > div.column > article > div.article-body > section > ol:not(.no-btm-margin),
-main section.row > div.column > section > section > ol:not(.no-btm-margin) {
+main section.row > div.column > section > section > ol:not(.no-btm-margin),
+main section.row > div.column > table > tbody > td > section > ol:not(.no-btm-margin) {
   margin-bottom: 1em;
 }
 main section.row > div.column > p + ul,
 main section.row > div.column > article > div.article-body > p + ul,
 main section.row > div.column > section > p + ul,
+main section.row > div.column > table > tbody > td > p + ul,
 main section.row > div.column > section > p + ul,
 main section.row > div.column > article > div.article-body > section > p + ul,
 main section.row > div.column > section > section > p + ul,
+main section.row > div.column > table > tbody > td > section > p + ul,
 main section.row > div.column > p + ol,
 main section.row > div.column > article > div.article-body > p + ol,
 main section.row > div.column > section > p + ol,
+main section.row > div.column > table > tbody > td > p + ol,
 main section.row > div.column > section > p + ol,
 main section.row > div.column > article > div.article-body > section > p + ol,
-main section.row > div.column > section > section > p + ol {
+main section.row > div.column > section > section > p + ol,
+main section.row > div.column > table > tbody > td > section > p + ol {
   margin-top: -0.75em;
 }
 main section.row:last-child > div.column > p:last-child,
