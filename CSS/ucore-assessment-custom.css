@@ -4943,7 +4943,7 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
 .tablepress tbody .odd:not(:last-child) td {
   border-bottom: 1px solid #70a5ad;
 }
-.tablepress tbody .even {
+.tablepress tbody .even td {
   background-color: #edf3f4;
 }
 .tablepress tbody .even:not(:first-child) td {
@@ -4953,14 +4953,14 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
   border-bottom: 1px solid #89b7bf;
 }
 .tablepress .row-hover tr:hover td {
-  background-color: #ffffff;
+  background-color: #f6f9fa;
 }
 .tablepress .row-hover tr:hover td:first-child {
-  background-color: #fafdfd;
+  background-color: #e0f0f3;
 }
 .tablepress .row-hover tr.odd:hover td {
-  background-color: #f2f6f7;
+  background-color: #dce7e9;
 }
 .tablepress .row-hover tr.odd:hover td:first-child {
-  background-color: #e0eef0;
+  background-color: #c8e1e4;
 }
