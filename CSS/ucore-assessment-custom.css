@@ -4904,7 +4904,6 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
   border-left: 1px solid #fdfefe;
 }
 .tablepress tbody td:first-child {
-  background-color: #d5ebef;
   border-right: 1px solid #68b7c3;
   font-weight: bold;
 }
@@ -4945,6 +4944,9 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
 }
 .tablepress tbody .even td {
   background-color: #edf3f4;
+}
+.tablepress tbody .even td:first-child {
+  background-color: #d5ebef;
 }
 .tablepress tbody .even:not(:first-child) td {
   border-top: 1px solid #fdfefe;
