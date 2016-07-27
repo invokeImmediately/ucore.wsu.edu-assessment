@@ -4197,7 +4197,8 @@ section.row.single.article-header.assessment-resources div.column {
   background: #6c563f url(/wp-content/uploads/sites/1304/2016/07/header-background_assessment-resources.jpg) center center / 990px 230px no-repeat;
 }
 section.row.single.article-header.assessment-resources div.column:before {
-  padding-bottom: 7.92134831%;
+  width: 12.19178082%;
+  padding-bottom: 9.62873599%;
   background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-resources.png) center center / 100% auto no-repeat;
 }
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
