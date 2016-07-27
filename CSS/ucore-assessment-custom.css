@@ -5046,3 +5046,6 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.tablepress.learning-goals thead th:first-child {
+  width: 40%;
+}
