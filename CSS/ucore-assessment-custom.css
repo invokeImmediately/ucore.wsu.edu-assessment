@@ -4905,7 +4905,6 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
 }
 .tablepress tbody td:first-child {
   border-right: 1px solid #68b7c3;
-  font-weight: bold;
 }
 @media all and (min-width: 1050px) {
   .tablepress tbody td {
@@ -4955,14 +4954,14 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
   border-bottom: 1px solid #89b7bf;
 }
 .tablepress .row-hover tr:hover td {
-  background-color: #f6f9fa;
+  background-color: #f4f8e7;
 }
 .tablepress .row-hover tr:hover td:first-child {
-  background-color: #e0f0f3;
+  background-color: #e3f2e1;
 }
 .tablepress .row-hover tr.odd:hover td {
-  background-color: #dce7e9;
+  background-color: #dfe9d6;
 }
 .tablepress .row-hover tr.odd:hover td:first-child {
-  background-color: #c8e1e4;
+  background-color: #cee4d2;
 }
