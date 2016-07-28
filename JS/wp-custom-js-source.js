@@ -358,9 +358,22 @@ function isJQuery($obj) {
 	function handleNiloaMouseMove($whichBttn, bttnCoords, moveEvent) {
 		if (isJQuery($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
 			if (bttnCoords.isWithinArea(moveEvent.pageX, moveEvent.pageY)) {
+				var $statusBar = $("div.simulated-status-bar");
+				if ($statusBar.length == 1) {
+					var bttnHref = $whichBttn.data("href");
+					if (bttnHref) {
+						// TODO: add Regular Expressions check on href formatting.
+						$statusBar.text(bttnHref);
+						$statusBar.fadeIn(200);
+					}
+				}
 				$whichBttn.addClass("hovered");
 			}
 			else {
+				var $statusBar = $("div.simulated-status-bar");
+				if ($statusBar.length == 1) {
+					$statusBar.fadeOut(200);
+				}
 				$whichBttn.removeClass("hovered");
 			}
 		}
