@@ -4493,6 +4493,18 @@ div.column ul.niloa-portal > li.hovered > div.initial {
   -moz-transition: opacity 0.25s linear, z-index 0.25s step-end;
   transition: opacity 0.25s linear, z-index 0.25s step-end;
 }
+div.simulated-status-bar {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 21px;
+  width: auto;
+  border-top-right-radius: 4px;
+  background-color: #dfdfdf;
+  color: #707070;
+  font-size: 12px;
+}
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### TABLE STYLES ########################################################################## ║
  *  ╠==============================================================================================╣
