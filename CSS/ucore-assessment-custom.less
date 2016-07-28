@@ -55,29 +55,76 @@ header.main-header {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-div.article-header {
-	position: relative;
-	width: 100%;
+
+section.row.single.article-header {
 	height: 230px;
-	&.assessment-planning {
-		background: #8a8f90 url(/wp-content/uploads/sites/1304/2016/07/header-background_assessment-planning-v2.jpg) center center no-repeat;
-	}
-	& > div.content {
-		position: absolute;
-		top: 50%;
-		right: 2rem;
-		left: 2rem;
-		.transform(~"translateY(-50%)");
+	div.column {
+		position: relative;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		height: 100%;
 		& > h1 {
+			position: absolute;
+			top: 50%;
+			left: 2rem;
+			right: 10%;
+			right: ~"calc(10% + 2rem)";
 			margin-bottom: 0.35em;
 			color: @hex-white;
 			text-shadow: 0 0 18px @hex-black;
+			.transform(~"translateY(-50%)");
 		}
-		& > p {
-			color: @hex-white;
-			font-size: 1.3em;
-			text-align: left;
-			text-shadow: 0 0 7px @hex-black;
+		& > :not(h1) {
+			display: none;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			width: 10%;
+			height: 0;
+		}
+	}
+	&.assessment-planning div.column {
+		background: #8a8f90 url(/wp-content/uploads/sites/1304/2016/07/header-background_assessment-planning-v2.jpg) center center/990px 230px no-repeat;
+		&:before {
+			padding-bottom: 11.71232877%;
+			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-plans_with-shadow.png) center center/100% auto no-repeat;
+		}
+	}
+	&.assessment-resources div.column {
+		background: #6c563f  url(/wp-content/uploads/sites/1304/2016/07/header-background_assessment-resources.jpg) center center/990px 230px no-repeat;
+		& > h1 {
+			right: ~"calc(12.19178082% + 2rem)";
+		}
+		&:before {
+			width: 12.19178082%;
+			padding-bottom: 9.62873599%;
+			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-resources_with-shadow.png) center center/100% auto no-repeat;
+		}
+	}
+	&.assessment-evidence div.column {
+		background: #8a8f90  url(/wp-content/uploads/sites/1304/2016/07/header-background_evidence-of-student-learning.jpg) center center/990px 230px no-repeat;
+		& > h1 {
+			right: ~"calc(9.86301370% + 2rem)";
+		}
+		&:before {
+			width: 9.86301370%;
+			padding-bottom: 11.50684932%;
+			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_evidence-of-student-learning_with-shadow.png) center center/100% auto no-repeat;
+		}
+	}
+	&.learning-goals div.column {
+		background: #9c7c58  url(/wp-content/uploads/sites/1304/2016/07/header-background_learning-outcomes.jpg) center center/990px 230px no-repeat;
+		& > h1 {
+			right: ~"calc(9.86301370% + 2rem)";
+		}
+		&:before {
+			width: 9.86301370%;
+			padding-bottom: 11.57534247%;
+			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_student-learning-outcome-statements_with-shadow.png) center center/100% auto no-repeat;
 		}
 	}
 }
@@ -313,6 +360,19 @@ div.column ul.niloa-portal {
 			}
 		}
 	}
+}
+
+div.simulated-status-bar {
+	display: none;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 21px;
+	width: auto;
+	border-top-right-radius: 4px;
+	background-color: #dfdfdf;
+	color: #707070;
+	font-size: 12px;
 }
 
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
@@ -745,5 +805,10 @@ section.assessment-evidence > div.column > table {
 	}
 	.sorting {
 		.transition(~"all 0.3s ease");
+	}
+	&.learning-goals {
+		thead th:first-child {
+			width: 40%;
+		}
 	}
 }
