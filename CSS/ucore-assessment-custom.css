@@ -2383,6 +2383,9 @@ ul.cascaded-layout > li.gutter-sizer {
  *         │ ···· ORDERED list elements ···························································· │
  *         └-----------------------------------------------------------------------------------------┘
  */
+div.column ol {
+  padding-bottom: 0;
+}
 @media all {
   div.column ol {
     line-height: 1.375em;
