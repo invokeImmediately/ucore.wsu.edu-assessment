@@ -160,27 +160,17 @@
 	}
 	
 	function handleNiloaMouseMove($whichBttn, bttnCoords, moveEvent) {
+		var destHref = "";
 		if (isJQuery($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
 			if (bttnCoords.isWithinArea(moveEvent.pageX, moveEvent.pageY)) {
-				var $statusBar = $("div.simulated-status-bar");
-				if ($statusBar.length == 1) {
-					var bttnHref = $whichBttn.data("href");
-					if (bttnHref) {
-						// TODO: add Regular Expressions check on href formatting.
-						$statusBar.text(bttnHref);
-						$statusBar.fadeIn(200);
-					}
-				}
+				destHref = $whichBttn.data("href");
 				$whichBttn.addClass("hovered");
 			}
 			else {
-				var $statusBar = $("div.simulated-status-bar");
-				if ($statusBar.length == 1) {
-					$statusBar.fadeOut(200);
-				}
 				$whichBttn.removeClass("hovered");
 			}
 		}
+		return destHref;
 	}
 	
 	function initNiloaPortal(slctrPortal) {
@@ -190,12 +180,27 @@
 			 *  repeated calculations. Note that the addition of a $(window).resize(…) will be necessary to
 			 *  recalculate coordinates if the user changes the size of the browser window. */
 			$portal.mousemove(function(moveEvent) {
+				var bttnHref = "";
+				var destHref = "";
 				var $bttns = $portal.find("li.panel");
 				$bttns.each(function () {
 					var $thisBttn = $(this);
 					var hxgnlBttn = new HexagonalButton($(this));
-					handleNiloaMouseMove($thisBttn, hxgnlBttn, moveEvent);
+					destHref = handleNiloaMouseMove($thisBttn, hxgnlBttn, moveEvent);
+					if (destHref != "") {
+						bttnHref = destHref;
+					}
 				});
+				var $statusBar = $("div.simulated-status-bar");
+				if ($statusBar.length == 1) {
+					if (bttnHref) {
+						$statusBar.text(bttnHref);
+						$statusBar.fadeIn(200);
+					}
+					else {
+						$statusBar.fadeOut(200);
+					}
+				}				
 			}).click(function(clickEvent) {
 				var $bttns = $portal.find("li.panel");
 				$bttns.each(function () {
