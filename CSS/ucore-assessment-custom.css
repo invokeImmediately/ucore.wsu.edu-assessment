@@ -708,6 +708,14 @@ main section.row:last-child > div.column > article > div.article-body > section 
 main section.row:last-child > div.column > section > section > ol:last-child {
   margin-bottom: 0;
 }
+main section.row > div.column table > tbody > tr > td > p:last-child,
+main section.row > div.column table > tbody > tr > td > section > p:last-child,
+main section.row > div.column table > tbody > tr > td > ul:last-child,
+main section.row > div.column table > tbody > tr > td > section > ul:last-child,
+main section.row > div.column table > tbody > tr > td > ol:last-child,
+main section.row > div.column table > tbody > tr > td > section > ol:last-child {
+  margin-bottom: 0;
+}
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++ ASIDE selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
