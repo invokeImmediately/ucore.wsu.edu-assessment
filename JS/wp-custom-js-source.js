@@ -470,7 +470,7 @@ function isJQuery($obj) {
 				}
 			}
 			else {
-				alert("ERROR: Tabs and panels mismatched in length.");
+				alert("ERROR: Tabs and panels mismatched in length.\r\nNumber of tabs found: " + $tabs.length + "\r\nNumber of panels found: " + $panels.length);
 			}
 		});
 	}
