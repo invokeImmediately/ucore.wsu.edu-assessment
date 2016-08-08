@@ -433,7 +433,7 @@ function isJQuery($obj) {
 				for (idx = 0; idx < $tabs.length; idx++) {
 					$tabs.eq(idx).click(function() {
 						var $thisTab = $(this);
-						var kdx = $tabs.get($thisTab);
+						var kdx = $tabs.index($thisTab);
 						alert(kdx);
 						if (kdx == 0) {
 							if ($thisTab.hasClass("deactivated")) {
