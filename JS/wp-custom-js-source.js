@@ -431,38 +431,37 @@ function isJQuery($obj) {
 				var idx;
 				var jdx;
 				for (idx = 0; idx < $tabs.length; idx++) {
-					$tabs[idx].click(function() {
-						alert(idx);
+					$tabs.eq(idx).click(function() {
 						var $thisTab = $(this);
 						if (idx == 0) {
 							if ($thisTab.hasClass("deactivated")) {
 								$thisTab.removeClass("deactivated");
-								$panels[idx].removeClass("deactivated");
+								$panels.eq(idx).removeClass("deactivated");
 								for (jdx = 1; jdx < $tabs.length; jdx++) {
-									if ($tabs[jdx].hasClass("activated")) {
-										$tabs[jdx].removeClass("activated");
-										$panels[jdx].removeClass("activated");
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
 									}
 								}
 								
 							}
 						} else {
-							if(!$tabs[0].hasClass("deactivated")) {
-								$tabs[0].addClass("deactivated");
-								$panels[0].addClass("deactivated");
+							if(!$tabs.eq(0).hasClass("deactivated")) {
+								$tabs.eq(0).addClass("deactivated");
+								$panels.eq(0).addClass("deactivated");
 							}
 							for (jdx = 1; jdx < idx; jdx++) {
-								if ($tabs[jdx].hasClass("activated")) {
-									$tabs[jdx].removeClass("activated");
-									$panels[jdx].removeClass("activated");
+								if ($tabs.eq(jdx).hasClass("activated")) {
+									$tabs.eq(jdx).removeClass("activated");
+									$panels.eq(jdx).removeClass("activated");
 								}
 							}
 							$thisTab.addClass("activated");
-							$panels[idx].addClass("activated");
+							$panels.eq(idx).addClass("activated");
 							for (jdx = idx + 1; jdx < $tabs.length; jdx++) {
-								if ($tabs[jdx].hasClass("activated")) {
-									$tabs[jdx].removeClass("activated");
-									$panels[jdx].removeClass("activated");
+								if ($tabs.eq(jdx).hasClass("activated")) {
+									$tabs.eq(jdx).removeClass("activated");
+									$panels.eq(jdx).removeClass("activated");
 								}
 							}							
 						}
