@@ -4604,8 +4604,12 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:not(:
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:not(:first-child):hover {
   border-left: 1px solid #e38698;
 }
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:not(:first-child) :not(.activated) {
+  border-bottom: 1px solid #d27689;
+}
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:first-child:not(.deactivated) {
   background: linear-gradient(rgba(198, 12, 48, 0.5), rgba(198, 12, 48, 0.5)), linear-gradient(#eff0f1, #eff0f1);
+  border-bottom: 1px solid #fff;
   cursor: auto;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:first-child:not(.deactivated) > a {
