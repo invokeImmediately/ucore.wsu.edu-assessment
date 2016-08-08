@@ -4562,6 +4562,7 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a {
   display: inline-block;
