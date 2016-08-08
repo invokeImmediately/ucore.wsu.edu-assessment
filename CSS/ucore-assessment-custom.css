@@ -4543,7 +4543,9 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul {
   min-width: 600px;
   margin: 0;
   padding: 0;
-  border: 1px solid #8d959a, 1px solid #8d959a, none, 1px solid #8d959a;
+  border-top: 1px solid #8d959a;
+  border-right: 1px solid #8d959a;
+  border-left: 1px solid #8d959a;
   background-color: #8d959a;
   list-style-type: none;
   overflow: hidden;
