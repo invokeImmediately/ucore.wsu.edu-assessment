@@ -423,7 +423,7 @@ function isJQuery($obj) {
 		var $qtSctn = $(slctrQtSctn);
 		$qtSctn.each(function () {
 			var $thisSctn = $(this);
-			var $tabCntnr = $thisSctn.find("ul");
+			var $tabCntnr = $thisSctn.find("div.column > ul");
 			var $tabs = $tabCntnr.find("li");
 			var $panelCntnr = $thisSctn.find("table");
 			var $panels = $panelCntnr.find("tbody:first-child > tr");
