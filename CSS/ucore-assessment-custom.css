@@ -4540,12 +4540,13 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 {
   display: none;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul {
-  list-style-type: none;
+  min-width: 600px;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  border: 1px solid #8d959a, 1px solid #8d959a, none, 1px solid #8d959a;
   background-color: #8d959a;
-  min-width: 600px;
+  list-style-type: none;
+  overflow: hidden;
   /*				@media (max-width: 600px) {
 					div.container {
 					  overflow: scroll;
@@ -4559,10 +4560,10 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
   justify-content: center;
   height: calc(3.9em + 16px);
   background-color: #eff0f1;
+  cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  cursor: pointer;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a {
   display: inline-block;
