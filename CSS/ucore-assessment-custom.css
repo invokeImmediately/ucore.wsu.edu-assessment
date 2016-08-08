@@ -4631,7 +4631,7 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-div.column > table,
+section:not(.quick-tabs) > div.column > table,
 table.assessment.planning,
 table.assessment.evidence,
 table.assessment.resources {
@@ -4640,7 +4640,7 @@ table.assessment.resources {
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 @media all {
-  div.column > table thead > tr > th,
+  section:not(.quick-tabs) > div.column > table thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
@@ -4650,7 +4650,7 @@ table.assessment.resources {
   }
 }
 @media all and (min-width: 1050px) {
-  div.column > table thead > tr > th,
+  section:not(.quick-tabs) > div.column > table thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
@@ -4658,7 +4658,7 @@ table.assessment.resources {
   }
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
-  div.column > table thead > tr > th,
+  section:not(.quick-tabs) > div.column > table thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
@@ -4666,7 +4666,7 @@ table.assessment.resources {
   }
 }
 @media all and (max-width: 480px) {
-  div.column > table thead > tr > th,
+  section:not(.quick-tabs) > div.column > table thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
@@ -4675,20 +4675,20 @@ table.assessment.resources {
   }
 }
 @media all {
-  div.column > table tbody > tr > td,
+  section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
     line-height: 1.375em;
   }
-  div.column > table tbody > tr > td:not(.no-padding),
+  section:not(.quick-tabs) > div.column > table tbody > tr > td:not(.no-padding),
   table.assessment.planning tbody > tr > td:not(.no-padding),
   table.assessment.evidence tbody > tr > td:not(.no-padding),
   table.assessment.resources tbody > tr > td:not(.no-padding) {
     padding-right: 0.5em;
     padding-left: 0.5em;
   }
-  div.column > table tbody > tr > td.no-padding,
+  section:not(.quick-tabs) > div.column > table tbody > tr > td.no-padding,
   table.assessment.planning tbody > tr > td.no-padding,
   table.assessment.evidence tbody > tr > td.no-padding,
   table.assessment.resources tbody > tr > td.no-padding {
@@ -4696,7 +4696,7 @@ table.assessment.resources {
   }
 }
 @media all and (min-width: 1050px) {
-  div.column > table tbody > tr > td,
+  section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
@@ -4704,7 +4704,7 @@ table.assessment.resources {
   }
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
-  div.column > table tbody > tr > td,
+  section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
@@ -4712,7 +4712,7 @@ table.assessment.resources {
   }
 }
 @media all and (max-width: 480px) {
-  div.column > table tbody > tr > td,
+  section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
