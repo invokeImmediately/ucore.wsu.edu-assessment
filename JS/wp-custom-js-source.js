@@ -216,6 +216,7 @@ function isJQuery($obj) {
 		}
 		
 		initNiloaPortal(".niloa-portal");
+		initQuickTabs("section.row.single.quick-tabs");
 	});
 	
 	function HexagonalButton($fromElem) {
@@ -416,6 +417,58 @@ function isJQuery($obj) {
 				}
 			});
 		}
+	}
+	
+	function initQuickTabs(slctrQtSctn) {
+		var $qtSctn = $(slctrQtSctn);
+		$qtSctn.each(function () {
+			var $thisSctn = $(this);
+			var $tabCntnr = $thisSctn.find("ul");
+			var $tabs = $tabCntnr.find("li");
+			var $panelCntnr = $thisSctn.find("table");
+			var $panels = $panelCntnr.find("tbody:first-child > tr");
+			if($tabs.length = $panels.length) {
+				var idx;
+				var jdx;
+				for(idx = 0; idx < $tabs.length; idx++) {
+					$tabs[idx].click(function() {
+						var $thisTab = $(this);
+						if (idx == 0) {
+							if ($thisTab.hasClass("deactivated")) {
+								$thisTab.removeClass("deactivated");
+								$panels[idx].removeClass("deactivated");
+								for(jdx = 1; jdx < $tabs.length; jdx++) {
+									if ($tabs[jdx].hasClass("activated")) {
+										$tabs[jdx].removeClass("activated");
+										$panels[jdx].removeClass("activated");
+									}
+								}
+								
+							}
+						} else {
+							if(!$tabs[0].hasClass("deactivated")) {
+								$tabs[0].addClass("deactivated");
+								$panels[0].addClass("deactivated");
+							}
+							for(jdx = 1; jdx < idx; jdx++) {
+								if ($tabs[jdx].hasClass("activated")) {
+									$tabs[jdx].removeClass("activated");
+									$panels[jdx].removeClass("activated");
+								}
+							}
+							$thisTab.addClass("activated");
+							$panels[idx].addClass("activated");
+							for(jdx = idx + 1; jdx < $tabs.length; jdx++) {
+								if ($tabs[jdx].hasClass("activated")) {
+									$tabs[jdx].removeClass("activated");
+									$panels[jdx].removeClass("activated");
+								}
+							}							
+						}
+					});
+				}
+			}
+		});
 	}
 })(jQuery);
 /**********************************************************************************************************************
