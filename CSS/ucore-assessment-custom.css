@@ -4580,12 +4580,12 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a:h
   background-color: transparent;
   box-shadow: none;
 }
-section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a:hover > a {
-  color: #fff;
-}
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:hover {
   background-color: #c60c30;
   color: #ffffff;
+}
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:hover > a {
+  color: #fff;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:not(:last-child) {
   border-right: 1px solid #dfe1e3;
