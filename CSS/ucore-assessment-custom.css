@@ -5224,6 +5224,11 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
   display: block;
   position: relative;
 }
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr:first-child {
   display: block;
 }
