@@ -436,33 +436,33 @@ function isJQuery($obj) {
 						var kdx = $tabs.index($thisTab);
 						if (kdx == 0) {
 							if ($thisTab.hasClass("deactivated")) {
-								$thisTab.removeClass("deactivated");
-								$panels.eq(kdx).removeClass("deactivated");
+								$thisTab.removeClass("deactivated", 200);
+								$panels.eq(kdx).removeClass("deactivated", 200);
 								for (jdx = 1; jdx < $tabs.length; jdx++) {
 									if ($tabs.eq(jdx).hasClass("activated")) {
-										$tabs.eq(jdx).removeClass("activated");
-										$panels.eq(jdx).removeClass("activated");
+										$tabs.eq(jdx).removeClass("activated", 200);
+										$panels.eq(jdx).removeClass("activated", 200);
 									}
 								}
 								
 							}
 						} else {
 							if(!$tabs.eq(0).hasClass("deactivated")) {
-								$tabs.eq(0).addClass("deactivated");
-								$panels.eq(0).addClass("deactivated");
+								$tabs.eq(0).addClass("deactivated", 200);
+								$panels.eq(0).addClass("deactivated", 200);
 							}
 							for (jdx = 1; jdx < kdx; jdx++) {
 								if ($tabs.eq(jdx).hasClass("activated")) {
-									$tabs.eq(jdx).removeClass("activated");
-									$panels.eq(jdx).removeClass("activated");
+									$tabs.eq(jdx).removeClass("activated", 200);
+									$panels.eq(jdx).removeClass("activated", 200);
 								}
 							}
 							$thisTab.addClass("activated");
-							$panels.eq(kdx).addClass("activated");
+							$panels.eq(kdx).addClass("activated", 200);
 							for (jdx = kdx + 1; jdx < $tabs.length; jdx++) {
 								if ($tabs.eq(jdx).hasClass("activated")) {
-									$tabs.eq(jdx).removeClass("activated");
-									$panels.eq(jdx).removeClass("activated");
+									$tabs.eq(jdx).removeClass("activated", 200);
+									$panels.eq(jdx).removeClass("activated", 200);
 								}
 							}							
 						}
