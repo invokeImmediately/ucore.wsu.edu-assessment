@@ -434,7 +434,6 @@ function isJQuery($obj) {
 					$tabs.eq(idx).click(function() {
 						var $thisTab = $(this);
 						var kdx = $tabs.index($thisTab);
-						alert(kdx);
 						if (kdx == 0) {
 							if ($thisTab.hasClass("deactivated")) {
 								$thisTab.removeClass("deactivated");
@@ -469,9 +468,6 @@ function isJQuery($obj) {
 						}
 					});
 				}
-			}
-			else {
-				alert("ERROR: Tabs and panels mismatched in length.\r\nNumber of tabs found: " + $tabs.length + "\r\nNumber of panels found: " + $panels.length);
 			}
 		});
 	}
