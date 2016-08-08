@@ -421,6 +421,7 @@ function isJQuery($obj) {
 	
 	function initQuickTabs(slctrQtSctn) {
 		var $qtSctn = $(slctrQtSctn);
+		alert($qtSctn.length)
 		$qtSctn.each(function () {
 			var $thisSctn = $(this);
 			var $tabCntnr = $thisSctn.find("ul");
