@@ -4540,6 +4540,7 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 {
   display: none;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul {
+  width: 100%;
   min-width: 600px;
   margin: 0;
   padding: 0;
