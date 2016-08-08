@@ -4610,6 +4610,11 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:not(:
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:not(:first-child):not(.activated) {
   border-bottom: 1px solid #dfe1e3;
 }
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:not(:first-child).activated {
+  background: linear-gradient(rgba(198, 12, 48, 0.5), rgba(198, 12, 48, 0.5)), linear-gradient(#eff0f1, #eff0f1);
+  border-bottom: 1px solid #fff;
+  cursor: auto;
+}
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:first-child:not(.deactivated) {
   background: linear-gradient(rgba(198, 12, 48, 0.5), rgba(198, 12, 48, 0.5)), linear-gradient(#eff0f1, #eff0f1);
   border-bottom: 1px solid #fff;
@@ -4617,6 +4622,9 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:first
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:first-child:not(.deactivated) > a {
   color: #fff;
+}
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:first-child:not(.deactivated).deactivated {
+  border-bottom: 1px solid #dfe1e3;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:last-child {
   border-right: 1px solid #a1a1a1;
