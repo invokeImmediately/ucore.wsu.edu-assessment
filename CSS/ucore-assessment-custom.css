@@ -5203,6 +5203,9 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table {
   display: block;
+  border-right: 1px solid #8d959a;
+  border-bottom: 1px solid #8d959a;
+  border-left: 1px solid #8d959a;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody {
   display: block;
