@@ -427,10 +427,10 @@ function isJQuery($obj) {
 			var $tabs = $tabCntnr.find("li");
 			var $panelCntnr = $thisSctn.find("table");
 			var $panels = $panelCntnr.find("tbody:first-child > tr");
-			if($tabs.length = $panels.length) {
+			if($tabs.length == $panels.length) {
 				var idx;
 				var jdx;
-				for(idx = 0; idx < $tabs.length; idx++) {
+				for (idx = 0; idx < $tabs.length; idx++) {
 					$tabs[idx].click(function() {
 						alert(idx);
 						var $thisTab = $(this);
@@ -438,7 +438,7 @@ function isJQuery($obj) {
 							if ($thisTab.hasClass("deactivated")) {
 								$thisTab.removeClass("deactivated");
 								$panels[idx].removeClass("deactivated");
-								for(jdx = 1; jdx < $tabs.length; jdx++) {
+								for (jdx = 1; jdx < $tabs.length; jdx++) {
 									if ($tabs[jdx].hasClass("activated")) {
 										$tabs[jdx].removeClass("activated");
 										$panels[jdx].removeClass("activated");
@@ -451,7 +451,7 @@ function isJQuery($obj) {
 								$tabs[0].addClass("deactivated");
 								$panels[0].addClass("deactivated");
 							}
-							for(jdx = 1; jdx < idx; jdx++) {
+							for (jdx = 1; jdx < idx; jdx++) {
 								if ($tabs[jdx].hasClass("activated")) {
 									$tabs[jdx].removeClass("activated");
 									$panels[jdx].removeClass("activated");
@@ -459,7 +459,7 @@ function isJQuery($obj) {
 							}
 							$thisTab.addClass("activated");
 							$panels[idx].addClass("activated");
-							for(jdx = idx + 1; jdx < $tabs.length; jdx++) {
+							for (jdx = idx + 1; jdx < $tabs.length; jdx++) {
 								if ($tabs[jdx].hasClass("activated")) {
 									$tabs[jdx].removeClass("activated");
 									$panels[jdx].removeClass("activated");
