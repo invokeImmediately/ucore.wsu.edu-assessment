@@ -421,7 +421,6 @@ function isJQuery($obj) {
 	
 	function initQuickTabs(slctrQtSctn) {
 		var $qtSctn = $(slctrQtSctn);
-		alert($qtSctn.length)
 		$qtSctn.each(function () {
 			var $thisSctn = $(this);
 			var $tabCntnr = $thisSctn.find("ul");
@@ -433,6 +432,7 @@ function isJQuery($obj) {
 				var jdx;
 				for(idx = 0; idx < $tabs.length; idx++) {
 					$tabs[idx].click(function() {
+						alert(idx);
 						var $thisTab = $(this);
 						if (idx == 0) {
 							if ($thisTab.hasClass("deactivated")) {
@@ -468,9 +468,6 @@ function isJQuery($obj) {
 						}
 					});
 				}
-			}
-			else {
-				alert("Uh oh... something is broken!");
 			}
 		});
 	}
