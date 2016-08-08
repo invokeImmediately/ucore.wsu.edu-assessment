@@ -4546,6 +4546,8 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul {
   border-top: 1px solid #8d959a;
   border-right: 1px solid #8d959a;
   border-left: 1px solid #8d959a;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
   background-color: #8d959a;
   list-style-type: none;
   overflow: hidden;
@@ -5206,6 +5208,8 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
   border-right: 1px solid #8d959a;
   border-bottom: 1px solid #8d959a;
   border-left: 1px solid #8d959a;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody {
   display: block;
