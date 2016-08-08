@@ -4559,6 +4559,8 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
   justify-content: center;
   height: calc(3.9em + 16px);
   background-color: #eff0f1;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a {
@@ -4570,10 +4572,16 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a {
   text-decoration: none;
   text-align: center;
   box-shadow: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a:hover {
   background-color: transparent;
   box-shadow: none;
+}
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a:hover > a {
+  color: #fff;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:hover {
   background-color: #c60c30;
