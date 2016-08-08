@@ -5186,3 +5186,16 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
 .tablepress.learning-goals thead th:first-child {
   width: 40%;
 }
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table {
+  display: block;
+}
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody {
+  display: block;
+  position: relative;
+}
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr {
+  display: block;
+}
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr td {
+  display: block;
+}
