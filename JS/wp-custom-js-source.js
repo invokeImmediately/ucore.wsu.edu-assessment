@@ -468,6 +468,9 @@ function isJQuery($obj) {
 					});
 				}
 			}
+			else {
+				alert("Uh oh... something is broken!");
+			}
 		});
 	}
 })(jQuery);
