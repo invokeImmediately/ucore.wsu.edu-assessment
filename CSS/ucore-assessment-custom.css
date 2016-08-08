@@ -4557,7 +4557,7 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(18.6em);
+  height: calc(3.9em + 16px);
   background-color: #eff0f1;
   transition: all 0.2s ease;
 }
