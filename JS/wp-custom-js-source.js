@@ -469,6 +469,9 @@ function isJQuery($obj) {
 					});
 				}
 			}
+			else {
+				alert("ERROR: Tabs and panels mismatched in length.");
+			}
 		});
 	}
 })(jQuery);
