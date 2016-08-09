@@ -444,27 +444,34 @@ function isJQuery($obj) {
 										$panels.eq(jdx).removeClass("activated");
 									}
 								}
-								
+								$("html, body").animate({
+									scrollTop: $thisTab.offset().top
+								}, 500);								
 							}
 						} else {
-							if(!$tabs.eq(0).hasClass("deactivated")) {
-								$tabs.eq(0).addClass("deactivated");
-								$panels.eq(0).addClass("deactivated");
-							}
-							for (jdx = 1; jdx < kdx; jdx++) {
-								if ($tabs.eq(jdx).hasClass("activated")) {
-									$tabs.eq(jdx).removeClass("activated");
-									$panels.eq(jdx).removeClass("activated");
+							if (!$thisTab.hasClass("activated")) {
+								if (!$tabs.eq(0).hasClass("deactivated")) {
+									$tabs.eq(0).addClass("deactivated");
+									$panels.eq(0).addClass("deactivated");
 								}
-							}
-							$thisTab.addClass("activated");
-							$panels.eq(kdx).addClass("activated");
-							for (jdx = kdx + 1; jdx < $tabs.length; jdx++) {
-								if ($tabs.eq(jdx).hasClass("activated")) {
-									$tabs.eq(jdx).removeClass("activated");
-									$panels.eq(jdx).removeClass("activated");
+								for (jdx = 1; jdx < kdx; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
 								}
-							}							
+								$thisTab.addClass("activated");
+								$panels.eq(kdx).addClass("activated");
+								for (jdx = kdx + 1; jdx < $tabs.length; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$("html, body").animate({
+									scrollTop: $thisTab.offset().top
+								}, 500);								
+							}
 						}
 					});
 				}
