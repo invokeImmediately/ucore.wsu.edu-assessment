@@ -4149,32 +4149,25 @@ div.auto-scroller ul li {
   list-style-image: none;
 }
 body {
-  background: #981e32;
-}
-@media all and (max-width: 1440px) {
-  body {
-    background: #981e32;
-  }
-}
-@media all and (min-width: 1441px) and (max-width: 1920px) and (max-height: 1080px) {
-  body {
-    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top repeat-y fixed;
-  }
-}
-@media all and (min-width: 1441px) and (max-width: 1920px) and (min-height: 1081px) {
-  body {
-    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top / auto 100% repeat-y fixed;
-  }
-}
-@media all and (min-width: 1921px) and (max-width: 2560px) {
-  body {
-    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top / auto 100% repeat-y fixed;
-  }
-}
-@media all and (min-width: 2561px) {
-  body {
-    background: #981e32 url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) 1080px top / auto 100% repeat-y fixed;
-  }
+  background: #eff0f1;
+  /*background: @hex-crimson;
+	@media all and (max-width: @v-wdscrn-bckgrnd) {
+		background: @hex-crimson;
+	}
+	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
+		@media (max-height: 1080px) {
+			background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top repeat-y fixed;
+		}
+		@media (min-height: 1081px) {
+			background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top/auto 100% repeat-y fixed;
+		}
+	}
+	@media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
+		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top/auto 100% repeat-y fixed;
+	}
+	@media all and (min-width: (@v-wqxga-width+1)) {
+		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) 1080px top/auto 100% repeat-y fixed;
+	}*/
 }
 main {
   background: #fff;
@@ -4377,12 +4370,12 @@ div.column section.header-newsEvents {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-div.column ul:not(.niloa-portal) li {
-  list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
-}
-div.column ul:not(.niloa-portal).gray-bullets li {
-  list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png);
-}
+/*div.column ul:not(.niloa-portal) {
+	li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
+	&.gray-bullets {
+		li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
+	}
+}*/
 div.column ul.niloa-portal {
   position: relative;
   width: 100%;
