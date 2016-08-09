@@ -4171,12 +4171,14 @@ body {
 }
 main {
   background: #fff;
+  border-left: 1px solid #eff0f1;
 }
-@media all and (min-width: 1441px) {
-  #binder {
-    box-shadow: 5px 0 5px rgba(42, 48, 51, 0.5);
-  }
-}
+/*#binder {
+	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) {
+//		border-right: 1px solid rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.5);
+		box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), green(@hex-darkest-gray), blue(@hex-darkest-gray), 0.5);
+	}
+}*/
 #jacket {
   background-repeat: no-repeat;
   background-position: right bottom;
