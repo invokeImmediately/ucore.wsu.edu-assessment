@@ -5228,9 +5228,9 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-animation: quick-fade-in 0.2s linear 1;
-  -moz-animation: quick-fade-in 0.2s linear 1;
-  animation: quick-fade-in 0.2s linear 1;
+  -webkit-animation: quick-fade-in 0.4s linear 1;
+  -moz-animation: quick-fade-in 0.4s linear 1;
+  animation: quick-fade-in 0.4s linear 1;
 }
 @-webkit-keyframes quick-fade-in {
   0% {
