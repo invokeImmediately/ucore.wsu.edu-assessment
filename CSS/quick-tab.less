@@ -1,0 +1,113 @@
+
+
+// Input LESS here, strike 'Ctrl|Command+Enter' to compile.
+@color1: #eff0f1;
+@color2: #615647;
+@mixed: mix(@color1, @color2, 0%);
+@darkened: darken(@color1, 6%);
+@lightened: lighten(@color1, 6%);
+@crimson: #c60c30;
+@crimson2: lighten(@crimson, 30%);
+@crimson3: mix(@crimson, @darkened, 50%);
+@crimson4: mix(@crimson, @lightened, 50%);
+@crimson5: mix(@crimson, #8d959a, 50%);
+
+body {
+    background-color: @darkened;
+    color: @lightened;
+}
+
+p {
+    background-color: @crimson2;
+    color: @crimson5;
+}
+
+a {
+    background-color: @crimson3;
+    color: @crimson4;
+}
+
+// Compiled result:
+body {
+  background-color: #dfe1e3;
+  color: #ffffff;
+}
+p {
+  background-color: #f7748e;
+  color: #aa5165;
+}
+a {
+  background-color: #d27689;
+  color: #e38698;
+}
+
+// SOURCE HTML:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #8d959a;
+		min-width: 600px;
+	}
+	li {
+		float: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: ~"calc(3.9em + 16px)";
+		background-color: #eff0f1;
+		transition: all 0.2s ease;
+	}
+	li > a {
+		display: inline-block;
+		color: #000;
+		padding: 8px 16px;
+		text-decoration: none;
+		max-width: 200px;
+		text-align: center;
+	}
+	li:not(:last-child) {
+		border-right: 1px solid #dfe1e3;
+	}
+	li:not(:first-child) {
+		border-left: 1px solid #ffffff;
+	}
+	li:last-child {
+		border-right: 1px solid #a1a1a1;
+	}
+	li:hover {
+		background-color: #c60c30;
+		color: #ffffff;
+	}
+	li:not(:first-child):hover {
+		border-left: 1px solid #e38698;
+	}
+	li:not(:last-child):hover {
+		border-right: 1px solid #d27689;
+	}
+	li:last-child:hover {
+		border-right: 1px solid #aa5165;
+	}
+	@media (max-width: 600px) {
+	div.container {
+	  overflow: scroll;
+	}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<ul>
+  <li><a href="#">Tab 1</a></li>
+  <li><a href="#">Tab 2</a></li>
+  <li><a href="#">Tab 3</a></li>
+  <li><a href="#">This is a very long string of text to see what happens.</a></li>
+</ul>
+</div>
+</body>
+</html>
