@@ -4637,6 +4637,7 @@ table.assessment.evidence,
 table.assessment.resources {
   border-collapse: separate;
   border-spacing: 0;
+  border: 1px solid #eff0f1;
 }
 @media all {
   section:not(.quick-tabs) > div.column > table thead > tr > th,
@@ -5013,6 +5014,7 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
 .tablepress {
   border-collapse: separate;
   border-spacing: 0;
+  border: 1px solid #eff0f1;
 }
 .tablepress thead th {
   padding-right: .5em;
