@@ -4721,16 +4721,16 @@ table.assessment.resources {
   }
 }
 section:not(.quick-tabs) > div.column > table thead th {
-  background-color: #5e6a71;
-  color: #fff;
-  border-bottom: 1px solid #171c1f;
+  background-color: #b5babe;
+  color: #000;
+  border-bottom: 1px solid #606e7a;
 }
 section:not(.quick-tabs) > div.column > table thead th:not(:last-child) {
-  border-right: 1px solid #191c1d;
+  border-right: 1px solid #666e74;
 }
 section:not(.quick-tabs) > div.column > table thead th:not(:first-child) {
-  border-top: 1px solid #647985;
-  border-left: 1px solid #6a777f;
+  border-top: 1px solid #c0c7cd;
+  border-left: 1px solid #c3c7ca;
 }
 section:not(.quick-tabs) > div.column > table > tbody > tr > td {
   background-color: #fff;
@@ -5019,17 +5019,17 @@ section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-chil
 .tablepress thead th {
   padding-right: .5em;
   padding-left: .5em;
-  background-color: #5e6a71;
-  color: #fff;
-  border-bottom: 1px solid #171c1f;
+  background-color: #b5babe;
+  color: #000;
+  border-bottom: 1px solid #606e7a;
   line-height: 1.375em;
 }
 .tablepress thead th:not(:last-child) {
-  border-right: 1px solid #191c1d;
+  border-right: 1px solid #666e74;
 }
 .tablepress thead th:not(:first-child) {
-  border-top: 1px solid #647985;
-  border-left: 1px solid #6a777f;
+  border-top: 1px solid #c0c7cd;
+  border-left: 1px solid #c3c7ca;
 }
 @media all and (min-width: 1050px) {
   .tablepress thead th {
