@@ -5274,4 +5274,5 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr td {
   display: block;
+  padding: 1em;
 }
