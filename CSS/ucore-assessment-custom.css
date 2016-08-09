@@ -5228,18 +5228,49 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  -webkit-animation: quick-fade-in 0.2s linear 1;
+  -moz-animation: quick-fade-in 0.2s linear 1;
+  animation: quick-fade-in 0.2s linear 1;
+}
+@-webkit-keyframes quick-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes quick-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes quick-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr:first-child {
   display: block;
+  opacity: 1;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr:first-child.deactivated {
   display: none;
+  opacity: 0;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr:not(:first-child) {
   display: none;
+  opacity: 0;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr:not(:first-child).activated {
   display: block;
+  opacity: 1;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr td {
   display: block;
