@@ -4150,7 +4150,7 @@ div.auto-scroller ul li {
 }
 body {
   background: #eff0f1;
-  /*background: @hex-crimson;
+  /*background: @hex-crimson; // Kimberly Green requested that this be removed. 2016-08-09
 	@media all and (max-width: @v-wdscrn-bckgrnd) {
 		background: @hex-crimson;
 	}
@@ -4203,6 +4203,7 @@ section.row.single.article-header {
   height: 230px;
 }
 section.row.single.article-header div.column {
+  background: #5e6a71;
   position: relative;
   padding-left: 0;
   padding-right: 0;
@@ -4217,7 +4218,6 @@ section.row.single.article-header div.column > h1 {
   right: calc(10% + 2rem);
   margin-bottom: 0.35em;
   color: #fff;
-  text-shadow: 0 0 18px #000;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -4234,15 +4234,13 @@ section.row.single.article-header div.column:before {
   height: 0;
 }
 section.row.single.article-header.assessment-planning div.column {
-  background: #8a8f90 url(/wp-content/uploads/sites/1304/2016/07/header-background_assessment-planning-v2.jpg) center center / 990px 230px no-repeat;
-  /*&:before {
+  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			padding-bottom: 11.71232877%;
 			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-plans_with-shadow.png) center center/100% auto no-repeat;
 		}*/
 }
 section.row.single.article-header.assessment-resources div.column {
-  background: #6c563f url(/wp-content/uploads/sites/1304/2016/07/header-background_assessment-resources.jpg) center center / 990px 230px no-repeat;
-  /*&:before {
+  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 12.19178082%;
 			padding-bottom: 9.62873599%;
 			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-resources_with-shadow.png) center center/100% auto no-repeat;
@@ -4252,8 +4250,7 @@ section.row.single.article-header.assessment-resources div.column > h1 {
   right: calc(12.19178082% + 2rem);
 }
 section.row.single.article-header.assessment-evidence div.column {
-  background: #8a8f90 url(/wp-content/uploads/sites/1304/2016/07/header-background_evidence-of-student-learning.jpg) center center / 990px 230px no-repeat;
-  /*&:before {
+  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 9.86301370%;
 			padding-bottom: 11.50684932%;
 			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_evidence-of-student-learning_with-shadow.png) center center/100% auto no-repeat;
@@ -4263,8 +4260,7 @@ section.row.single.article-header.assessment-evidence div.column > h1 {
   right: calc(9.86301370% + 2rem);
 }
 section.row.single.article-header.current-activities div.column {
-  background: #a09d85 url(/wp-content/uploads/sites/1304/2016/07/header-background_current-assessment-activities.jpg) center center / 990px 230px no-repeat;
-  /*&:before {
+  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 9.86301370%;
 			padding-bottom: 11.64383562%;
 			background: url(/wp-content/uploads/sites/1304/2016/08/thumbnail_current-assessment-activities.png) center center/100% auto no-repeat;
@@ -4274,8 +4270,7 @@ section.row.single.article-header.current-activities div.column > h1 {
   right: calc(9.86301370% + 2rem);
 }
 section.row.single.article-header.learning-goals div.column {
-  background: #9c7c58 url(/wp-content/uploads/sites/1304/2016/07/header-background_learning-outcomes.jpg) center center / 990px 230px no-repeat;
-  /*&:before {
+  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 9.86301370%;
 			padding-bottom: 11.57534247%;
 			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_student-learning-outcome-statements_with-shadow.png) center center/100% auto no-repeat;
@@ -4285,8 +4280,7 @@ section.row.single.article-header.learning-goals div.column > h1 {
   right: calc(9.86301370% + 2rem);
 }
 section.row.single.article-header.use-of-evidence div.column {
-  background: #546c69 url(/wp-content/uploads/sites/1304/2016/07/header-background_use-of-evidence.jpg) center center / 990px 230px no-repeat;
-  /*&:before {
+  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 11.98630137%;
 			padding-bottom: 9.58904110%;
 			background: url(/wp-content/uploads/sites/1304/2016/08/thumbnail_use-of-student-learning-evidence.png) center center/100% auto no-repeat;
