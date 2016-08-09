@@ -380,11 +380,114 @@ div.simulated-status-bar {
 	padding-right: 4px;
 	border-top: rgba(red(#dfdfdf), green(#dfdfdf), blue(#dfdfdf), 0.3);
 	border-right: rgba(red(#dfdfdf), green(#dfdfdf), blue(#dfdfdf), 0.3);
-	border-top-right-radius: 3px;
+	border-top-right-radius: 4px;
 	background-color: #dfdfdf;
 	color: #707070;
 	font-size: 11px;
 	z-index: 99352;
+}
+
+section.row.single.quick-tabs > div.column {
+	& > h3:first-child {
+		display: none;
+		& + h4 {
+			display: none;
+			& + ul {
+				width: 100%;
+				min-width: 600px;
+				margin: 0;
+				padding: 0;
+				border-top: 1px solid #8d959a;
+				border-right: 1px solid #8d959a;
+				border-left: 1px solid #8d959a;
+				border-top-right-radius: 7px;
+				border-top-left-radius: 7px;
+				background-color: #8d959a;
+				list-style-type: none;
+				overflow: hidden;
+				& > li {
+					float: left;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					height: ~"calc(3.9em + 16px)";
+					background-color: #eff0f1;
+					cursor: pointer;
+					.transition(~"all 0.2s ease");
+					& > a {
+						display: inline-block;
+						max-width: 200px;
+						padding: 8px 16px;
+						border-bottom: none;
+						color: #000;
+						text-decoration: none;
+						text-align: center;
+						box-shadow: none;
+						.transition(~"all 0.2s ease");
+						pointer-events: none;
+						&:hover {
+							background-color: transparent;
+							box-shadow: none;
+						}
+					}
+					&:hover {
+						background-color: #c60c30;
+						color: #ffffff;
+						& > a {
+							color: @hex-white;
+						}
+					}
+					&:not(:last-child) {
+						border-right: 1px solid #dfe1e3;
+						&:hover {
+							border-right: 1px solid #d27689;
+						}
+					}
+					&:not(:first-child) {
+						border-left: 1px solid #ffffff;
+						&:hover {
+							border-left: 1px solid #e38698;
+						}
+						&:not(.activated) {
+							border-bottom: 1px solid #dfe1e3;
+						}
+						&.activated {
+							background: linear-gradient(rgba(198, 12, 48, 0.5),rgba(198, 12, 48, 0.5)), linear-gradient(#eff0f1,#eff0f1);
+							border-bottom: 1px solid @hex-white;
+							cursor: auto;
+						}
+					}
+					&:first-child {
+						&:not(.deactivated) {
+							background: linear-gradient(rgba(198, 12, 48, 0.5),rgba(198, 12, 48, 0.5)), linear-gradient(#eff0f1,#eff0f1);
+							border-bottom: 1px solid @hex-white;
+							cursor: auto;
+							& > a {
+								color: @hex-white;
+							}
+						}
+						&.deactivated {
+							border-bottom: 1px solid #dfe1e3;
+						}
+					}
+					&:last-child {
+						border-right: 1px solid #a1a1a1;
+						&:hover {
+							border-right: 1px solid #aa5165;
+						}
+					}
+				}
+/*				@media (max-width: 600px) {
+					div.container {
+					  overflow: scroll;
+					}
+				}*/
+				& + h4 {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
@@ -394,9 +497,9 @@ div.simulated-status-bar {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-@tbl-elem-slctrs: ~"div.column > table", ~"table.assessment.planning", ~"table.assessment.evidence", ~"table.assessment.resources";
+@tbl-elem-slctrs: ~"section:not(.quick-tabs) > div.column > table", ~"table.assessment.planning", ~"table.assessment.evidence", ~"table.assessment.resources";
 @tbl-col-wdths: auto auto 141px 231px, auto 50px 50px 50px 50px 50px 50px 50px, auto auto auto;
-@tbl-clr-classes: ~"div.column > table", ~"div.column table.gray", ~"table.assessment.burgundy",
+@tbl-clr-classes: ~"section:not(.quick-tabs) > div.column > table", ~"div.column table.gray", ~"table.assessment.burgundy",
  ~"table.assessment.desaturated-orange";
 @tbl-header-clrs: @hex-darker-blue #8a8f90 #610013 #6c563f;
 @tbl-header-txt-clrs: @hex-white @hex-white @hex-white @hex-white;
@@ -821,6 +924,46 @@ section.assessment-evidence > div.column > table {
 	&.learning-goals {
 		thead th:first-child {
 			width: 40%;
+		}
+	}
+}
+
+section.row.single.quick-tabs > div.column {
+	& > h3:first-child + h4 + ul + h4 + table {
+		display: block;
+		border-right: 1px solid #8d959a;
+		border-bottom: 1px solid #8d959a;
+		border-left: 1px solid #8d959a;
+		border-bottom-right-radius: 7px;
+		border-bottom-left-radius: 7px;
+		& > tbody {
+			display: block;
+			position: relative;
+			tr {
+				.transition(~"all 0.2s ease");
+				.animation(quick-fade-in; 0.4s; linear; 0s; 1);
+				.keyframes(quick-fade-in; @frames-simple-fade-in);
+				&:first-child {
+					display: block;
+					opacity: 1;
+					&.deactivated {
+						display: none;
+						opacity: 0;
+					}
+				}
+				&:not(:first-child) {
+					display: none;
+					opacity: 0;
+					&.activated {
+						display: block;
+						opacity: 1;
+					}
+				}
+				td {
+					display: block;
+					padding: 1em;
+				}
+			}
 		}
 	}
 }
