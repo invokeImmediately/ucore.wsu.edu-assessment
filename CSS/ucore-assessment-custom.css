@@ -4204,6 +4204,7 @@ section.row.single.article-header {
 }
 section.row.single.article-header div.column {
   background: #5e6a71;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(173, 164, 0, 0) 60%, #ada400 60%, #ada400), linear-gradient(#5e6a71, #5e6a71);
   position: relative;
   padding-left: 0;
   padding-right: 0;
@@ -4214,8 +4215,8 @@ section.row.single.article-header div.column > h1 {
   position: absolute;
   top: 50%;
   left: 2rem;
-  right: 10%;
-  right: calc(10% + 2rem);
+  right: 60%;
+  right: calc(60% + 2rem);
   margin-bottom: 0.35em;
   color: #fff;
   -webkit-transform: translateY(-50%);
@@ -4240,54 +4241,54 @@ section.row.single.article-header.assessment-planning div.column {
 		}*/
 }
 section.row.single.article-header.assessment-resources div.column {
-  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
+  /*& > h1 {
+			right: ~"calc(12.19178082% + 2rem)";
+		}
+		&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 12.19178082%;
 			padding-bottom: 9.62873599%;
 			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-resources_with-shadow.png) center center/100% auto no-repeat;
 		}*/
 }
-section.row.single.article-header.assessment-resources div.column > h1 {
-  right: calc(12.19178082% + 2rem);
-}
 section.row.single.article-header.assessment-evidence div.column {
-  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
+  /*& > h1 {
+			right: ~"calc(9.86301370% + 2rem)";
+		}
+		&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 9.86301370%;
 			padding-bottom: 11.50684932%;
 			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_evidence-of-student-learning_with-shadow.png) center center/100% auto no-repeat;
 		}*/
 }
-section.row.single.article-header.assessment-evidence div.column > h1 {
-  right: calc(9.86301370% + 2rem);
-}
 section.row.single.article-header.current-activities div.column {
-  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
+  /*& > h1 {
+			right: ~"calc(9.86301370% + 2rem)";
+		}
+		&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 9.86301370%;
 			padding-bottom: 11.64383562%;
 			background: url(/wp-content/uploads/sites/1304/2016/08/thumbnail_current-assessment-activities.png) center center/100% auto no-repeat;
 		}*/
 }
-section.row.single.article-header.current-activities div.column > h1 {
-  right: calc(9.86301370% + 2rem);
-}
 section.row.single.article-header.learning-goals div.column {
-  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
+  /*& > h1 {
+			right: ~"calc(9.86301370% + 2rem)";
+		}
+		&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 9.86301370%;
 			padding-bottom: 11.57534247%;
 			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_student-learning-outcome-statements_with-shadow.png) center center/100% auto no-repeat;
 		}*/
 }
-section.row.single.article-header.learning-goals div.column > h1 {
-  right: calc(9.86301370% + 2rem);
-}
 section.row.single.article-header.use-of-evidence div.column {
-  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
+  /*& > h1 {
+			right: ~"calc(9.86301370% + 2rem)";
+		}
+		&:before { // Kimberly Green requested that this be removed. 2016-08-09
 			width: 11.98630137%;
 			padding-bottom: 9.58904110%;
 			background: url(/wp-content/uploads/sites/1304/2016/08/thumbnail_use-of-student-learning-evidence.png) center center/100% auto no-repeat;
 		}*/
-}
-section.row.single.article-header.use-of-evidence div.column > h1 {
-  right: calc(9.86301370% + 2rem);
 }
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
