@@ -4954,14 +4954,14 @@ section.assessment-planning > div.column > table > tbody > tr > td > table.sub-p
   border-left: 1px solid #ffffff;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n+1) {
-  width: 231px;
-  min-width: 231px;
-  max-width: 231px;
+  width: 230px;
+  min-width: 230px;
+  max-width: 230px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n) {
-  width: 141px;
-  min-width: 141px;
-  max-width: 231px;
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:nth-child(even) > td {
   background-color: #f1e4c4;
