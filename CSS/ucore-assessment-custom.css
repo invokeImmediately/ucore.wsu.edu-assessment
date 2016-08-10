@@ -4987,17 +4987,20 @@ section.assessment-planning > div.column > table > tbody > tr > td > table.sub-p
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:not(:last-child):nth-child(even) > td {
   border-bottom: 1px solid #d9ae43;
 }
-section.assessment-evidence > div.column > table > thead > tr:first-child > th:nth-child(8n + 1) {
+section.assessment-evidence > div.column > table > thead > tr:not(.title) > th:nth-child(8n + 1),
+section.assessment-activities > div.column > table > thead > tr:not(.title) > th:nth-child(8n + 1) {
   width: auto;
   vertical-align: bottom;
 }
-section.assessment-evidence > div.column > table > thead > tr:first-child > th:not(:nth-child(8n + 1)) {
+section.assessment-evidence > div.column > table > thead > tr:not(.title) > th:not(:nth-child(8n + 1)),
+section.assessment-activities > div.column > table > thead > tr:not(.title) > th:not(:nth-child(8n + 1)) {
   position: relative;
   width: 50px;
   min-width: 50px;
   height: 250px;
 }
-section.assessment-evidence > div.column > table > thead > tr:first-child > th:not(:nth-child(8n + 1)) p {
+section.assessment-evidence > div.column > table > thead > tr:not(.title) > th:not(:nth-child(8n + 1)) p,
+section.assessment-activities > div.column > table > thead > tr:not(.title) > th:not(:nth-child(8n + 1)) p {
   position: absolute;
   top: 130px;
   left: 50%;
@@ -5010,12 +5013,22 @@ section.assessment-evidence > div.column > table > thead > tr:first-child > th:n
   -moz-transform: translate(-50%, -50%) rotate(-90deg);
   transform: translate(-50%, -50%) rotate(-90deg);
 }
-section.assessment-evidence > div.column > table > tbody > tr > td {
+section.assessment-evidence > div.column > table > thead > tr:not(.title) > th,
+section.assessment-activities > div.column > table > thead > tr:not(.title) > th {
+  background-color: #fff;
+  font-size: 1.3em;
+  text-align: center;
+  vertical-align: middle;
+}
+section.assessment-evidence > div.column > table > tbody > tr > td,
+section.assessment-activities > div.column > table > tbody > tr > td {
   color: #000;
 }
-section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-child(8n + 1)) {
+section.assessment-evidence > div.column > table > tbody > tr > td:not(:nth-child(8n + 1)),
+section.assessment-activities > div.column > table > tbody > tr > td:not(:nth-child(8n + 1)) {
   text-align: center;
   font-weight: bold;
+  vertical-align: middle;
 }
 .tablepress {
   border-collapse: separate;
