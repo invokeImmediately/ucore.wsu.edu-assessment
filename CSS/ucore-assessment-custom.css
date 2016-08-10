@@ -4956,10 +4956,12 @@ section.assessment-planning > div.column > table > tbody > tr > td > table.sub-p
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n+1) {
   width: 231px;
   min-width: 231px;
+  max-width: 231px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n) {
   width: 141px;
   min-width: 141px;
+  max-width: 231px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:nth-child(even) > td {
   background-color: #f1e4c4;
