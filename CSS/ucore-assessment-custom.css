@@ -4932,16 +4932,16 @@ section.assessment-planning > div.column > table > thead > tr:first-child > th:n
   width: auto;
 }
 section.assessment-planning > div.column > table > thead > tr:first-child > th:nth-child(4n + 3) {
-  width: 141px;
-}
-section.assessment-planning > div.column > table > thead > tr:first-child > th:nth-child(4n) {
   width: 231px;
 }
+section.assessment-planning > div.column > table > thead > tr:first-child > th:nth-child(4n) {
+  width: 141px;
+}
 section.assessment-planning > div.column > table > thead > tr > th:nth-child(4n + 3) {
-  min-width: 141px;
+  min-width: 231px;
 }
 section.assessment-planning > div.column > table > thead > tr > th:nth-child(4n) {
-  min-width: 231px;
+  min-width: 141px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td {
   background-color: #fff;
@@ -4963,12 +4963,12 @@ section.assessment-planning > div.column > table > tbody > tr > td > table.sub-p
   border-left: 1px solid #f6edd9;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:first-child > td:nth-child(2n+1) {
-  width: 141px;
-  min-width: 141px;
-}
-section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:first-child > td:nth-child(2n) {
   width: 231px;
   min-width: 231px;
+}
+section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:first-child > td:nth-child(2n) {
+  width: 141px;
+  min-width: 141px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:not(:first-child) > td {
   border-top: 1px solid #f7eed7;
