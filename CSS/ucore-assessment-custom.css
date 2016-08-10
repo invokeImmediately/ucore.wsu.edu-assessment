@@ -5015,7 +5015,7 @@ section.assessment-activities > div.column > table > thead > tr:not(.title) > th
 }
 section.assessment-evidence > div.column > table > thead > tr.title > th,
 section.assessment-activities > div.column > table > thead > tr.title > th {
-  background-color: #fff;
+  background-color: #d7dadb;
   font-size: 1.3em;
   text-align: center;
   vertical-align: middle;
