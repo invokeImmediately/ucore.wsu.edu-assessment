@@ -4192,7 +4192,7 @@ header.main-header {
 .main-header sup:not(.unset) {
   color: #fff !important;
 }
-body.page main.spine-blank-template > header.main-header {
+body.page:not(.home) main.spine-blank-template > header.main-header {
   height: 85px;
 }
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
