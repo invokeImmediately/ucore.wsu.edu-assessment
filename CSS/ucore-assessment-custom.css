@@ -4959,9 +4959,9 @@ section.assessment-planning > div.column > table > tbody > tr > td > table.sub-p
   max-width: 230px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n) {
-  width: 140px;
-  min-width: 140px;
-  max-width: 140px;
+  width: 142px;
+  min-width: 142px;
+  max-width: 142px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:nth-child(even) > td {
   background-color: #f1e4c4;
