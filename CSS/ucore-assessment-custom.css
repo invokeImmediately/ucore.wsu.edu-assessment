@@ -4235,11 +4235,6 @@ section.row.halves.article-header div.column.one > h1 {
 section.row.halves.article-header div.column.one > :not(h1) {
   display: none;
 }
-@media (max-width: 693px) {
-  section.row.halves.article-header div.column.one {
-    float: left;
-  }
-}
 section.row.halves.article-header div.column.two {
   width: 40%;
   height: 100%;
@@ -4247,8 +4242,10 @@ section.row.halves.article-header div.column.two {
   background-size: auto 100%;
 }
 @media (max-width: 693px) {
+  section.row.halves.article-header div.column.one,
   section.row.halves.article-header div.column.two {
     float: left;
+    clear: none;
   }
 }
 section.row.single.article-header {
