@@ -2873,6 +2873,22 @@ img.symbolic-image {
     width: 96px;
   }
 }
+img.has-caption[title] {
+  position: relative;
+  margin-bottom: 40px;
+}
+img.has-caption[title]::after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.8em;
+  text-align: center;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
 /*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
  *  │ ++++++++ div.column ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *  │ ++++++++ TABLES     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
