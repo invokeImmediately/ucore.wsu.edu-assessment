@@ -4202,6 +4202,40 @@ body.page:not(.home) main.spine-blank-template > header.main-header {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
+section.row.halves.article-header {
+  height: 230px;
+}
+section.row.halves.article-header.gutter .column:not(.gutterless) {
+  padding-left: 0;
+  padding-right: 0;
+}
+section.row.halves.article-header div.column.one {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  background: #5e6a71;
+  width: 60%;
+  height: 100%;
+}
+section.row.halves.article-header div.column.one > h1 {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  right: 60%;
+  right: calc(60% + 2rem);
+  margin-bottom: 0.35em;
+  color: #fff;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+section.row.halves.article-header div.column.one > :not(h1) {
+  display: none;
+}
+section.row.halves.article-header div.column.two {
+  width: 40%;
+  height: 100%;
+}
 section.row.single.article-header {
   height: 230px;
 }
