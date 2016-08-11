@@ -4232,6 +4232,12 @@ section.row.halves.article-header div.column.one > h1 {
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+@media (max-width: 693px) {
+  section.row.halves.article-header div.column.one > h1 {
+    font-size: 6.5vw;
+    left: 1rem;
+  }
+}
 section.row.halves.article-header div.column.one > :not(h1) {
   display: none;
 }
