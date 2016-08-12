@@ -4216,7 +4216,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header {
   height: 85px;
 }
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### DIV.ARTICLE-HEADER #################################################################### ║
+ *  ║ #### ARTICLE/PAGE-HEADERS ################################################################## ║
  *  ╠==============================================================================================╣
  *  ║ Container designed to hold the header for the article being presented on the current page.   ║
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
@@ -4316,62 +4316,6 @@ section.row.single.article-header div.column:before {
   width: 10%;
   height: 0;
 }
-section.row.single.article-header.assessment-planning div.column {
-  /*&:before { // Kimberly Green requested that this be removed. 2016-08-09
-			padding-bottom: 11.71232877%;
-			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-plans_with-shadow.png) center center/100% auto no-repeat;
-		}*/
-}
-section.row.single.article-header.assessment-resources div.column {
-  /*& > h1 {
-			right: ~"calc(12.19178082% + 2rem)";
-		}
-		&:before { // Kimberly Green requested that this be removed. 2016-08-09
-			width: 12.19178082%;
-			padding-bottom: 9.62873599%;
-			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_assessment-resources_with-shadow.png) center center/100% auto no-repeat;
-		}*/
-}
-section.row.single.article-header.assessment-evidence div.column {
-  /*& > h1 {
-			right: ~"calc(9.86301370% + 2rem)";
-		}
-		&:before { // Kimberly Green requested that this be removed. 2016-08-09
-			width: 9.86301370%;
-			padding-bottom: 11.50684932%;
-			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_evidence-of-student-learning_with-shadow.png) center center/100% auto no-repeat;
-		}*/
-}
-section.row.single.article-header.current-activities div.column {
-  /*& > h1 {
-			right: ~"calc(9.86301370% + 2rem)";
-		}
-		&:before { // Kimberly Green requested that this be removed. 2016-08-09
-			width: 9.86301370%;
-			padding-bottom: 11.64383562%;
-			background: url(/wp-content/uploads/sites/1304/2016/08/thumbnail_current-assessment-activities.png) center center/100% auto no-repeat;
-		}*/
-}
-section.row.single.article-header.learning-goals div.column {
-  /*& > h1 {
-			right: ~"calc(9.86301370% + 2rem)";
-		}
-		&:before { // Kimberly Green requested that this be removed. 2016-08-09
-			width: 9.86301370%;
-			padding-bottom: 11.57534247%;
-			background: url(/wp-content/uploads/sites/1304/2016/07/thumbnail_student-learning-outcome-statements_with-shadow.png) center center/100% auto no-repeat;
-		}*/
-}
-section.row.single.article-header.use-of-evidence div.column {
-  /*& > h1 {
-			right: ~"calc(9.86301370% + 2rem)";
-		}
-		&:before { // Kimberly Green requested that this be removed. 2016-08-09
-			width: 11.98630137%;
-			padding-bottom: 9.58904110%;
-			background: url(/wp-content/uploads/sites/1304/2016/08/thumbnail_use-of-student-learning-evidence.png) center center/100% auto no-repeat;
-		}*/
-}
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
  *  ╠==============================================================================================╣
@@ -4442,6 +4386,16 @@ div.column div.gray-acrylic-sidebar h4 {
 div.column section.header-newsEvents {
   background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
 }
+div.recent-posts {
+  padding-bottom: 1rem;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #edf3f4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.33);
+}
+div.recent-posts > h3.fancy.with-top-border:first-child {
+  background: linear-gradient(to right, rgba(152, 30, 50, 0.075), rgba(152, 30, 50, 0.075)), linear-gradient(to right, #fff, #fff);
+}
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### LIST STYLES ########################################################################### ║
  *  ╠==============================================================================================╣
@@ -4449,12 +4403,6 @@ div.column section.header-newsEvents {
  *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-/*div.column ul:not(.niloa-portal) {
-	li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
-	&.gray-bullets {
-		li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
-	}
-}*/
 div.column ul.niloa-portal {
   position: relative;
   width: 100%;
