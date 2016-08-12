@@ -4266,7 +4266,7 @@ section.row.halves.article-header div.column.two {
   width: 40%;
   height: 100%;
   background-position: center center;
-  background-size: auto 100%;
+  background-size: cover;
 }
 @media (max-width: 693px) {
   section.row.halves.article-header div.column.one,
