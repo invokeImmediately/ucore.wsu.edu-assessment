@@ -4243,9 +4243,8 @@ section.row.halves.article-header div.column.one {
 section.row.halves.article-header div.column.one > h1 {
   position: absolute;
   top: 50%;
+  right: 2rem;
   left: 2rem;
-  right: 60%;
-  right: calc(60% + 2rem);
   margin-bottom: 0.35em;
   color: #fff;
   -webkit-transform: translateY(-50%);
@@ -4255,6 +4254,7 @@ section.row.halves.article-header div.column.one > h1 {
 @media (max-width: 693px) {
   section.row.halves.article-header div.column.one > h1 {
     font-size: 6.5vw;
+    right: 1rem;
     left: 1rem;
   }
 }
@@ -4291,8 +4291,8 @@ section.row.single.article-header div.column > h1 {
   position: absolute;
   top: 50%;
   left: 2rem;
-  right: 60%;
-  right: calc(60% + 2rem);
+  right: 40%;
+  right: calc(40% + 2rem);
   margin-bottom: 0.35em;
   color: #fff;
   -webkit-transform: translateY(-50%);
