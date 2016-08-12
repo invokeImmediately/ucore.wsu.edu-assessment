@@ -4396,6 +4396,10 @@ div.recent-posts {
 div.recent-posts > h3.fancy.with-top-border:first-child {
   background: linear-gradient(to right, rgba(152, 30, 50, 0.075), rgba(152, 30, 50, 0.075)), linear-gradient(to right, #fff, #fff);
 }
+div.recent-posts a {
+  border-bottom: none;
+  box-shadow: none;
+}
 div.recent-posts + div.recent-posts {
   margin-top: 2rem;
 }
