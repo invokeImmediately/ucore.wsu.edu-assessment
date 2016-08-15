@@ -4282,7 +4282,7 @@ section.row.halves.article-header div.column.two {
   }
 }
 section.row.halves.article-header.nsse div.column.two {
-  background: url(/wp-content/uploads/sites/1304/2016/08/nsse_header-banner.png) no-repeat center left, #d6d6d6 url(/wp-content/uploads/sites/1304/2016/08/nsse_header-bg.gif) repeat-x top left;
+  background: url(/wp-content/uploads/sites/1304/2016/08/nsse_header-banner.png) center left / 95% auto no-repeat, #e6e6e6 url(/wp-content/uploads/sites/1304/2016/08/nsse_header-bg.gif) top left repeat-x;
 }
 section.row.single.article-header {
   height: 230px;
