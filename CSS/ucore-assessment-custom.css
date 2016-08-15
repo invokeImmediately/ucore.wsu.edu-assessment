@@ -4281,6 +4281,9 @@ section.row.halves.article-header div.column.two {
     clear: none;
   }
 }
+section.row.halves.article-header.nsse div.column.two {
+  background: url(/wp-content/uploads/sites/1304/2016/08/nsse_header-banner.png) no-repeat center left, #d6d6d6 url(/wp-content/uploads/sites/1304/2016/08/nsse_header-bg.gif) repeat-x top left;
+}
 section.row.single.article-header {
   height: 230px;
 }
