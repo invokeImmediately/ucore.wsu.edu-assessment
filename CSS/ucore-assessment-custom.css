@@ -4191,12 +4191,12 @@ header.main-header {
 body.page:not(.home) main.spine-blank-template > header.main-header {
   height: 85px;
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### ARTICLE/PAGE-HEADERS ################################################################## ║
- *  ╠==============================================================================================╣
- *  ║ Container designed to hold the header for the article being presented on the current page.   ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### ARTICLE/PAGE-HEADER layouts ##################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Container designed to hold the header for the article being presented on the current page.             ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 section.row.halves.article-header {
   position: relative;
@@ -4295,12 +4295,12 @@ section.row.single.article-header div.column:before {
   width: 10%;
   height: 0;
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### ASIDE layouts ################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom asides & sidebars within a div.column element.                ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.column aside {
   font-size: .8rem;
@@ -4334,12 +4334,12 @@ div.column aside.article-sidebar.bluish-gray {
   border: 1px solid #464e54;
   box-shadow: 3px 3px 3px rgba(42, 48, 51, 0.3333);
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### DIV STYLES ############################################################################ ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### DIV layouts ##################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.                         ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.column div.bluish-gray-acrylic-sidebar p,
 div.column div.green-marble-sidebar p,
@@ -4382,12 +4382,12 @@ div.recent-posts a {
 div.recent-posts + div.recent-posts {
   margin-top: 2rem;
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### LIST STYLES ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### LIST layouts #################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.                         ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.column ul.niloa-portal {
   position: relative;
@@ -4636,12 +4636,12 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:last-
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 {
   display: none;
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### TABLE STYLES ########################################################################## ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### TABLE layouts ################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.                         ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 section:not(.quick-tabs) > div.column > table,
 table.assessment.planning,
@@ -5158,6 +5158,19 @@ section.assessment-activities > div.column > table > tbody > tr > td:not(:nth-ch
 }
 .tablepress.learning-goals thead th:first-child {
   width: 40%;
+}
+h2.tablepress-table-name {
+  padding: 8px 0.5em;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #d7dadb;
+  font-size: 1.3em;
+  text-align: center;
+  text-transform: none;
+}
+h2.tablepress-table-name + table.tabelpress {
+  border-top: 1px solid #606e7a;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table {
   display: block;
