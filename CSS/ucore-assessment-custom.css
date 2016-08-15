@@ -4170,35 +4170,11 @@ div.auto-scroller ul li {
 }
 body {
   background: #eff0f1;
-  /*background: @hex-crimson; // Kimberly Green requested that this be removed. 2016-08-09
-	@media all and (max-width: @v-wdscrn-bckgrnd) {
-		background: @hex-crimson;
-	}
-	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
-		@media (max-height: 1080px) {
-			background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top repeat-y fixed;
-		}
-		@media (min-height: 1081px) {
-			background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top/auto 100% repeat-y fixed;
-		}
-	}
-	@media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
-		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top/auto 100% repeat-y fixed;
-	}
-	@media all and (min-width: (@v-wqxga-width+1)) {
-		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) 1080px top/auto 100% repeat-y fixed;
-	}*/
 }
 main {
   background: #fff;
   border-left: 1px solid #eff0f1;
 }
-/*#binder {
-	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) {
-//		border-right: 1px solid rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.5);
-		box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), green(@hex-darkest-gray), blue(@hex-darkest-gray), 0.5);
-	}
-}*/
 #jacket {
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -4582,11 +4558,6 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul {
   background-color: #8d959a;
   list-style-type: none;
   overflow: hidden;
-  /*				@media (max-width: 600px) {
-					div.container {
-					  overflow: scroll;
-					}
-				}*/
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
   float: left;
@@ -4785,7 +4756,6 @@ section:not(.quick-tabs) > div.column > table > tbody > tr > td:not(:first-child
 section:not(.quick-tabs) > div.column > table > tbody > tr > td:first-child {
   background-color: #fff;
   border-right: 1px solid #b3b3b3;
-  font-weight: bold;
 }
 section:not(.quick-tabs) > div.column > table > tbody > tr:nth-child(even) > td {
   background-color: #f9f4e7;
@@ -4836,7 +4806,6 @@ div.column table.gray > tbody > tr > td:not(:first-child) {
 div.column table.gray > tbody > tr > td:first-child {
   background-color: #bec1c1;
   border-right: 1px solid #707676;
-  font-weight: bold;
 }
 div.column table.gray > tbody > tr:nth-child(even) > td {
   background-color: #d2cfd2;
@@ -4887,7 +4856,6 @@ table.assessment.burgundy > tbody > tr > td:not(:first-child) {
 table.assessment.burgundy > tbody > tr > td:first-child {
   background-color: #ff7590;
   border-right: 1px solid #db002b;
-  font-weight: bold;
 }
 table.assessment.burgundy > tbody > tr:nth-child(even) > td {
   background-color: #ffd4c2;
@@ -4938,7 +4906,6 @@ table.assessment.desaturated-orange > tbody > tr > td:not(:first-child) {
 table.assessment.desaturated-orange > tbody > tr > td:first-child {
   background-color: #ad9072;
   border-right: 1px solid #554331;
-  font-weight: bold;
 }
 table.assessment.desaturated-orange > tbody > tr:nth-child(even) > td {
   background-color: #c9d4df;
