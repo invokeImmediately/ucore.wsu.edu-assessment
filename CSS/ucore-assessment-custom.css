@@ -5169,7 +5169,7 @@ div.column h2.tablepress-table-name {
   text-align: center;
   text-transform: none;
 }
-div.column h2.tablepress-table-name + table.tabelpress {
+div.column h2.tablepress-table-name + table.tablepress {
   border-top: 1px solid #606e7a;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table {
