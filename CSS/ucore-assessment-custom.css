@@ -5159,7 +5159,7 @@ section.assessment-activities > div.column > table > tbody > tr > td:not(:nth-ch
 .tablepress.learning-goals thead th:first-child {
   width: 40%;
 }
-h2.tablepress-table-name {
+div.column h2.tablepress-table-name {
   padding: 8px 0.5em;
   margin-bottom: 0;
   margin-left: 0;
@@ -5169,7 +5169,7 @@ h2.tablepress-table-name {
   text-align: center;
   text-transform: none;
 }
-h2.tablepress-table-name + table.tabelpress {
+div.column h2.tablepress-table-name + table.tabelpress {
   border-top: 1px solid #606e7a;
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table {
