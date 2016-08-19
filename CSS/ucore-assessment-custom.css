@@ -868,6 +868,7 @@ div.column h1 {
   padding-bottom: 0;
   margin-top: 1.5rem;
   margin-bottom: .75rem;
+  font-size: 3em;
   font-weight: 900;
   text-transform: uppercase;
   color: #464e54;
@@ -1027,6 +1028,7 @@ div.column h3,
   margin-top: 1.5rem;
   margin-bottom: .75rem;
   margin-left: -0.1em;
+  font-size: 1.7em;
   font-weight: 600;
   text-transform: uppercase;
   color: #981e32;
@@ -1123,44 +1125,45 @@ div.column h4 {
   padding: 0;
   margin-top: 1rem;
   margin-bottom: .5rem;
+  font-size: 1.4em;
   font-weight: 600;
   color: #981e32;
 }
 @media all {
   div.column h4 {
     line-height: 1.2em;
-    font-size: 1.7em;
+    font-size: 1.4em;
   }
 }
 @media all and (min-width: 1073px) {
   div.column h4 {
-    font-size: 1.84390888em;
+    font-size: 1.5185132em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   div.column h4 {
-    font-size: 1.7em;
+    font-size: 1.4em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h4 {
-    font-size: 1.84390888em;
+    font-size: 1.5185132em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   div.column h4 {
-    font-size: 1.7em;
+    font-size: 1.4em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h4 {
-    font-size: 1.56732257em;
+    font-size: 1.29073623em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h4 {
-    font-size: 1.44500001em;
+    font-size: 1.19000001em;
     text-align: left;
   }
 }
@@ -4648,6 +4651,44 @@ div.recent-posts {
 }
 div.recent-posts > h3.fancy.with-top-border:first-child {
   background: linear-gradient(to right, rgba(152, 30, 50, 0.075), rgba(152, 30, 50, 0.075)), linear-gradient(to right, #fff, #fff);
+}
+@media all {
+  div.recent-posts > h3.fancy.with-top-border:first-child {
+    line-height: 1.1em;
+    font-size: 1.56732257em;
+  }
+}
+@media all and (min-width: 1073px) {
+  div.recent-posts > h3.fancy.with-top-border:first-child {
+    font-size: 1.7em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  div.recent-posts > h3.fancy.with-top-border:first-child {
+    font-size: 1.56732257em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  div.recent-posts > h3.fancy.with-top-border:first-child {
+    font-size: 1.7em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  div.recent-posts > h3.fancy.with-top-border:first-child {
+    font-size: 1.56732257em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  div.recent-posts > h3.fancy.with-top-border:first-child {
+    font-size: 1.44500001em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  div.recent-posts > h3.fancy.with-top-border:first-child {
+    font-size: 1.33222419em;
+    text-align: left;
+  }
 }
 div.recent-posts a {
   border-bottom: none;
