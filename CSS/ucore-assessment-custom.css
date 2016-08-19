@@ -4643,6 +4643,9 @@ div.column div.green-marble-sidebar h4,
 div.column div.gray-acrylic-sidebar h4 {
   font-size: 1.05rem;
 }
+.widget_rss ul li {
+  list-style-type: disc;
+}
 div.column section.header-newsEvents {
   background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
 }
