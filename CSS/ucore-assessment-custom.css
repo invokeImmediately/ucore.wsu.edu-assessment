@@ -4651,6 +4651,9 @@ div.column .widget_rss a:hover {
   border-bottom: none;
   box-shadow: none;
 }
+div.column .widget_rss a.rsswidget img {
+  display: none;
+}
 div.column .widget_rss ul li {
   list-style-type: disc;
 }
