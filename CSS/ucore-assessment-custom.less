@@ -2,37 +2,12 @@
 
 body {
 	background: @hex-bright-gray;
-	/*background: @hex-crimson; // Kimberly Green requested that this be removed. 2016-08-09
-	@media all and (max-width: @v-wdscrn-bckgrnd) {
-		background: @hex-crimson;
-	}
-	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
-		@media (max-height: 1080px) {
-			background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top repeat-y fixed;
-		}
-		@media (min-height: 1081px) {
-			background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top/auto 100% repeat-y fixed;
-		}
-	}
-	@media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
-		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) right top/auto 100% repeat-y fixed;
-	}
-	@media all and (min-width: (@v-wqxga-width+1)) {
-		background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/07/background_ucore-assessment-body_wuxga-v4.jpg) 1080px top/auto 100% repeat-y fixed;
-	}*/
 }
 
 main {
 	background: @hex-white;
 	border-left: 1px solid @hex-bright-gray;
 }
-
-/*#binder {
-	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) {
-//		border-right: 1px solid rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.5);
-		box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), green(@hex-darkest-gray), blue(@hex-darkest-gray), 0.5);
-	}
-}*/
 
 #jacket {
 	background-repeat: no-repeat;
@@ -42,7 +17,6 @@ main {
 
 header.main-header {
 	&:extend(.has-dflt-font);
-	// background: #717171 url(/wp-content/uploads/sites/1304/2016/07/site-header_platinum-background.jpg) repeat scroll left top;
 	background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/08/site-header_platinum-background_crimson.jpg) repeat scroll left top;
 	color: @hex-white !important;
 }
@@ -55,14 +29,13 @@ body.page:not(.home) main.spine-blank-template > header.main-header {
 	height: 85px;
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### ARTICLE/PAGE-HEADERS ################################################################## ║
- *  ╠==============================================================================================╣
- *  ║ Container designed to hold the header for the article being presented on the current page.   ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### ARTICLE/PAGE-HEADER layouts ##################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Container designed to hold the header for the article being presented on the current page.             ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-
 section.row.halves.article-header {
 	position: relative;
 	height: 230px;
@@ -90,7 +63,6 @@ section.row.halves.article-header {
 				left: @v-dflt-spcng;
 				margin-bottom: 0.35em;
 				color: @hex-white;
-				//text-shadow: 0 0 18px @hex-black; // Kimberly Green requested that this be removed. 2016-08-09
 				.transform(~"translateY(-50%)");
 				@media (max-width: @v-rghtclmn-thrshld) {
 					font-size: 6.5vw;
@@ -119,6 +91,10 @@ section.row.halves.article-header {
 			}
 		}
 	}
+	&.nsse div.column.two {
+		background: url(/wp-content/uploads/sites/1304/2016/08/nsse_header-banner_enhanced.png) center center/95% auto no-repeat,
+		 #e6e6e6 url(/wp-content/uploads/sites/1304/2016/08/nsse_header-bg.gif) top left repeat-x;
+	}
 }
  
 section.row.single.article-header {
@@ -143,7 +119,6 @@ section.row.single.article-header {
 			right: ~"calc(40% + 2rem)";
 			margin-bottom: 0.35em;
 			color: @hex-white;
-			//text-shadow: 0 0 18px @hex-black; // Kimberly Green requested that this be removed. 2016-08-09
 			.transform(~"translateY(-50%)");
 		}
 		& > :not(h1) {
@@ -160,12 +135,12 @@ section.row.single.article-header {
 	}
 }
  
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### ASIDE layouts ################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom asides & sidebars within a div.column element.                ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.column {
 	aside {
@@ -199,12 +174,12 @@ div.column {
 	}
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### DIV STYLES ############################################################################ ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### DIV layouts ##################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.                         ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.column {
 	div.bluish-gray-acrylic-sidebar, div.green-marble-sidebar, div.gray-acrylic-sidebar {
@@ -256,18 +231,16 @@ div.recent-posts {
 	}
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### LIST STYLES ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### LIST layouts #################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.                         ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-//
 //     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 //     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 //     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
-//
 div.column ul.niloa-portal {
 	position: relative;
 	width: 100%;
@@ -410,6 +383,9 @@ div.simulated-status-bar {
 	z-index: 99352;
 }
 
+//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+//     │ ++++ Quick Tab tabs +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 section.row.single.quick-tabs > div.column {
 	& > h3:first-child {
 		display: none;
@@ -500,11 +476,6 @@ section.row.single.quick-tabs > div.column {
 						}
 					}
 				}
-/*				@media (max-width: 600px) {
-					div.container {
-					  overflow: scroll;
-					}
-				}*/
 				& + h4 {
 					display: none;
 				}
@@ -513,13 +484,16 @@ section.row.single.quick-tabs > div.column {
 	}
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### TABLE STYLES ########################################################################## ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### TABLE layouts ################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.                         ║
+ *  ║  ╘═» Customized here for use on the UCORE Assessment website.                                          ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
+//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+//     │ ++++ General tables throughout site +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 @tbl-elem-slctrs: ~"section:not(.quick-tabs) > div.column > table", ~"table.assessment.planning", ~"table.assessment.evidence", ~"table.assessment.resources";
 @tbl-col-wdths: auto auto 231px 141px, auto 50px 50px 50px 50px 50px 50px 50px, auto auto auto;
 @tbl-clr-classes: ~"section:not(.quick-tabs) > div.column > table", ~"div.column table.gray", ~"table.assessment.burgundy",
@@ -537,7 +511,6 @@ section.row.single.quick-tabs > div.column {
 	border-collapse: separate;
 	border-spacing: 0;
 	border: 1px solid @hex-lighter-gray;
-	//box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
 	thead > tr > th {
         @media all {
 			padding-right: 0.5em;
@@ -608,7 +581,6 @@ section.row.single.quick-tabs > div.column {
 					&:first-child {
 						background-color: extract(@tbl-col1-clrs, @i);
 						border-right: 1px solid darken(extract(@tbl-col1-clrs, @i), 30%);
-						font-weight: bold;
 					}
 				}
 				&:nth-child(even) > td {
@@ -763,6 +735,9 @@ section.assessment-activities > div.column > table {
 	}
 }
 
+//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+//     │ ++++ TablePress tables ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 @dflt-tbl-hdr-clr: @hex-light-gray;
 @dflt-tbl-hdr-txt-clr: @hex-black;
 @dflt-tbl-col1-clr: @hex-white;
@@ -897,6 +872,23 @@ section.assessment-activities > div.column > table {
 	}
 }
 
+div.column h2.tablepress-table-name {
+	padding: 8px 0.5em;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	background-color: @hex-lighter-gray;
+	font-size: 1.3em;
+	text-align: center;
+	text-transform: none;
+	& + table.tablepress {
+		border-top: 1px solid saturate(darken(@dflt-tbl-hdr-clr, 30%), 5%);
+	}
+}
+
+//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+//     │ ++++ Quick-Tabs content panels ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 section.row.single.quick-tabs > div.column {
 	& > h3:first-child + h4 + ul + h4 + table {
 		display: block;
