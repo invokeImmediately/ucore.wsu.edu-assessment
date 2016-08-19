@@ -4882,6 +4882,11 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+@media screen and (max-width: 480px) {
+  section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
+    width: 100%;
+  }
+}
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a {
   display: inline-block;
   max-width: 200px;
