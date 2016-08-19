@@ -4901,6 +4901,11 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a {
   transition: all 0.2s ease;
   pointer-events: none;
 }
+@media screen and (max-width: 480px) {
+  section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a {
+    max-width: none;
+  }
+}
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a:hover {
   background-color: transparent;
   box-shadow: none;
