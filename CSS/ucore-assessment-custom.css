@@ -1083,6 +1083,7 @@ div.column h3.no-top-margin,
   margin-top: 0;
 }
 div.column h3.fancy,
+div.column h4 .fancy,
 .gform_heading h3.gform_title.fancy {
   position: relative;
   padding: 0.3333rem 0.5rem;
@@ -1092,14 +1093,17 @@ div.column h3.fancy,
   background-color: rgba(219, 120, 121, 0.075);
 }
 div.column h3.fancy.with-top-border,
+div.column h4 .fancy.with-top-border,
 .gform_heading h3.gform_title.fancy.with-top-border {
   padding-top: 0.4375rem;
 }
 div.column h3.fancy.with-top-border:not(:first-child),
+div.column h4 .fancy.with-top-border:not(:first-child),
 .gform_heading h3.gform_title.fancy.with-top-border:not(:first-child) {
   margin-top: 2rem;
 }
 div.column h3.fancy.with-top-border::before,
+div.column h4 .fancy.with-top-border::before,
 .gform_heading h3.gform_title.fancy.with-top-border::before {
   content: "";
   position: absolute;
