@@ -4821,7 +4821,6 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 {
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul {
   width: 100%;
-  min-width: 600px;
   margin: 0;
   padding: 0;
   border-top: 1px solid #8d959a;
