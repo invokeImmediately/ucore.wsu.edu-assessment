@@ -27,6 +27,7 @@ function isJQuery($obj) {
         initContentFlippers(".content-flipper", ".flipped-content-front", ".flipped-content-back", 500);
         initDefinitionLists("dl.toggled", ".large-format-friendly", "div.column.one", "div.column.two",
          "activated", 400, 100);
+		initQuickTabs("section.row.single.quick-tabs");
         initTriggeredByHover(".triggered-on-hover", ".content-revealed", ".content-hidden", 200);
         initWelcomeMessage("#welcome-message", "post-welcome-message", 1000, 500, 500);
     });
@@ -166,6 +167,66 @@ function isJQuery($obj) {
         });
     }
     
+	function initQuickTabs(slctrQtSctn) {
+		var $qtSctn = $(slctrQtSctn);
+		$qtSctn.each(function () {
+			var $thisSctn = $(this);
+			var $tabCntnr = $thisSctn.find("div.column > ul");
+			var $tabs = $tabCntnr.find("li");
+			var $panelCntnr = $thisSctn.find("table");
+			var $panels = $panelCntnr.find("tbody:first-child > tr");
+			if($tabs.length == $panels.length) {
+				var idx;
+				var jdx;
+				for (idx = 0; idx < $tabs.length; idx++) {
+					$tabs.eq(idx).click(function() {
+						var $thisTab = $(this);
+						var kdx = $tabs.index($thisTab);
+						if (kdx == 0) {
+							if ($thisTab.hasClass("deactivated")) {
+								$thisTab.removeClass("deactivated");
+								$panels.eq(kdx).removeClass("deactivated");
+								for (jdx = 1; jdx < $tabs.length; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$("html, body").animate({
+									scrollTop: $thisTab.offset().top
+								}, 500);								
+							}
+						} else {
+							if (!$thisTab.hasClass("activated")) {
+								if (!$tabs.eq(0).hasClass("deactivated")) {
+									$tabs.eq(0).addClass("deactivated");
+									$panels.eq(0).addClass("deactivated");
+								}
+								for (jdx = 1; jdx < kdx; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$thisTab.addClass("activated");
+								$panels.eq(kdx).addClass("activated");
+								for (jdx = kdx + 1; jdx < $tabs.length; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$("html, body").animate({
+									scrollTop: $thisTab.offset().top
+								}, 500);								
+							}
+						}
+					});
+				}
+			}
+		});
+	}
+
     function initReadMoreToggles(slctrToggleIn, slctrToggleOut, slctrPanel, animDuration) {
         $(slctrToggleIn).click(function () {
             var $this = $(this);
@@ -216,7 +277,6 @@ function isJQuery($obj) {
 		}
 		
 		initNiloaPortal(".niloa-portal");
-		initQuickTabs("section.row.single.quick-tabs");
 	});
 	
 	function HexagonalButton($fromElem) {
@@ -418,66 +478,6 @@ function isJQuery($obj) {
 			});
 		}
 	}
-	
-	function initQuickTabs(slctrQtSctn) {
-		var $qtSctn = $(slctrQtSctn);
-		$qtSctn.each(function () {
-			var $thisSctn = $(this);
-			var $tabCntnr = $thisSctn.find("div.column > ul");
-			var $tabs = $tabCntnr.find("li");
-			var $panelCntnr = $thisSctn.find("table");
-			var $panels = $panelCntnr.find("tbody:first-child > tr");
-			if($tabs.length == $panels.length) {
-				var idx;
-				var jdx;
-				for (idx = 0; idx < $tabs.length; idx++) {
-					$tabs.eq(idx).click(function() {
-						var $thisTab = $(this);
-						var kdx = $tabs.index($thisTab);
-						if (kdx == 0) {
-							if ($thisTab.hasClass("deactivated")) {
-								$thisTab.removeClass("deactivated");
-								$panels.eq(kdx).removeClass("deactivated");
-								for (jdx = 1; jdx < $tabs.length; jdx++) {
-									if ($tabs.eq(jdx).hasClass("activated")) {
-										$tabs.eq(jdx).removeClass("activated");
-										$panels.eq(jdx).removeClass("activated");
-									}
-								}
-								$("html, body").animate({
-									scrollTop: $thisTab.offset().top
-								}, 500);								
-							}
-						} else {
-							if (!$thisTab.hasClass("activated")) {
-								if (!$tabs.eq(0).hasClass("deactivated")) {
-									$tabs.eq(0).addClass("deactivated");
-									$panels.eq(0).addClass("deactivated");
-								}
-								for (jdx = 1; jdx < kdx; jdx++) {
-									if ($tabs.eq(jdx).hasClass("activated")) {
-										$tabs.eq(jdx).removeClass("activated");
-										$panels.eq(jdx).removeClass("activated");
-									}
-								}
-								$thisTab.addClass("activated");
-								$panels.eq(kdx).addClass("activated");
-								for (jdx = kdx + 1; jdx < $tabs.length; jdx++) {
-									if ($tabs.eq(jdx).hasClass("activated")) {
-										$tabs.eq(jdx).removeClass("activated");
-										$panels.eq(jdx).removeClass("activated");
-									}
-								}
-								$("html, body").animate({
-									scrollTop: $thisTab.offset().top
-								}, 500);								
-							}
-						}
-					});
-				}
-			}
-		});
-	}
 })(jQuery);
 /**********************************************************************************************************************
  JQUERY QTIP TOOL TIPS PLUGIN
@@ -654,7 +654,41 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
             $(window).on("resize.textresize orientationchange.textresize", resizer);
         });
     };
-    
+	
+// TODO: write function for fitting text.
+//	$.fn.fitText = function(  )
+
+// TODO: Come up with a line-based solution
+//  Ideas: invisible absolutely positioned duplicate of element that is scaled until desired effect is
+//   achieved, then settings are applied to original; etc.
+/*	function FontShrinker($fromElem) {
+		this.maxLines = undefined;
+		this.leadingRatio = undefined;
+		this.fontSizeStart = undefined;
+		this.fontSizeThreshold = undefined;
+		
+		var validArg = isJQuery($fromElem);
+		if(validArg) {
+			this.maxLines = $this.data("max-lines");
+			var styleProps = $this.css([
+				"fontSize", "lineHeight"
+			]);
+			styleProps = $.extend({
+				"height" : $this.height()
+			}, styleProps);
+			var height = parseFloat(styleProps.height);
+			var fontSize = parseFloat(styleProps.fontSize);
+			var lineHeight = parseFloat(styleProps.lineHeight);
+			this.leadingRatio = parseFloat(styleProps.lineHeight) / parseFloat(styleProps.fontSize);
+			var curLines = height / lineHeight;
+			if(this.maxLines != undefined && curLines > maxLines) {
+				var newFontSz = 
+			} else {
+				
+			}
+		}
+	}*/
+
     // Now use the plugin on the WSU Undergraduate education website (i.e. delete or modify the
     // following statement if you are going to utilize this plugin on your own site).
     $(document).ready(function () {
@@ -676,6 +710,13 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
 			var maxWidth = $parent.css("max-width");
 			var scalingAmt;
 			if (maxWidth == "none") {
+				var $binder = $("#binder");
+				if ($binder.length == 1) {
+					maxWidth = $binder.css("max-width");
+					if (maxWidth != "none") {
+						clmnWidth = parseFloat(maxWidth) - 198;
+					}
+				}
 				scalingAmt = clmnWidth / (parseFloat(fontSz) * 10);
 			}
 			else {
@@ -683,8 +724,15 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
 			}
 			$this.textResize(scalingAmt, {"minFontSize" : "10.7px", "againstSelf" : 0})
 		});
+		
+/*		var $shrinkingElems = $(".shrinks-with-parent");
+		$shrinkingElems.each(function() {
+			var $this = $(this);
+			
+		});*/
     });
 })(jQuery);
+// 14.4px;
 /*!
  * imagesLoaded PACKAGED v4.1.0
  * JavaScript is all like "You images are done yet or what?"
