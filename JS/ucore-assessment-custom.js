@@ -20,7 +20,6 @@
 		}
 		
 		initNiloaPortal(".niloa-portal");
-		initQuickTabs("section.row.single.quick-tabs");
 	});
 	
 	function HexagonalButton($fromElem) {
@@ -221,65 +220,5 @@
 				}
 			});
 		}
-	}
-	
-	function initQuickTabs(slctrQtSctn) {
-		var $qtSctn = $(slctrQtSctn);
-		$qtSctn.each(function () {
-			var $thisSctn = $(this);
-			var $tabCntnr = $thisSctn.find("div.column > ul");
-			var $tabs = $tabCntnr.find("li");
-			var $panelCntnr = $thisSctn.find("table");
-			var $panels = $panelCntnr.find("tbody:first-child > tr");
-			if($tabs.length == $panels.length) {
-				var idx;
-				var jdx;
-				for (idx = 0; idx < $tabs.length; idx++) {
-					$tabs.eq(idx).click(function() {
-						var $thisTab = $(this);
-						var kdx = $tabs.index($thisTab);
-						if (kdx == 0) {
-							if ($thisTab.hasClass("deactivated")) {
-								$thisTab.removeClass("deactivated");
-								$panels.eq(kdx).removeClass("deactivated");
-								for (jdx = 1; jdx < $tabs.length; jdx++) {
-									if ($tabs.eq(jdx).hasClass("activated")) {
-										$tabs.eq(jdx).removeClass("activated");
-										$panels.eq(jdx).removeClass("activated");
-									}
-								}
-								$("html, body").animate({
-									scrollTop: $thisTab.offset().top
-								}, 500);								
-							}
-						} else {
-							if (!$thisTab.hasClass("activated")) {
-								if (!$tabs.eq(0).hasClass("deactivated")) {
-									$tabs.eq(0).addClass("deactivated");
-									$panels.eq(0).addClass("deactivated");
-								}
-								for (jdx = 1; jdx < kdx; jdx++) {
-									if ($tabs.eq(jdx).hasClass("activated")) {
-										$tabs.eq(jdx).removeClass("activated");
-										$panels.eq(jdx).removeClass("activated");
-									}
-								}
-								$thisTab.addClass("activated");
-								$panels.eq(kdx).addClass("activated");
-								for (jdx = kdx + 1; jdx < $tabs.length; jdx++) {
-									if ($tabs.eq(jdx).hasClass("activated")) {
-										$tabs.eq(jdx).removeClass("activated");
-										$panels.eq(jdx).removeClass("activated");
-									}
-								}
-								$("html, body").animate({
-									scrollTop: $thisTab.offset().top
-								}, 500);								
-							}
-						}
-					});
-				}
-			}
-		});
 	}
 })(jQuery);

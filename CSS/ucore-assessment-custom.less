@@ -199,6 +199,23 @@ div.column {
 	}
 }
 
+div.column .widget_rss {
+	a {
+		border-bottom: none;
+		box-shadow: none;
+		&:hover {
+			border-bottom: none;
+			box-shadow: none;		
+		}
+		&.rsswidget img {
+			display: none;
+		}
+	}
+	ul li {
+		list-style-type: disc;
+	}
+}
+
 div.column {
 	&:extend(.has-dflt-font);
 	section {
@@ -216,11 +233,12 @@ div.recent-posts {
 	border-bottom-left-radius: 10px;
 	background-color: #edf3f4;
 	box-shadow: 0 1px 2px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.33);
-	& > h3.fancy.with-top-border:first-child {
+	& > h4.fancy.with-top-border:first-child {
 		background: linear-gradient(to right,
 		 rgba(red(@hex-crimson), green(@hex-crimson), blue(@hex-crimson), 0.075),
 		 rgba(red(@hex-crimson), green(@hex-crimson), blue(@hex-crimson), 0.075)),
 		 linear-gradient(to right, @hex-white, @hex-white);
+		.has-responsive-font(@v-h4-sz * @v-scl-dwn, @v-hX-lnhght);
 	}
 	a {
 		border-bottom: none;
@@ -381,107 +399,6 @@ div.simulated-status-bar {
 	color: #707070;
 	font-size: 11px;
 	z-index: 99352;
-}
-
-//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-//     │ ++++ Quick Tab tabs +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
-section.row.single.quick-tabs > div.column {
-	& > h3:first-child {
-		display: none;
-		& + h4 {
-			display: none;
-			& + ul {
-				width: 100%;
-				min-width: 600px;
-				margin: 0;
-				padding: 0;
-				border-top: 1px solid #8d959a;
-				border-right: 1px solid #8d959a;
-				border-left: 1px solid #8d959a;
-				border-top-right-radius: 7px;
-				border-top-left-radius: 7px;
-				background-color: #8d959a;
-				list-style-type: none;
-				overflow: hidden;
-				& > li {
-					float: left;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					height: ~"calc(3.9em + 16px)";
-					background-color: #eff0f1;
-					cursor: pointer;
-					.transition(~"all 0.2s ease");
-					& > a {
-						display: inline-block;
-						max-width: 200px;
-						padding: 8px 16px;
-						border-bottom: none;
-						color: #000;
-						text-decoration: none;
-						text-align: center;
-						box-shadow: none;
-						.transition(~"all 0.2s ease");
-						pointer-events: none;
-						&:hover {
-							background-color: transparent;
-							box-shadow: none;
-						}
-					}
-					&:hover {
-						background-color: #c60c30;
-						color: #ffffff;
-						& > a {
-							color: @hex-white;
-						}
-					}
-					&:not(:last-child) {
-						border-right: 1px solid #dfe1e3;
-						&:hover {
-							border-right: 1px solid #d27689;
-						}
-					}
-					&:not(:first-child) {
-						border-left: 1px solid #ffffff;
-						&:hover {
-							border-left: 1px solid #e38698;
-						}
-						&:not(.activated) {
-							border-bottom: 1px solid #dfe1e3;
-						}
-						&.activated {
-							background: linear-gradient(rgba(198, 12, 48, 0.5),rgba(198, 12, 48, 0.5)), linear-gradient(#eff0f1,#eff0f1);
-							border-bottom: 1px solid @hex-white;
-							cursor: auto;
-						}
-					}
-					&:first-child {
-						&:not(.deactivated) {
-							background: linear-gradient(rgba(198, 12, 48, 0.5),rgba(198, 12, 48, 0.5)), linear-gradient(#eff0f1,#eff0f1);
-							border-bottom: 1px solid @hex-white;
-							cursor: auto;
-							& > a {
-								color: @hex-white;
-							}
-						}
-						&.deactivated {
-							border-bottom: 1px solid #dfe1e3;
-						}
-					}
-					&:last-child {
-						border-right: 1px solid #a1a1a1;
-						&:hover {
-							border-right: 1px solid #aa5165;
-						}
-					}
-				}
-				& + h4 {
-					display: none;
-				}
-			}
-		}
-	}
 }
 
 /*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
@@ -886,45 +803,10 @@ div.column h2.tablepress-table-name {
 	}
 }
 
-//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-//     │ ++++ Quick-Tabs content panels ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
-section.row.single.quick-tabs > div.column {
-	& > h3:first-child + h4 + ul + h4 + table {
-		display: block;
-		border-right: 1px solid #8d959a;
-		border-bottom: 1px solid #8d959a;
-		border-left: 1px solid #8d959a;
-		border-bottom-right-radius: 7px;
-		border-bottom-left-radius: 7px;
-		& > tbody {
-			display: block;
-			position: relative;
-			tr {
-				.transition(~"all 0.2s ease");
-				.animation(quick-fade-in; 0.4s; linear; 0s; 1);
-				.keyframes(quick-fade-in; @frames-simple-fade-in);
-				&:first-child {
-					display: block;
-					opacity: 1;
-					&.deactivated {
-						display: none;
-						opacity: 0;
-					}
-				}
-				&:not(:first-child) {
-					display: none;
-					opacity: 0;
-					&.activated {
-						display: block;
-						opacity: 1;
-					}
-				}
-				td {
-					display: block;
-					padding: 1em;
-				}
-			}
-		}
-	}
-}
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### CUSTOM layouts ################################################################################## ║
+ *  ╠========================================================================================================╣
+ *  ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.             ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+.include-quick-tabs-layout(true);
