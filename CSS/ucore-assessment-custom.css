@@ -4732,6 +4732,19 @@ div.column ul.niloa-portal {
   margin-left: auto;
   margin-right: auto;
 }
+div.column ul.niloa-portal:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 17.73439089%;
+  height: 0;
+  padding-bottom: 21.96461257%;
+  background: transparent url(/wp-content/uploads/sites/1304/2016/08/graphic_WSU-Shield_201-431-RGB.jpg) center center / 100% 100% no-repeat;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 div.column ul.niloa-portal > li {
   position: absolute;
   width: 33.33333333%;
