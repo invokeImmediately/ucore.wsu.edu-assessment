@@ -5325,13 +5325,13 @@ section.assessment-planning > div.column > table > thead > tr:first-child > th:n
   width: 287px;
 }
 section.assessment-planning > div.column > table > thead > tr:first-child > th:nth-child(4n) {
-  width: 206px;
+  width: 208px;
 }
 section.assessment-planning > div.column > table > thead > tr > th:nth-child(4n + 3) {
   min-width: 287px;
 }
 section.assessment-planning > div.column > table > thead > tr > th:nth-child(4n) {
-  min-width: 206px;
+  min-width: 208px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td ul {
   padding-left: 1.25em;
@@ -5349,13 +5349,13 @@ section.assessment-planning > div.column > table > tbody > tr > td > table.sub-p
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n+1) {
   width: 286px;
-  min-width: 286px;
-  max-width: 286px;
+  min-width: 287px;
+  max-width: 287px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n) {
-  width: 207px;
-  min-width: 207px;
-  max-width: 207px;
+  width: 209px;
+  min-width: 208px;
+  max-width: 208px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:nth-child(even) > td {
   background-color: #f1e4c4;
