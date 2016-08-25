@@ -4941,30 +4941,61 @@ table.assessment.resources {
   border-spacing: 0;
   border: 1px solid #d7dadb;
 }
+section:not(.quick-tabs) > div.column > table thead > tr > th,
+table.assessment.planning thead > tr > th,
+table.assessment.evidence thead > tr > th,
+table.assessment.resources thead > tr > th {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
 @media all {
   section:not(.quick-tabs) > div.column > table thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
-    padding-right: 0.5em;
-    padding-left: 0.5em;
     line-height: 1.25em;
+    font-size: 0.88em;
   }
 }
-@media all and (min-width: 1050px) {
+@media all and (min-width: 1073px) {
   section:not(.quick-tabs) > div.column > table thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
-    font-size: 1em;
+    font-size: 0.93816631em;
   }
 }
-@media all and (min-width: 361px) and (max-width: 1049px) {
+@media all and (min-width: 990px) and (max-width: 1072px) {
   section:not(.quick-tabs) > div.column > table thead > tr > th,
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
-    font-size: 0.938em;
+    font-size: 0.88em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  section:not(.quick-tabs) > div.column > table thead > tr > th,
+  table.assessment.planning thead > tr > th,
+  table.assessment.evidence thead > tr > th,
+  table.assessment.resources thead > tr > th {
+    font-size: 0.93816631em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  section:not(.quick-tabs) > div.column > table thead > tr > th,
+  table.assessment.planning thead > tr > th,
+  table.assessment.evidence thead > tr > th,
+  table.assessment.resources thead > tr > th {
+    font-size: 0.88em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  section:not(.quick-tabs) > div.column > table thead > tr > th,
+  table.assessment.planning thead > tr > th,
+  table.assessment.evidence thead > tr > th,
+  table.assessment.resources thead > tr > th {
+    font-size: 0.82544em;
+    text-align: left;
   }
 }
 @media all and (max-width: 360px) {
@@ -4972,40 +5003,46 @@ table.assessment.resources {
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
-    font-size: 0.879844em;
+    font-size: 0.77426272em;
     text-align: left;
   }
 }
-@media all {
-  section:not(.quick-tabs) > div.column > table tbody > tr > td:not(.no-padding),
-  table.assessment.planning tbody > tr > td:not(.no-padding),
-  table.assessment.evidence tbody > tr > td:not(.no-padding),
-  table.assessment.resources tbody > tr > td:not(.no-padding) {
-    padding-right: 0.5em;
-    padding-left: 0.5em;
-  }
-  section:not(.quick-tabs) > div.column > table tbody > tr > td p,
-  table.assessment.planning tbody > tr > td p,
-  table.assessment.evidence tbody > tr > td p,
-  table.assessment.resources tbody > tr > td p,
-  section:not(.quick-tabs) > div.column > table tbody > tr > td ul,
-  table.assessment.planning tbody > tr > td ul,
-  table.assessment.evidence tbody > tr > td ul,
-  table.assessment.resources tbody > tr > td ul,
-  section:not(.quick-tabs) > div.column > table tbody > tr > td ol,
-  table.assessment.planning tbody > tr > td ol,
-  table.assessment.evidence tbody > tr > td ol,
-  table.assessment.resources tbody > tr > td ol {
-    font-size: inherit;
-  }
-  section:not(.quick-tabs) > div.column > table tbody > tr > td.no-padding,
-  table.assessment.planning tbody > tr > td.no-padding,
-  table.assessment.evidence tbody > tr > td.no-padding,
-  table.assessment.resources tbody > tr > td.no-padding {
-    padding: 0;
+@media all and (max-width: 360px) {
+  section:not(.quick-tabs) > div.column > table thead > tr > th,
+  table.assessment.planning thead > tr > th,
+  table.assessment.evidence thead > tr > th,
+  table.assessment.resources thead > tr > th {
+    text-align: left;
   }
 }
-@media all and all {
+section:not(.quick-tabs) > div.column > table tbody > tr > td:not(.no-padding),
+table.assessment.planning tbody > tr > td:not(.no-padding),
+table.assessment.evidence tbody > tr > td:not(.no-padding),
+table.assessment.resources tbody > tr > td:not(.no-padding) {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+section:not(.quick-tabs) > div.column > table tbody > tr > td.no-padding,
+table.assessment.planning tbody > tr > td.no-padding,
+table.assessment.evidence tbody > tr > td.no-padding,
+table.assessment.resources tbody > tr > td.no-padding {
+  padding: 0;
+}
+section:not(.quick-tabs) > div.column > table tbody > tr > td p,
+table.assessment.planning tbody > tr > td p,
+table.assessment.evidence tbody > tr > td p,
+table.assessment.resources tbody > tr > td p,
+section:not(.quick-tabs) > div.column > table tbody > tr > td ul,
+table.assessment.planning tbody > tr > td ul,
+table.assessment.evidence tbody > tr > td ul,
+table.assessment.resources tbody > tr > td ul,
+section:not(.quick-tabs) > div.column > table tbody > tr > td ol,
+table.assessment.planning tbody > tr > td ol,
+table.assessment.evidence tbody > tr > td ol,
+table.assessment.resources tbody > tr > td ol {
+  font-size: inherit;
+}
+@media all {
   section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
@@ -5014,7 +5051,7 @@ table.assessment.resources {
     font-size: 0.88em;
   }
 }
-@media all and all and (min-width: 1073px) {
+@media all and (min-width: 1073px) {
   section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
@@ -5022,7 +5059,7 @@ table.assessment.resources {
     font-size: 0.93816631em;
   }
 }
-@media all and all and (min-width: 990px) and (max-width: 1072px) {
+@media all and (min-width: 990px) and (max-width: 1072px) {
   section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
@@ -5030,7 +5067,7 @@ table.assessment.resources {
     font-size: 0.88em;
   }
 }
-@media all and all and (min-width: 792px) and (max-width: 989px) {
+@media all and (min-width: 792px) and (max-width: 989px) {
   section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
@@ -5038,7 +5075,7 @@ table.assessment.resources {
     font-size: 0.93816631em;
   }
 }
-@media all and all and (min-width: 481px) and (max-width: 791px) {
+@media all and (min-width: 481px) and (max-width: 791px) {
   section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
@@ -5046,7 +5083,7 @@ table.assessment.resources {
     font-size: 0.88em;
   }
 }
-@media all and all and (min-width: 361px) and (max-width: 480px) {
+@media all and (min-width: 361px) and (max-width: 480px) {
   section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
@@ -5055,12 +5092,20 @@ table.assessment.resources {
     text-align: left;
   }
 }
-@media all and all and (max-width: 360px) {
+@media all and (max-width: 360px) {
   section:not(.quick-tabs) > div.column > table tbody > tr > td,
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
     font-size: 0.77426272em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  section:not(.quick-tabs) > div.column > table tbody > tr > td,
+  table.assessment.planning tbody > tr > td,
+  table.assessment.evidence tbody > tr > td,
+  table.assessment.resources tbody > tr > td {
     text-align: left;
   }
 }
@@ -5377,7 +5422,6 @@ section.assessment-activities > div.column > table > tbody > tr > td:not(:nth-ch
   background-color: #b5babe;
   color: #000;
   border-bottom: 1px solid #606e7a;
-  line-height: 1.375em;
 }
 .tablepress thead th:not(:last-child) {
   border-right: 1px solid #666e74;
@@ -5386,19 +5430,41 @@ section.assessment-activities > div.column > table > tbody > tr > td:not(:nth-ch
   border-top: 1px solid #c0c7cd;
   border-left: 1px solid #c3c7ca;
 }
-@media all and (min-width: 1050px) {
+@media all {
   .tablepress thead th {
-    font-size: 1em;
+    line-height: 1.25em;
+    font-size: 0.88em;
   }
 }
-@media all and (min-width: 361px) and (max-width: 1049px) {
+@media all and (min-width: 1073px) {
   .tablepress thead th {
-    font-size: 0.938em;
+    font-size: 0.93816631em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  .tablepress thead th {
+    font-size: 0.88em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  .tablepress thead th {
+    font-size: 0.93816631em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  .tablepress thead th {
+    font-size: 0.88em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  .tablepress thead th {
+    font-size: 0.82544em;
+    text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   .tablepress thead th {
-    font-size: 0.879844em;
+    font-size: 0.77426272em;
     text-align: left;
   }
 }
