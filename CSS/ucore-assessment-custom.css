@@ -5333,6 +5333,9 @@ section.assessment-planning > div.column > table > thead > tr > th:nth-child(4n 
 section.assessment-planning > div.column > table > thead > tr > th:nth-child(4n) {
   min-width: 228px;
 }
+section.assessment-planning > div.column > table {
+  table-layout: fixed;
+}
 section.assessment-planning > div.column > table > tbody > tr > td ul {
   padding-left: 1.25em;
   padding-right: 0;
@@ -5348,12 +5351,12 @@ section.assessment-planning > div.column > table > tbody > tr > td > table.sub-p
   border-left: 1px solid #ffffff;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n+1) {
-  width: 266px;
+  width: 267px;
   min-width: 267px;
   max-width: 267px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n) {
-  width: 229px;
+  width: 228px;
   min-width: 228px;
   max-width: 228px;
 }
