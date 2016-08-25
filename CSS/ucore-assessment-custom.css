@@ -1336,11 +1336,11 @@ footer.article-footer div.author-info {
  */
 div.column p {
   padding-bottom: 0;
-  text-align: justify;
+  text-align: left;
 }
 @media all {
   div.column p {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 1em;
   }
 }
@@ -1396,7 +1396,7 @@ div.column p.article-deck {
 }
 @media all {
   div.column p.article-deck {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 1.2em;
   }
 }
@@ -1443,7 +1443,7 @@ div.column p.article-tagline {
 }
 @media all {
   div.column p.article-tagline {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 1.45em;
   }
 }
@@ -1490,7 +1490,7 @@ div.column p.article-tagline.sans > span.lead-in {
 }
 @media all {
   div.column p.article-tagline.home {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 1.90000025em;
   }
 }
@@ -1553,7 +1553,7 @@ div.column p.vpue-jump-back {
 div.column p.article-media-contacts {
   padding-left: 2em;
   font-size: .8em;
-  line-height: 1.25em;
+  line-height: 1.275em;
   text-align: left;
 }
 div.column p.fine-print {
@@ -1587,7 +1587,7 @@ div.column p.banner-text {
   margin-bottom: 2rem;
   background-color: rgba(94, 106, 113, 0.5);
   border: 1px solid #2a3033;
-  line-height: 1.25em;
+  line-height: 1.275em;
   color: #2a3033;
 }
 div.column p.banner-text.orange {
@@ -2537,7 +2537,7 @@ div.column ul {
 }
 @media all {
   div.column ul {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 1em;
   }
 }
@@ -2609,7 +2609,7 @@ ul.content-boxes > li {
 }
 @media all {
   ul.content-boxes > li p {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 0.938em;
   }
 }
@@ -2686,7 +2686,7 @@ div.column ol {
 }
 @media all {
   div.column ol {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 1em;
   }
 }
@@ -2745,7 +2745,7 @@ div.column dl.faq dt {
 }
 @media all {
   div.column dl.faq dt {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 1em;
   }
 }
@@ -3311,7 +3311,7 @@ div.column table.navigational-map a {
 div.column table.navigational-map th {
   border-bottom: 1px solid #b5babe;
   font-size: 1.1em;
-  line-height: 1.25em;
+  line-height: 1.275em;
   font-weight: bold;
   text-transform: uppercase;
   vertical-align: bottom;
@@ -4953,7 +4953,7 @@ table.assessment.resources thead > tr > th {
   table.assessment.planning thead > tr > th,
   table.assessment.evidence thead > tr > th,
   table.assessment.resources thead > tr > th {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 0.88em;
   }
 }
@@ -5047,7 +5047,7 @@ table.assessment.resources tbody > tr > td ol {
   table.assessment.planning tbody > tr > td,
   table.assessment.evidence tbody > tr > td,
   table.assessment.resources tbody > tr > td {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 0.88em;
   }
 }
@@ -5432,7 +5432,7 @@ section.assessment-activities > div.column > table > tbody > tr > td:not(:nth-ch
 }
 @media all {
   .tablepress thead th {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 0.88em;
   }
 }
@@ -5491,7 +5491,7 @@ section.assessment-activities > div.column > table > tbody > tr > td:not(:nth-ch
 }
 @media all {
   .tablepress tbody td {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 0.88em;
   }
 }
@@ -5625,7 +5625,7 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul {
 }
 @media all {
   section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul {
-    line-height: 1.25em;
+    line-height: 1.275em;
     font-size: 0.938em;
   }
 }
