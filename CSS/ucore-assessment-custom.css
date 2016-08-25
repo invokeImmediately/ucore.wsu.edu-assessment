@@ -5357,8 +5357,8 @@ section.assessment-planning > div.column > table > tbody > tr > td > table.sub-p
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n) {
   width: 228px;
-  min-width: 228px;
-  max-width: 228px;
+  min-width: 229px;
+  max-width: 229px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:nth-child(even) > td {
   background-color: #f1e4c4;
