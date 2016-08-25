@@ -5474,8 +5474,9 @@ section.assessment-activities > div.column > table > tbody > tr > td:not(:nth-ch
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.tablepress.learning-goals thead th:first-child {
-  width: 40%;
+.tablepress.learning-goals thead th:first-child,
+.tablepress.learning-goals tbody td:first-child {
+  width: 30%;
 }
 div.column h2.tablepress-table-name {
   padding: 8px 0.5em;
