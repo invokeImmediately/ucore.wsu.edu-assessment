@@ -2579,6 +2579,9 @@ div.column ul.centered {
 div.column ul + p {
   margin-top: 1em;
 }
+div.column ul li {
+  line-height: inherit;
+}
 div.column ul li.no-bottom-pad {
   padding-bottom: 0;
 }
@@ -2721,6 +2724,9 @@ div.column ol {
     font-size: 0.879844em;
     text-align: left;
   }
+}
+div.column ol li {
+  line-height: inherit;
 }
 div.column ol ol {
   list-style-type: lower-alpha;
@@ -5310,22 +5316,22 @@ table.assessment.desaturated-orange > tbody > tr:not(:last-child):nth-child(even
   border-bottom: 1px solid #6388ac;
 }
 section.assessment-planning > div.column > table > thead > tr:first-child > th:nth-child(4n + 1) {
-  width: auto;
+  width: 19%;
 }
 section.assessment-planning > div.column > table > thead > tr:first-child > th:nth-child(4n + 2) {
   width: auto;
 }
 section.assessment-planning > div.column > table > thead > tr:first-child > th:nth-child(4n + 3) {
-  width: 231px;
+  width: 287px;
 }
 section.assessment-planning > div.column > table > thead > tr:first-child > th:nth-child(4n) {
-  width: 141px;
+  width: 208px;
 }
 section.assessment-planning > div.column > table > thead > tr > th:nth-child(4n + 3) {
-  min-width: 231px;
+  min-width: 287px;
 }
 section.assessment-planning > div.column > table > thead > tr > th:nth-child(4n) {
-  min-width: 141px;
+  min-width: 208px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td {
   background-color: #fff;
@@ -5338,14 +5344,18 @@ section.assessment-planning > div.column > table > tbody > tr > td > table.sub-p
   border-left: 1px solid #ffffff;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n+1) {
-  width: 230px;
-  min-width: 230px;
-  max-width: 230px;
+  width: 286px;
+  min-width: 286px;
+  max-width: 286px;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td:nth-child(2n) {
-  width: 142px;
-  min-width: 142px;
-  max-width: 142px;
+  width: 209px;
+  min-width: 209px;
+  max-width: 209px;
+}
+section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr > td ul {
+  padding-left: 1.25em;
+  padding-right: 0;
 }
 section.assessment-planning > div.column > table > tbody > tr > td > table.sub-planning > tbody > tr:nth-child(even) > td {
   background-color: #f1e4c4;
