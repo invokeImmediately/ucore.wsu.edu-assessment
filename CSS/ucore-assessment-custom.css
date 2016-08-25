@@ -5378,14 +5378,14 @@ section.assessment-activities > div.column > table > thead > tr:not(.title) > th
   position: relative;
   width: 50px;
   min-width: 50px;
-  height: 250px;
+  height: 200px;
 }
 section.assessment-evidence > div.column > table > thead > tr:not(.title) > th:not(:nth-child(8n + 1)) p,
 section.assessment-activities > div.column > table > thead > tr:not(.title) > th:not(:nth-child(8n + 1)) p {
   position: absolute;
-  top: 130px;
+  top: 107px;
   left: 50%;
-  width: 250px;
+  width: 200px;
   padding-left: 0.5em;
   text-align: left;
   letter-spacing: inherit;
