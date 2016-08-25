@@ -5477,6 +5477,7 @@ section.assessment-activities > div.column > table > tbody > tr > td:not(:nth-ch
 .tablepress.learning-goals thead th:first-child,
 .tablepress.learning-goals tbody td:first-child {
   width: 30%;
+  min-width: 255px;
 }
 div.column h2.tablepress-table-name {
   padding: 8px 0.5em;
