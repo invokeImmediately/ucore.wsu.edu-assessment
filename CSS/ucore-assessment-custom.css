@@ -868,7 +868,7 @@ div.column h1 {
   padding-bottom: 0;
   margin-top: 1.5rem;
   margin-bottom: .75rem;
-  font-size: 3em;
+  font-size: 2.82352941em;
   font-weight: 900;
   text-transform: uppercase;
   color: #464e54;
@@ -876,38 +876,38 @@ div.column h1 {
 @media all {
   div.column h1 {
     line-height: 1.1em;
-    font-size: 3em;
+    font-size: 2.82352941em;
   }
 }
 @media all and (min-width: 1073px) {
   div.column h1 {
-    font-size: 3.19829424em;
+    font-size: 3.01015929em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   div.column h1 {
-    font-size: 3em;
+    font-size: 2.82352941em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h1 {
-    font-size: 3.19829424em;
+    font-size: 3.01015929em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   div.column h1 {
-    font-size: 3em;
+    font-size: 2.82352941em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h1 {
-    font-size: 2.814em;
+    font-size: 2.64847059em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h1 {
-    font-size: 2.639532em;
+    font-size: 2.48426541em;
     text-align: left;
   }
 }
@@ -925,7 +925,7 @@ div.column h2 {
   margin-top: 1.5rem;
   margin-bottom: .75rem;
   margin-left: -0.1em;
-  font-size: 2.2em;
+  font-size: 2.07058824em;
   line-height: 1.375em;
   font-weight: 800;
   color: #464e54;
@@ -934,38 +934,38 @@ div.column h2 {
 @media all {
   div.column h2 {
     line-height: 1.1em;
-    font-size: 2.2em;
+    font-size: 2.07058824em;
   }
 }
 @media all and (min-width: 1073px) {
   div.column h2 {
-    font-size: 2.34541578em;
+    font-size: 2.20745014em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   div.column h2 {
-    font-size: 2.2em;
+    font-size: 2.07058824em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h2 {
-    font-size: 2.34541578em;
+    font-size: 2.20745014em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   div.column h2 {
-    font-size: 2.2em;
+    font-size: 2.07058824em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h2 {
-    font-size: 2.0636em;
+    font-size: 1.94221176em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h2 {
-    font-size: 1.9356568em;
+    font-size: 1.82179464em;
     text-align: left;
   }
 }
@@ -1028,7 +1028,7 @@ div.column h3,
   margin-top: 1.5rem;
   margin-bottom: .75rem;
   margin-left: -0.1em;
-  font-size: 1.7em;
+  font-size: 1.6em;
   font-weight: 600;
   text-transform: uppercase;
   color: #981e32;
@@ -1037,44 +1037,44 @@ div.column h3,
   div.column h3,
   .gform_heading h3.gform_title {
     line-height: 1.1em;
-    font-size: 1.7em;
+    font-size: 1.6em;
   }
 }
 @media all and (min-width: 1073px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.81236674em;
+    font-size: 1.70575693em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.7em;
+    font-size: 1.6em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.81236674em;
+    font-size: 1.70575693em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.7em;
+    font-size: 1.6em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.5946em;
+    font-size: 1.5008em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.4957348em;
+    font-size: 1.4077504em;
     text-align: left;
   }
 }
@@ -1129,45 +1129,45 @@ div.column h4 {
   padding: 0;
   margin-top: 1rem;
   margin-bottom: .5rem;
-  font-size: 1.4em;
+  font-size: 1.31764706em;
   font-weight: 600;
   color: #981e32;
 }
 @media all {
   div.column h4 {
     line-height: 1.2em;
-    font-size: 1.4em;
+    font-size: 1.31764706em;
   }
 }
 @media all and (min-width: 1073px) {
   div.column h4 {
-    font-size: 1.49253731em;
+    font-size: 1.404741em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   div.column h4 {
-    font-size: 1.4em;
+    font-size: 1.31764706em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h4 {
-    font-size: 1.49253731em;
+    font-size: 1.404741em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   div.column h4 {
-    font-size: 1.4em;
+    font-size: 1.31764706em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h4 {
-    font-size: 1.3132em;
+    font-size: 1.23595294em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h4 {
-    font-size: 1.2317816em;
+    font-size: 1.15932386em;
     text-align: left;
   }
 }
@@ -4720,38 +4720,38 @@ div.recent-posts > h4.fancy.with-top-border:first-child {
 @media all {
   div.recent-posts > h4.fancy.with-top-border:first-child {
     line-height: 1.1em;
-    font-size: 1.3132em;
+    font-size: 1.23595294em;
   }
 }
 @media all and (min-width: 1073px) {
   div.recent-posts > h4.fancy.with-top-border:first-child {
-    font-size: 1.4em;
+    font-size: 1.31764706em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   div.recent-posts > h4.fancy.with-top-border:first-child {
-    font-size: 1.3132em;
+    font-size: 1.23595294em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.recent-posts > h4.fancy.with-top-border:first-child {
-    font-size: 1.4em;
+    font-size: 1.31764706em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   div.recent-posts > h4.fancy.with-top-border:first-child {
-    font-size: 1.3132em;
+    font-size: 1.23595294em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.recent-posts > h4.fancy.with-top-border:first-child {
-    font-size: 1.2317816em;
+    font-size: 1.15932386em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.recent-posts > h4.fancy.with-top-border:first-child {
-    font-size: 1.15541114em;
+    font-size: 1.08744578em;
     text-align: left;
   }
 }
