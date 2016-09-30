@@ -267,6 +267,17 @@ div.column ul.niloa-portal {
 	padding-bottom: 96.25468165%;
 	margin-left: auto;
 	margin-right: auto;
+	&:before {
+		content: "";
+		position: absolute;
+		 left: 50%;
+		 top: 51.5%;
+		width: 17.73439089%;
+		height: 0;
+		padding-bottom: 21.96461257%;
+		background: transparent url(/wp-content/uploads/sites/1304/2016/08/graphic_WSU-Shield_201-431-RGB.jpg) center center/100% 100% no-repeat;
+		.transform(~"translate(-50%, -50%)");
+	}
 	& > li {
 		position: absolute;
 		width: 33.33333333%;
@@ -412,7 +423,7 @@ div.simulated-status-bar {
 //     │ ++++ General tables throughout site +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 //     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 @tbl-elem-slctrs: ~"section:not(.quick-tabs) > div.column > table", ~"table.assessment.planning", ~"table.assessment.evidence", ~"table.assessment.resources";
-@tbl-col-wdths: auto auto 231px 141px, auto 50px 50px 50px 50px 50px 50px 50px, auto auto auto;
+@tbl-col-wdths: 19% auto 267px 228px, auto 50px 50px 50px 50px 50px 50px 50px, auto auto auto;
 @tbl-clr-classes: ~"section:not(.quick-tabs) > div.column > table", ~"div.column table.gray", ~"table.assessment.burgundy",
  ~"table.assessment.desaturated-orange";
 @tbl-header-clrs: @hex-light-gray #8a8f90 #610013 #6c563f;
@@ -429,42 +440,33 @@ div.simulated-status-bar {
 	border-spacing: 0;
 	border: 1px solid @hex-lighter-gray;
 	thead > tr > th {
+		.has-responsive-font((@v-p-sz * 0.88), @v-p-lnhght);
+		padding-right: 0.5em;
+		padding-left: 0.5em;
         @media all {
-			padding-right: 0.5em;
-			padding-left: 0.5em;
-            line-height: @v-p-lnhght;
-            @media (min-width: @v-lrgfrmt-thrshld) {
-                font-size: (@v-p-sz);
-            }
-            @media (min-width: (@v-mbl-thrshld + 1)) and (max-width: (@v-lrgfrmt-thrshld - 1)) {
-                font-size: (@v-p-sz * @v-scl-dwn);
-            }
             @media (max-width: @v-mbl-thrshld) {
-                font-size: (@v-p-sz * @v-scl-dwn * @v-scl-dwn);
                 text-align: left;
             }
         }
 	}
 	tbody > tr > td {
+		&:not(.no-padding) {
+			padding-right: 0.5em;
+			padding-left: 0.5em;
+		}
+		&.no-padding {
+			padding: 0;
+		}
+		p,
+		ul,
+		ol {
+			font-size: inherit;
+		}
+		.has-responsive-font((@v-p-sz * 0.88), @v-p-lnhght);
         @media all {
-			&:not(.no-padding) {
-				padding-right: 0.5em;
-				padding-left: 0.5em;
-			}
-            line-height: @v-p-lnhght;
-            @media (min-width: @v-lrgfrmt-thrshld) {
-                font-size: (@v-p-sz * 0.88);
-            }
-            @media (min-width: (@v-mbl-thrshld + 1)) and (max-width: (@v-lrgfrmt-thrshld - 1)) {
-                font-size: (@v-p-sz * @v-scl-dwn * 0.88);
-            }
             @media (max-width: @v-mbl-thrshld) {
-                font-size: (@v-p-sz * @v-scl-dwn * @v-scl-dwn * 0.88);
                 text-align: left;
             }
-			&.no-padding {
-				padding: 0;
-			}
         }
 	}
 };
@@ -559,51 +561,58 @@ section.assessment-planning > div.column > table > thead > tr {
 	}
 }
 
-section.assessment-planning > div.column > table > tbody > tr {
-	& > td > table.sub-planning > tbody > tr {
-		& > td {
-			background-color: extract(@tbl-row-clrs, 1);
-			font-size: 1em;
-			&:not(:last-child) {
-				border-right: 1px solid darken(extract(@tbl-row-clrs, 1), 30%);
-			}
-			&:not(:first-child) {
-				border-left: 1px solid lighten(extract(@tbl-row-clrs, 1), 5%);
-			}
-			&:nth-child(2n+1) {
-				width: (extract(extract(@tbl-col-wdths, 1), 3) - 1);
-				min-width: (extract(extract(@tbl-col-wdths, 1), 3) - 1);
-				max-width: (extract(extract(@tbl-col-wdths, 1), 3) - 1);
-			}
-			&:nth-child(2n) {
-				width: (extract(extract(@tbl-col-wdths, 1), 4) + 1);
-				min-width: (extract(extract(@tbl-col-wdths, 1), 4) + 1);
-				max-width: (extract(extract(@tbl-col-wdths, 1), 4) + 1);
-			}
+section.assessment-planning > div.column > table {
+	table-layout: fixed;
+	& > tbody > tr > td {
+		ul {
+			padding-left: 1.25em;
+			padding-right: 0;
 		}
-		&:nth-child(even) > td {
-			background-color: @tbl-sub-row-clr;
-			&:not(:last-child) {
-				border-right: 1px solid darken(@tbl-sub-row-clr, 30%);
-			}
-			&:not(:first-child) {
-				border-left: 1px solid lighten(@tbl-sub-row-clr, 5%);
-			}
-		}
-		&:not(:first-child) {
+		& > table.sub-planning > tbody > tr {
 			& > td {
-				border-top: 1px solid saturate(lighten(@tbl-sub-row-clr, 5%), 5%);
+				background-color: extract(@tbl-row-clrs, 1);
+				font-size: 1em;
+				&:not(:last-child) {
+					border-right: 1px solid darken(extract(@tbl-row-clrs, 1), 30%);
+				}
+				&:not(:first-child) {
+					border-left: 1px solid lighten(extract(@tbl-row-clrs, 1), 5%);
+				}
+				&:nth-child(2n+1) {
+					width: (extract(extract(@tbl-col-wdths, 1), 3));
+					min-width: (extract(extract(@tbl-col-wdths, 1), 3));
+					max-width: (extract(extract(@tbl-col-wdths, 1), 3));
+				}
+				&:nth-child(2n) {
+					width: (extract(extract(@tbl-col-wdths, 1), 4));
+					min-width: (extract(extract(@tbl-col-wdths, 1), 4) + 1);
+					max-width: (extract(extract(@tbl-col-wdths, 1), 4) + 1);
+				}
 			}
 			&:nth-child(even) > td {
-				border-top: 1px solid saturate(lighten(@tbl-sub-row-clr, 5%), 5%);
+				background-color: @tbl-sub-row-clr;
+				&:not(:last-child) {
+					border-right: 1px solid darken(@tbl-sub-row-clr, 30%);
+				}
+				&:not(:first-child) {
+					border-left: 1px solid lighten(@tbl-sub-row-clr, 5%);
+				}
 			}
-		}
-		&:not(:last-child) {
-			& > td {
-				border-bottom: 1px solid saturate(darken(@tbl-sub-row-clr, 30%), 5%);
+			&:not(:first-child) {
+				& > td {
+					border-top: 1px solid saturate(lighten(@tbl-sub-row-clr, 5%), 5%);
+				}
+				&:nth-child(even) > td {
+					border-top: 1px solid saturate(lighten(@tbl-sub-row-clr, 5%), 5%);
+				}
 			}
-			&:nth-child(even) > td {
-				border-bottom: 1px solid saturate(darken(@tbl-sub-row-clr, 30%), 5%);
+			&:not(:last-child) {
+				& > td {
+					border-bottom: 1px solid saturate(darken(@tbl-sub-row-clr, 30%), 5%);
+				}
+				&:nth-child(even) > td {
+					border-bottom: 1px solid saturate(darken(@tbl-sub-row-clr, 30%), 5%);
+				}
 			}
 		}
 	}
@@ -621,12 +630,12 @@ section.assessment-activities > div.column > table {
 				position: relative;
 				width: 50px;
 				min-width: 50px;
-				height:250px;
+				height:200px;
 				p {
 					position: absolute;
-					top: 130px;
+					top: 107px;
 					left: 50%;
-					width: 250px;
+					width: 200px;
 					padding-left: 0.5em;
 					text-align: left;
 					letter-spacing: inherit;
@@ -682,19 +691,7 @@ section.assessment-activities > div.column > table {
 			border-top: 1px solid saturate(lighten(@dflt-tbl-hdr-clr, 5%), 5%);
 			border-left: 1px solid lighten(@dflt-tbl-hdr-clr, 5%);
 		}
-		line-height: 1.375em;
-		@media all {
-            @media (min-width: @v-lrgfrmt-thrshld) {
-                font-size: (@v-p-sz);
-            }
-            @media (min-width: (@v-mbl-thrshld + 1)) and (max-width: (@v-lrgfrmt-thrshld - 1)) {
-                font-size: (@v-p-sz * @v-scl-dwn);
-            }
-            @media (max-width: @v-mbl-thrshld) {
-                font-size: (@v-p-sz * @v-scl-dwn * @v-scl-dwn);
-                text-align: left;
-            }
-		}
+		.has-responsive-font((@v-p-sz * 0.88), @v-p-lnhght);
 	}
 	tbody {
 		td {
@@ -714,20 +711,13 @@ section.assessment-activities > div.column > table {
 			&:first-child {
 				border-right: 1px solid darken(@dflt-tbl-col1-clr, 30%);
 			}
-			line-height: @v-p-lnhght;
-			@media all {
-				@media (min-width: @v-lrgfrmt-thrshld) {
-					font-size: (@v-p-sz * 0.88);
-				}
-				@media (min-width: (@v-mbl-thrshld + 1)) and (max-width: (@v-lrgfrmt-thrshld - 1)) {
-					font-size: (@v-p-sz * @v-scl-dwn * 0.88);
-				}
-				@media (max-width: @v-mbl-thrshld) {
-					font-size: (@v-p-sz * @v-scl-dwn * @v-scl-dwn * 0.88);
-					text-align: left;
-				}
-			}
+			.has-responsive-font((@v-p-sz * 0.88), @v-p-lnhght);
 			.transition(~"all 0.3s ease");
+			p,
+			ul,
+			ol {
+				font-size: inherit;
+			}
 		}
 		.odd {
 			td {
@@ -783,8 +773,10 @@ section.assessment-activities > div.column > table {
 		.transition(~"all 0.3s ease");
 	}
 	&.learning-goals {
-		thead th:first-child {
-			width: 40%;
+		thead th:first-child,
+		tbody td:first-child {
+			width: 30%;
+			min-width: 255px;
 		}
 	}
 }
