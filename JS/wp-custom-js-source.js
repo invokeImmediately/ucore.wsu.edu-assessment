@@ -542,14 +542,17 @@ function isJQuery($obj) {
 		if (isJQuery($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
 			if (bttnCoords.isWithinArea(clickEvent.pageX, clickEvent.pageY)) {
 				var bttnHref = $whichBttn.data("href");
-				if (!bttnHref) {
+				if (bttnHref == "") {
 					var $childLink = $whichBttn.find("a");
 					if ($childLink.length == 1) {
 						bttnHref = $childLink.attr("href");
 						$whichBttn.data("href", bttnHref);
 					}
+					} else {
+						console.log("More than one child link.");
+					}
 				}				
-				if (bttnHref) {
+				if (bttnHref != "") {
 					// TODO: add Regular Expressions check on href formatting.
 					window.location.href = bttnHref;
 				}
@@ -568,11 +571,13 @@ function isJQuery($obj) {
 		if (isJQuery($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
 			if (bttnCoords.isWithinArea(moveEvent.pageX, moveEvent.pageY)) {
 				destHref = $whichBttn.data("href");
-				if (!destHref) {
+				if (destHref == "") {
 					var $childLink = $whichBttn.find("a");
 					if ($childLink.length == 1) {
 						destHref = $childLink.attr("href");
 						$whichBttn.data("href", destHref);
+					} else {
+						console.log("More than one child link.");
 					}
 				}
 				$whichBttn.addClass("hovered");
