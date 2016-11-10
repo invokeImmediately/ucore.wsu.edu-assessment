@@ -604,10 +604,10 @@ function isJQuery($obj) {
 				if ($statusBar.length == 1) {
 					if (bttnHref) {
 						$statusBar.text(bttnHref);
-						$statusBar.fadeIn(200);
+						$statusBar.stop().fadeIn(200);
 					}
 					else {
-						$statusBar.fadeOut(200);
+						$statusBar.stop().fadeOut(200);
 					}
 				}				
 			}).click(function(clickEvent) {
@@ -625,7 +625,7 @@ function isJQuery($obj) {
 				});
 				var $statusBar = $("div.simulated-status-bar");
 				if ($statusBar.length == 1) {
-					$statusBar.fadeOut(200);
+					$statusBar.stop().fadeOut(200);
 				}
 			});
 		}
