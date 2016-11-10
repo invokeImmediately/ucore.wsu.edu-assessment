@@ -547,7 +547,6 @@ function isJQuery($obj) {
 					if ($childLink.length == 1) {
 						bttnHref = $childLink.attr("href");
 						$whichBttn.data("href", bttnHref);
-					}
 					} else {
 						console.log("More than one child link.");
 					}
@@ -605,6 +604,8 @@ function isJQuery($obj) {
 					destHref = handleNiloaMouseMove($thisBttn, hxgnlBttn, moveEvent);
 					if (destHref != "") {
 						bttnHref = destHref;
+					} else {
+						console.log("Error.");
 					}
 				});
 				var $statusBar = $("div.simulated-status-bar");
