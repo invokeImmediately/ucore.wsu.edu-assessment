@@ -6100,6 +6100,9 @@ div.column ul.niloa-portal > li {
   height: 40%;
   list-style-type: none;
 }
+div.column ul.niloa-portal > li a {
+  display: none;
+}
 div.column ul.niloa-portal > li > div.initial,
 div.column ul.niloa-portal > li > div.revealed {
   position: absolute;
