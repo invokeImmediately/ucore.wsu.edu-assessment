@@ -587,7 +587,17 @@ function isJQuery($obj) {
 						$thisBttn.data("href", bttnHref);
 					}
 				}
-			});			
+			});
+			var $statusBarToCheck = $("div#simulated-status-bar");
+			if ($statusBarToCheck.length != 1) {
+				if ($statusBarToCheck.length > 1) {
+					$statusBarToCheck.remove();
+				}
+				$statusBarToCheck = $("<div></div>", {
+					id: "simulated-status-bar"
+				});
+				$statusBarToCheck.insertAfter($portal);
+			}
 			$portal.mousemove(function(moveEvent) {
 				var bttnHref = "";
 				var destHref = "";
@@ -600,7 +610,7 @@ function isJQuery($obj) {
 						bttnHref = destHref;
 					}
 				});
-				var $statusBar = $("div.simulated-status-bar");
+				var $statusBar = $("div#simulated-status-bar");
 				if ($statusBar.length == 1) {
 					if (bttnHref) {
 						$statusBar.text(bttnHref);
@@ -609,7 +619,7 @@ function isJQuery($obj) {
 					else {
 						$statusBar.stop().fadeOut(200);
 					}
-				}				
+				}
 			}).click(function(clickEvent) {
 				var $bttns = $portal.find("li.panel");
 				$bttns.each(function () {
