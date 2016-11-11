@@ -6220,7 +6220,7 @@ div.column ul.niloa-portal > li.hovered > div.initial {
   -moz-transition: opacity 0.25s linear, z-index 0.25s step-end;
   transition: opacity 0.25s linear, z-index 0.25s step-end;
 }
-div.simulated-status-bar {
+div#simulated-status-bar {
   display: none;
   position: fixed;
   left: 0;
