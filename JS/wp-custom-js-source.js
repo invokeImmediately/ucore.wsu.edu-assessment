@@ -630,7 +630,7 @@ function isJQuery($obj) {
 					var $thisBttn = $(this);
 					handleNiloaLeave($thisBttn);
 				});
-				var $statusBar = $("div.simulated-status-bar");
+				var $statusBar = $("div#simulated-status-bar");
 				if ($statusBar.length == 1) {
 					$statusBar.stop().fadeOut(200);
 				}
