@@ -179,6 +179,18 @@
 			/** TODO: Use jQuery.data(…, …) to store coordinates with elements; this will minimize unnecessary
 			 *  repeated calculations. Note that the addition of a $(window).resize(…) will be necessary to
 			 *  recalculate coordinates if the user changes the size of the browser window. */
+			var $bttnsToCheck = $portal.find("li.panel");
+			$bttnsToCheck.each(function () {
+				var $thisBttn = $(this);
+				var bttnHref = $thisBttn.data("href");
+				if (!bttnHref) {
+					var $childLink = $thisBttn.find("a");
+					if ($childLink.length == 1) {
+						bttnHref = $childLink.attr("href");
+						$thisBttn.data("href", bttnHref);
+					}
+				}
+			});			
 			$portal.mousemove(function(moveEvent) {
 				var bttnHref = "";
 				var destHref = "";
@@ -195,10 +207,10 @@
 				if ($statusBar.length == 1) {
 					if (bttnHref) {
 						$statusBar.text(bttnHref);
-						$statusBar.fadeIn(200);
+						$statusBar.stop().fadeIn(200);
 					}
 					else {
-						$statusBar.fadeOut(200);
+						$statusBar.stop().fadeOut(200);
 					}
 				}				
 			}).click(function(clickEvent) {
@@ -216,7 +228,7 @@
 				});
 				var $statusBar = $("div.simulated-status-bar");
 				if ($statusBar.length == 1) {
-					$statusBar.fadeOut(200);
+					$statusBar.stop().fadeOut(200);
 				}
 			});
 		}
