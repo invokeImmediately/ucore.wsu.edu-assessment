@@ -396,7 +396,7 @@ div.column ul.niloa-portal {
 	}
 }
 
-div.simulated-status-bar {
+div#simulated-status-bar {
 	display: none;
 	position: fixed;
 	left: 0;
@@ -805,3 +805,23 @@ div.column h2.tablepress-table-name {
  *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 .include-quick-tabs-layout(true);
+
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### CSS Added by Others ############################################################################# ║
+ *  ╠========================================================================================================╣
+ *  ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.             ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+.wsuwp-content-syndicate-wrapper {
+	.content-item-byline-author {
+	display: none;
+	}
+
+	.content-item-byline-date {
+	display: none;
+	}
+
+	.content-item-read-story {
+	display: none;
+	}
+}
