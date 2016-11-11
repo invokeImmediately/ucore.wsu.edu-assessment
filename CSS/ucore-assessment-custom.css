@@ -7121,3 +7121,18 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
   display: block;
   padding: 1em;
 }
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### CSS Added by Others ############################################################################# ║
+ *  ╠========================================================================================================╣
+ *  ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.             ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+.wsuwp-content-syndicate-wrapper .content-item-byline-author {
+  display: none;
+}
+.wsuwp-content-syndicate-wrapper .content-item-byline-date {
+  display: none;
+}
+.wsuwp-content-syndicate-wrapper .content-item-read-story {
+  display: none;
+}
