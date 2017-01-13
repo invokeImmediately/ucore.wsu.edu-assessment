@@ -6990,6 +6990,9 @@ div.recent-posts a {
 div.recent-posts + div.recent-posts {
   margin-top: 2rem;
 }
+div.wsuwp-content-syndicate-wrapper > ul.wsuwp-content-syndicate-list span.content-item-title a {
+  font-weight: bold;
+}
 /*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### LIST layouts #################################################################################### ║
  *  ╠========================================================================================================╣
