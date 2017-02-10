@@ -5,7 +5,8 @@ concat([
  './ucore-assessment-custom.js',
  '../WSU-UE---JS/jQuery.qTip.js',
  '../WSU-UE---JS/jQuery.textResize.js',
- '../WSU-UE---JS/jQuery.masonry.min.js'
+ '../WSU-UE---JS/jQuery.masonry.min.js',
+ '../WSU-UE---JS/jquery.media.js'
  ], './wp-custom-js-source.js', function() {
     console.log('Concatenation complete.');     
  });
