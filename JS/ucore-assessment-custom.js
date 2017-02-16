@@ -23,7 +23,7 @@
 	});
 	
 	function HexagonalButton($fromElem) {
-		var validArg = isJQuery($fromElem);
+		var validArg = $.isJQueryObj($fromElem);
 		var tan30 = Math.tan(30 / 180 * Math.PI);
 		this.origin = {
 			x: validArg ? $fromElem.offset().left : undefined,
@@ -142,7 +142,7 @@
 	}
 	
 	function handleNiloaClick($whichBttn, bttnCoords, clickEvent) {
-		if (isJQuery($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
+		if ($.isJQueryObj($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
 			if (bttnCoords.isWithinArea(clickEvent.pageX, clickEvent.pageY)) {
 				var bttnHref = $whichBttn.data("href");
 				if (bttnHref) {
@@ -154,14 +154,14 @@
 	}
 
 	function handleNiloaLeave($whichBttn) {
-		if (isJQuery($whichBttn)) {
+		if ($.isJQueryObj($whichBttn)) {
 			$whichBttn.removeClass("hovered");
 		}
 	}
 	
 	function handleNiloaMouseMove($whichBttn, bttnCoords, moveEvent) {
 		var destHref = "";
-		if (isJQuery($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
+		if ($.isJQueryObj($whichBttn) && bttnCoords && bttnCoords instanceof HexagonalButton) {
 			if (bttnCoords.isWithinArea(moveEvent.pageX, moveEvent.pageY)) {
 				destHref = $whichBttn.data("href");
 				$whichBttn.addClass("hovered");
