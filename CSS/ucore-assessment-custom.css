@@ -5160,11 +5160,11 @@ figure figcaption {
 }
 .column .pdf-wrapper.portrait {
   padding-bottom: 129.4118%;
-  padding-bottom: calc(185.4118%);
+  padding-bottom: calc(129.4118% + 56px);
 }
 .column .pdf-wrapper.landscape {
   padding-bottom: 77.2727%;
-  padding-bottom: calc(133.2727%);
+  padding-bottom: calc(77.2727% + 56px);
 }
 .column .pdf-wrapper > iframe {
   position: absolute;
