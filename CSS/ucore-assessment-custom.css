@@ -531,6 +531,12 @@ header:first-child + .has-pull-quote-bordering:not(.alt) {
     border-color: rgba(219, 120, 121, 0);
   }
 }
+.row:not(.clear-none):target:before {
+  content: "";
+  width: auto;
+  height: auto;
+  visibility: visible;
+}
 html {
   font-size: 17px;
 }
@@ -1861,7 +1867,7 @@ footer.article-footer div.author-info {
   text-align: left;
 }
 .column p.centered {
-  text-align: center;
+  text-align: center !important;
 }
 .column p.align-left {
   text-align: left;
@@ -3753,7 +3759,8 @@ section.pad-top div.column.half-pad {
 .column hr:first-child {
   margin-top: 0;
 }
-.column hr.subSection {
+.column hr.subSection,
+.column hr.sub-section {
   width: 85%;
   margin: 2rem auto;
   background: none;
@@ -5136,6 +5143,32 @@ img.symbolic-image {
 figure figcaption {
   font-size: 0.85em;
   text-align: center;
+}
+@media print {
+  .column .decoration {
+    display: none;
+  }
+}
+@media screen {
+  .column .decoration {
+    display: block;
+    position: relative;
+    float: right;
+    width: 30%;
+    height: 0;
+    padding-bottom: 45%;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    background-color: #464e54;
+  }
+}
+@media screen and (max-width: 480px) {
+  .column .decoration {
+    float: none;
+    width: 100%;
+    padding-bottom: 40%;
+    margin-left: 0;
+  }
 }
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++++++ IFRAMES rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
