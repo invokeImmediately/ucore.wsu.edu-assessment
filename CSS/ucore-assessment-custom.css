@@ -7899,7 +7899,7 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(3.9em + 16px);
+  height: calc(2.6em + 16px);
   background-color: #eff0f1;
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
@@ -7909,11 +7909,12 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
 @media screen and (max-width: 480px) {
   section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li {
     width: 100%;
+    height: calc(1.3em + 16px);
   }
 }
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li > a {
   display: inline-block;
-  max-width: 200px;
+  max-width: 140px;
   padding: 8px 16px;
   border-bottom: none;
   color: #000;
