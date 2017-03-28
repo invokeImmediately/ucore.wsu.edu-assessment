@@ -7979,12 +7979,6 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:last-
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li:last-child:hover {
   border-right: 1px solid #aa5165;
 }
-section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul > li hr {
-  margin-top: 1.5rem;
-  margin-bottom: 1.25rem;
-  border-top: 1px solid rgba(94, 106, 113, 0.25);
-  border-bottom: 1px solid rgba(160, 160, 160, 0.125);
-}
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 {
   display: none;
 }
@@ -8051,6 +8045,12 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
 section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr td {
   display: block;
   padding: 1em;
+}
+section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + table > tbody tr td hr {
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+  border-top: 1px solid rgba(94, 106, 113, 0.25);
+  border-bottom: 1px solid rgba(160, 160, 160, 0.125);
 }
 /*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### CSS Added by Others ############################################################################# ║
