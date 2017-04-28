@@ -1781,7 +1781,7 @@ header.main-header .header-group {
     transform: translateX(-50%);
   }
 }
-.column > header:first-child {
+.column:not(.show-header) > header:first-child {
   display: none;
 }
 .column header:first-child + h1,
