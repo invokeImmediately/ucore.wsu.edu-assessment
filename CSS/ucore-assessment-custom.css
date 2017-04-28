@@ -7249,8 +7249,8 @@ div#simulated-status-bar {
   min-width: 631px;
   padding-left: 4px;
   padding-right: 4px;
-  border-top: 1px solid rgba(223, 223, 223, 0.5);
-  border-right: 1px solid rgba(223, 223, 223, 0.5);
+  border-top: 1px solid rgba(97, 97, 97, 0.3);
+  border-right: 1px solid rgba(97, 97, 97, 0.3);
   border-top-right-radius: 4px;
   background-color: #f2f2f2;
   color: #616161;
