@@ -4460,7 +4460,7 @@ body.single-post .main-header + .featured-image {
 .wsuwp-content-syndicate-wrapper {
   font-size: 0.9rem;
 }
-.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-syndicate-list {
+body.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-syndicate-list {
   list-style-type: none;
   padding: 0;
 }
